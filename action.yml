@@ -14,9 +14,12 @@ inputs:
   output-format:
     description: 'Select the desired output format'
     default: '--html'
+  output-file:
+    default: 'output.html'
 outputs:
   scan-output: # id of output
     description: 'Scan output'
+    default : output.html
 runs:
   using: 'docker'
   image: 'Dockerfile'
