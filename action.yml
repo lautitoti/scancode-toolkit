@@ -13,6 +13,7 @@ inputs:
     default: '-lcp'
   output-format:
     description: 'Select the desired output format'
+    default: '--html'
 outputs:
   scan-output: # id of output
     description: 'Scan output'
