@@ -3,19 +3,20 @@ name: 'Scan Code'
 author: 'Lautaro Sosa'
 description: 'Action to Scan Code using Scancode Toolkit'
 inputs:
-  scan-input:  # id of input
-    description: 'Path to Scan'
-    required: true
-    default: './'
   options:
     description: 'Set desired output format'
     required: true
-    default: '-lcp'
+    default: '-p'
   output-format:
     description: 'Select the desired output format'
     default: '--html'
   output-file:
     default: 'output.html'
+  scan-input:  # id of input
+    description: 'Path to Scan'
+    required: true
+    default: './'
+    
 outputs:
   scan-output: # id of output
     description: 'Scan output'
