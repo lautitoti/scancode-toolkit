@@ -1,0 +1,25 @@
+# action.yml
+name: 'Scan Code'
+author: 'Lautaro Sosa'
+description: 'Action to Scan Code using Scancode Toolkit'
+inputs:
+  scan-input:  # id of input
+    description: 'Path to Scan'
+    required: true
+    default: './'
+  options:
+    description: 'Set desired output format'
+    required: true
+    default: '-lcp'
+  output-format:
+    description: 'Select the desired output format'
+outputs:
+  scan-output: # id of output
+    description: 'Scan output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.scan-input }}
+    - ${{ inputs.options }}
+    - ${{ inputs.output-format }}
