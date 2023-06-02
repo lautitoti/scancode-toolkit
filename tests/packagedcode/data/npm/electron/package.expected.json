@@ -1,4 +1,82 @@
 {
+  "packages": [
+    {
+      "type": "npm",
+      "namespace": null,
+      "name": "electron",
+      "version": "3.1.11",
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": "JavaScript",
+      "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+      "release_date": null,
+      "parties": [
+        {
+          "type": "person",
+          "role": "author",
+          "name": "Electron Community",
+          "email": null,
+          "url": null
+        }
+      ],
+      "keywords": [
+        "electron"
+      ],
+      "homepage_url": null,
+      "download_url": "https://registry.npmjs.org/electron/-/electron-3.1.11.tgz",
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": "https://github.com/electron/electron",
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "- MIT\n",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {},
+      "repository_homepage_url": "https://www.npmjs.com/package/electron",
+      "repository_download_url": "https://registry.npmjs.org/electron/-/electron-3.1.11.tgz",
+      "api_data_url": "https://registry.npmjs.org/electron/3.1.11",
+      "package_uid": "pkg:npm/electron@3.1.11?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_paths": [
+        "package/package.json"
+      ],
+      "datasource_ids": [
+        "npm_package_json"
+      ],
+      "purl": "pkg:npm/electron@3.1.11"
+    }
+  ],
   "dependencies": [
     {
       "purl": "pkg:npm/%40types/node",
@@ -85,60 +163,6 @@
       "datasource_id": "npm_package_json"
     }
   ],
-  "packages": [
-    {
-      "type": "npm",
-      "namespace": null,
-      "name": "electron",
-      "version": "3.1.11",
-      "qualifiers": {},
-      "subpath": null,
-      "primary_language": "JavaScript",
-      "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
-      "release_date": null,
-      "parties": [
-        {
-          "type": "person",
-          "role": "author",
-          "name": "Electron Community",
-          "email": null,
-          "url": null
-        }
-      ],
-      "keywords": [
-        "electron"
-      ],
-      "homepage_url": null,
-      "download_url": "https://registry.npmjs.org/electron/-/electron-3.1.11.tgz",
-      "size": null,
-      "sha1": null,
-      "md5": null,
-      "sha256": null,
-      "sha512": null,
-      "bug_tracking_url": null,
-      "code_view_url": null,
-      "vcs_url": "https://github.com/electron/electron",
-      "copyright": null,
-      "license_expression": "mit",
-      "declared_license": [
-        "MIT"
-      ],
-      "notice_text": null,
-      "source_packages": [],
-      "extra_data": {},
-      "repository_homepage_url": "https://www.npmjs.com/package/electron",
-      "repository_download_url": "https://registry.npmjs.org/electron/-/electron-3.1.11.tgz",
-      "api_data_url": "https://registry.npmjs.org/electron/3.1.11",
-      "package_uid": "pkg:npm/electron@3.1.11?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_paths": [
-        "package/package.json"
-      ],
-      "datasource_ids": [
-        "npm_package_json"
-      ],
-      "purl": "pkg:npm/electron@3.1.11"
-    }
-  ],
   "files": [
     {
       "path": "package",
@@ -193,10 +217,34 @@
           "code_view_url": null,
           "vcs_url": "https://github.com/electron/electron",
           "copyright": null,
-          "license_expression": "mit",
-          "declared_license": [
-            "MIT"
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            }
           ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "- MIT\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],

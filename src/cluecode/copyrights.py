@@ -2620,6 +2620,9 @@ grammar = """
     # author (Panagiotis Tsirigotis)
     AUTHOR: {<AUTH>  <NNP><NNP>+} #author Foo Bar
 
+    # Author: Tim (xtimor@gmail.com)
+    AUTHOR: {<AUTH>  <NNP>+ <EMAIL>+} #Author Foo joe@email.com
+
 
 #######################################
 # Mixed AUTHOR and COPYRIGHT
@@ -3118,7 +3121,7 @@ def strip_trailing_period(s):
     if not s.endswith('.'):
         return s
 
-    if len(s) < 3 :
+    if len(s) < 3:
         return s
 
     is_single_word = len(s.split()) == 1

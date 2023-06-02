@@ -23,12 +23,13 @@ class CopyrightScanner(ScanPlugin):
     """
 
     resource_attributes = dict([
-        ('copyrights',attr.ib(default=attr.Factory(list))),
-        ('holders',attr.ib(default=attr.Factory(list))),
-        ('authors',attr.ib(default=attr.Factory(list))),
+        ('copyrights', attr.ib(default=attr.Factory(list))),
+        ('holders', attr.ib(default=attr.Factory(list))),
+        ('authors', attr.ib(default=attr.Factory(list))),
     ])
 
-    sort_order = 4
+    run_order = 6
+    sort_order = 6
 
     options = [
         PluggableCommandLineOption(('-c', '--copyright',),

@@ -11,13 +11,13 @@ import hashlib
 import json
 import os
 import logging
+import sys
+from functools import partial
 
 import saneyaml
 from packageurl import PackageURL
 
 from packagedcode import models
-from packagedcode.licensing import get_license_matches
-from packagedcode.licensing import get_license_expression_from_matches
 from packagedcode import spec
 from packagedcode import utils
 
@@ -30,6 +30,7 @@ See https://cocoapods.org
 
 TRACE = os.environ.get('SCANCODE_DEBUG_PACKAGE', False)
 
+
 def logger_debug(*args):
     pass
 
@@ -37,7 +38,6 @@ def logger_debug(*args):
 logger = logging.getLogger(__name__)
 
 if TRACE:
-    import sys
     logging.basicConfig(stream=sys.stdout)
     logger.setLevel(logging.DEBUG)
 
@@ -91,8 +91,10 @@ def get_hashed_path(name):
     Returns a string with a part of the file path derived from the md5 hash.
 
     From https://github.com/CocoaPods/cdn.cocoapods.org:
-    "There are a set of known prefixes for all Podspec paths, you take the name of the pod,
-    create a hash (using md5) of it and take the first three characters."
+        "There are a set of known prefixes for all Podspec paths, you take the
+        name of the pod, create a hash (using md5) of it and take the first
+        three characters."
+
     """
     if not name:
         return
@@ -107,8 +109,22 @@ def get_hashed_path(name):
     return hashed_path
 
 
+# for FIPS support
+sys_v0 = sys.version_info[0]
+sys_v1 = sys.version_info[1]
+if sys_v0 == 3 and sys_v1 >= 9:
+    md5_hasher = partial(hashlib.md5, usedforsecurity=False)
+else:
+    md5_hasher = hashlib.md5
+
+
 def get_first_three_md5_hash_characters(podname):
-    return hashlib.md5(podname.encode('utf-8')).hexdigest()[0:3]
+    """
+    From https://github.com/CocoaPods/cdn.cocoapods.org:
+    "There are a set of known prefixes for all Podspec paths, you take the name of the pod,
+    create a hash (using md5) of it and take the first three characters."
+    """
+    return md5_hasher(podname.encode('utf-8')).hexdigest()[0:3]
 
 
 class BasePodHandler(models.DatafileHandler):
@@ -194,7 +210,7 @@ class BasePodHandler(models.DatafileHandler):
 class PodspecHandler(BasePodHandler):
     datasource_id = 'cocoapods_podspec'
     path_patterns = ('*.podspec',)
-    default_package_type = 'pods'
+    default_package_type = 'cocoapods'
     default_primary_language = 'Objective-C'
     description = 'Cocoapods .podspec'
     documentation_url = 'https://guides.cocoapods.org/syntax/podspec.html'
@@ -213,10 +229,7 @@ class PodspecHandler(BasePodHandler):
         name = podspec.get('name')
         version = podspec.get('version')
         homepage_url = podspec.get('homepage')
-        declared_license = podspec.get('license')
-        license_expression = None
-        if declared_license:
-            license_expression = models.compute_normalized_license(declared_license)
+        extracted_license_statement = podspec.get('license')
         summary = podspec.get('summary')
         description = podspec.get('description')
         description = utils.build_description(
@@ -255,8 +268,7 @@ class PodspecHandler(BasePodHandler):
             # FIXME: a source should be a PURL, not a list of URLs
             # source_packages=vcs_url.split('\n'),
             description=description,
-            declared_license=declared_license,
-            license_expression=license_expression,
+            extracted_license_statement=extracted_license_statement,
             homepage_url=homepage_url,
             parties=parties,
             **urls,
@@ -266,7 +278,7 @@ class PodspecHandler(BasePodHandler):
 class PodfileHandler(PodspecHandler):
     datasource_id = 'cocoapods_podfile'
     path_patterns = ('*Podfile',)
-    default_package_type = 'pods'
+    default_package_type = 'cocoapods'
     default_primary_language = 'Objective-C'
     description = 'Cocoapods Podfile'
     documentation_url = 'https://guides.cocoapods.org/using/the-podfile.html'
@@ -275,7 +287,7 @@ class PodfileHandler(PodspecHandler):
 class PodfileLockHandler(BasePodHandler):
     datasource_id = 'cocoapods_podfile_lock'
     path_patterns = ('*Podfile.lock',)
-    default_package_type = 'pods'
+    default_package_type = 'cocoapods'
     default_primary_language = 'Objective-C'
     description = 'Cocoapods Podfile.lock'
     documentation_url = 'https://guides.cocoapods.org/using/the-podfile.html'
@@ -336,7 +348,7 @@ class PodfileLockHandler(BasePodHandler):
 class PodspecJsonHandler(models.DatafileHandler):
     datasource_id = 'cocoapods_podspec_json'
     path_patterns = ('*.podspec.json',)
-    default_package_type = 'pods'
+    default_package_type = 'cocoapods'
     default_primary_language = 'Objective-C'
     description = 'Cocoapods .podspec.json'
     documentation_url = 'https://guides.cocoapods.org/syntax/podspec.html'
@@ -354,9 +366,9 @@ class PodspecJsonHandler(models.DatafileHandler):
 
         lic = data.get('license')
         if isinstance(lic, dict):
-            declared_license = ' '.join(list(lic.values()))
+            extracted_license_statement = ' '.join(list(lic.values()))
         else:
-            declared_license = lic
+            extracted_license_statement = lic
 
         source = data.get('source')
         vcs_url = None
@@ -374,12 +386,6 @@ class PodspecJsonHandler(models.DatafileHandler):
                 vcs_url = source
 
         authors = data.get('authors') or {}
-
-        license_matches = get_license_matches(query_string=declared_license)
-        if not license_matches:
-            license_expression = 'unknown'
-        else:
-            license_expression = get_license_expression_from_matches(license_matches)
 
         if summary and not description.startswith(summary):
             desc = [summary]
@@ -424,8 +430,7 @@ class PodspecJsonHandler(models.DatafileHandler):
             name=name,
             version=version,
             description=description,
-            declared_license=declared_license,
-            license_expression=license_expression,
+            extracted_license_statement=extracted_license_statement,
             parties=parties,
             vcs_url=vcs_url,
             homepage_url=homepage_url,
@@ -434,7 +439,7 @@ class PodspecJsonHandler(models.DatafileHandler):
         )
 
 
-def get_urls(name=None, version=None, homepage_url=None, vcs_url=None):
+def get_urls(name=None, version=None, homepage_url=None, vcs_url=None, **kwargs):
     """
     Return a mapping of podspec URLS.
     """
@@ -523,14 +528,14 @@ def parse_dep_requirements(dep):
 
     For example:
 
-    >>> expected = PackageURL.from_string('pkg:pods/OHHTTPStubs@9.0.0'), '9.0.0'
+    >>> expected = PackageURL.from_string('pkg:cocoapods/OHHTTPStubs@9.0.0'), '9.0.0'
     >>> assert parse_dep_requirements('OHHTTPStubs (9.0.0)') == expected
 
-    >>> expected = PackageURL.from_string('pkg:pods/OHHTTPStubs/NSURLSession'), None
+    >>> expected = PackageURL.from_string('pkg:cocoapods/OHHTTPStubs/NSURLSession'), None
     >>> result = parse_dep_requirements('OHHTTPStubs/NSURLSession')
     >>> assert result == expected, result
 
-    >>> expected = PackageURL.from_string('pkg:pods/AFNetworking/Serialization@3.0.4'), '= 3.0.4'
+    >>> expected = PackageURL.from_string('pkg:cocoapods/AFNetworking/Serialization@3.0.4'), '= 3.0.4'
     >>> result = parse_dep_requirements(' AFNetworking/Serialization (= 3.0.4) ')
     >>> assert result == expected, result
     """
@@ -552,7 +557,7 @@ def parse_dep_requirements(dep):
         namespace = None
 
     purl = PackageURL(
-        type='pods',
+        type='cocoapods',
         namespace=namespace,
         name=name,
         version=version,

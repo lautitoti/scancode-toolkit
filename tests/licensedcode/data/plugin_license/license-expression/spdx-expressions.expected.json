@@ -1,0 +1,56 @@
+{
+  "license_detections": [
+    {
+      "identifier": "zlib_and_apache_2_0-98210dcd-8eb2-6675-dd67-08f007face08",
+      "license_expression": "zlib AND apache-2.0",
+      "detection_count": 1,
+      "detection_log": []
+    }
+  ],
+  "files": [
+    {
+      "path": "spdx-expressions.txt",
+      "type": "file",
+      "detected_license_expression": "zlib AND apache-2.0",
+      "detected_license_expression_spdx": "Zlib AND Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "zlib AND apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 2,
+              "end_line": 2,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "zlib",
+              "rule_identifier": "spdx-license-identifier-zlib-defbb051fec96d25d21a92bf9e28889f674a89dc",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "licenses.nuget.org/Zlib"
+            },
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 4,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "spdx-license-identifier-apache-2.0-8b7d7ba520c6ab392deaea36b8b1f018b637027e",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "SPDX-License-Identifier: Apache-2.0"
+            }
+          ],
+          "detection_log": [],
+          "identifier": "zlib_and_apache_2_0-98210dcd-8eb2-6675-dd67-08f007face08"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 90.91,
+      "scan_errors": []
+    }
+  ]
+}

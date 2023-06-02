@@ -28,8 +28,8 @@ import saneyaml
 from commoncode import fileutils
 from commoncode.hash import multi_checksums
 from commoncode.text import python_safe_name
-from packaging import tags as packaging_tags
-from packaging import version as packaging_version
+from packvers import tags as packaging_tags
+from packvers import version as packaging_version
 
 import utils_pip_compatibility_tags
 
@@ -115,13 +115,14 @@ TRACE_DEEP = False
 TRACE_ULTRA_DEEP = False
 
 # Supported environments
-PYTHON_VERSIONS = "37", "38", "39", "310"
+PYTHON_VERSIONS = "37", "38", "39", "310", "311"
 
 PYTHON_DOT_VERSIONS_BY_VER = {
     "37": "3.7",
     "38": "3.8",
     "39": "3.9",
     "310": "3.10",
+    "311": "3.11",
 }
 
 
@@ -137,6 +138,7 @@ ABIS_BY_PYTHON_VERSION = {
     "38": ["cp38", "cp38m", "abi3"],
     "39": ["cp39", "cp39m", "abi3"],
     "310": ["cp310", "cp310m", "abi3"],
+    "311": ["cp311", "cp311m", "abi3"],
 }
 
 PLATFORMS_BY_OS = {
@@ -910,7 +912,7 @@ class Distribution(NameVer):
         declared_license = [raw_data["License"]] + [
             c for c in classifiers if c.startswith("License")
         ]
-        license_expression = compute_normalized_license_expression(declared_license)
+        license_expression = get_license_expression(declared_license)
         other_classifiers = [c for c in classifiers if not c.startswith("License")]
 
         holder = raw_data["Author"]
@@ -2272,16 +2274,16 @@ def find_problems(
     check_about(dest_dir=dest_dir)
 
 
-def compute_normalized_license_expression(declared_licenses):
+def get_license_expression(declared_licenses):
     """
     Return a normalized license expression or None.
     """
     if not declared_licenses:
         return
     try:
-        from packagedcode import pypi
+        from packagedcode.licensing import get_only_expression_from_extracted_license
 
-        return pypi.compute_normalized_license(declared_licenses)
+        return get_only_expression_from_extracted_license(declared_licenses)
     except ImportError:
         # Scancode is not installed, clean and join all the licenses
         lics = [python_safe_name(l).lower() for l in declared_licenses]

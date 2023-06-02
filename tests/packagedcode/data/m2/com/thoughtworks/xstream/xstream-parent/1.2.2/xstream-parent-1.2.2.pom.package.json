@@ -29,15 +29,53 @@
   "code_view_url": "https://svn.codehaus.org/xstream/tags/XSTREAM_1_2_2",
   "vcs_url": "svn+https://svn.codehaus.org/xstream/tags/XSTREAM_1_2_2",
   "copyright": null,
-  "license_expression": "bsd-new",
-  "declared_license": [
+  "holder": null,
+  "declared_license_expression": "bsd-new",
+  "declared_license_expression_spdx": "BSD-3-Clause",
+  "license_detections": [
     {
-      "name": "BSD style",
-      "url": "http://xstream.codehaus.com/license.html",
-      "comments": null,
-      "distribution": "repo"
+      "license_expression": "bsd-new",
+      "matches": [
+        {
+          "score": 90.0,
+          "start_line": 1,
+          "end_line": 1,
+          "matched_length": 2,
+          "match_coverage": 100.0,
+          "matcher": "1-hash",
+          "license_expression": "bsd-new",
+          "rule_identifier": "bsd-new_878.RULE",
+          "rule_relevance": 90,
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-new_878.RULE",
+          "matched_text": "BSD style"
+        }
+      ],
+      "identifier": "bsd_new-a77f8bf6-d564-f8d2-8f4e-2ff70cf207f4"
+    },
+    {
+      "license_expression": "bsd-new",
+      "matches": [
+        {
+          "score": 100.0,
+          "start_line": 1,
+          "end_line": 1,
+          "matched_length": 6,
+          "match_coverage": 100.0,
+          "matcher": "1-hash",
+          "license_expression": "bsd-new",
+          "rule_identifier": "bsd-new_xstream_maven_4.RULE",
+          "rule_relevance": 100,
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/bsd-new_xstream_maven_4.RULE",
+          "matched_text": "http://xstream.codehaus.com/license.html"
+        }
+      ],
+      "identifier": "bsd_new-3c28c341-2557-a170-5574-2b740318c7e1"
     }
   ],
+  "other_license_expression": null,
+  "other_license_expression_spdx": null,
+  "other_license_detections": [],
+  "extracted_license_statement": "- name: BSD style\n  url: http://xstream.codehaus.com/license.html\n  comments:\n  distribution: repo\n",
   "notice_text": null,
   "source_packages": [
     "pkg:maven/com.thoughtworks.xstream/xstream-parent@1.2.2?classifier=sources"

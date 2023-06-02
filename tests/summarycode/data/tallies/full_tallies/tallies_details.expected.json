@@ -1,1084 +1,4 @@
 {
-  "dependencies": [
-    {
-      "purl": "pkg:npm/abbrev",
-      "extracted_requirement": "~1.0.7",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/abbrev?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/ansi",
-      "extracted_requirement": "~0.3.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/ansi?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/ansicolors",
-      "extracted_requirement": "~0.3.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/ansicolors?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/ansistyles",
-      "extracted_requirement": "~0.1.3",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/ansistyles?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/archy",
-      "extracted_requirement": "~1.0.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/archy?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/async-some",
-      "extracted_requirement": "~1.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/async-some?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/block-stream",
-      "extracted_requirement": "0.0.8",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/block-stream?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/char-spinner",
-      "extracted_requirement": "~1.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/char-spinner?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/chmodr",
-      "extracted_requirement": "~1.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/chmodr?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/chownr",
-      "extracted_requirement": "0.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/chownr?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/cmd-shim",
-      "extracted_requirement": "~2.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/cmd-shim?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/columnify",
-      "extracted_requirement": "~1.5.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/columnify?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/config-chain",
-      "extracted_requirement": "~1.1.9",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/config-chain?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/dezalgo",
-      "extracted_requirement": "~1.0.3",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/dezalgo?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/editor",
-      "extracted_requirement": "~1.0.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/editor?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/fs-vacuum",
-      "extracted_requirement": "~1.2.6",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/fs-vacuum?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/fs-write-stream-atomic",
-      "extracted_requirement": "~1.0.3",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/fs-write-stream-atomic?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/fstream",
-      "extracted_requirement": "~1.0.7",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/fstream?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/fstream-npm",
-      "extracted_requirement": "~1.0.4",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/fstream-npm?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/github-url-from-git",
-      "extracted_requirement": "~1.4.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/github-url-from-git?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/github-url-from-username-repo",
-      "extracted_requirement": "~1.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/github-url-from-username-repo?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/glob",
-      "extracted_requirement": "~5.0.14",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/glob?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/graceful-fs",
-      "extracted_requirement": "~4.1.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/graceful-fs?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/hosted-git-info",
-      "extracted_requirement": "~2.1.4",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/hosted-git-info?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/inflight",
-      "extracted_requirement": "~1.0.4",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/inflight?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/inherits",
-      "extracted_requirement": "~2.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/inherits?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/ini",
-      "extracted_requirement": "~1.3.4",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/ini?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/init-package-json",
-      "extracted_requirement": "~1.7.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/init-package-json?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/lockfile",
-      "extracted_requirement": "~1.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/lockfile?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/lru-cache",
-      "extracted_requirement": "~2.6.5",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/lru-cache?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/minimatch",
-      "extracted_requirement": "~2.0.10",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/minimatch?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/mkdirp",
-      "extracted_requirement": "~0.5.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/mkdirp?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/node-gyp",
-      "extracted_requirement": "~2.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/node-gyp?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/nopt",
-      "extracted_requirement": "~3.0.3",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/nopt?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/normalize-git-url",
-      "extracted_requirement": "~3.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/normalize-git-url?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/normalize-package-data",
-      "extracted_requirement": "~2.3.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/normalize-package-data?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-cache-filename",
-      "extracted_requirement": "~1.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-cache-filename?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-install-checks",
-      "extracted_requirement": "~1.0.6",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-install-checks?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-package-arg",
-      "extracted_requirement": "~4.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-package-arg?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-registry-client",
-      "extracted_requirement": "~6.5.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-registry-client?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-user-validate",
-      "extracted_requirement": "~0.1.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-user-validate?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npmlog",
-      "extracted_requirement": "~1.2.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npmlog?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/once",
-      "extracted_requirement": "~1.3.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/once?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/opener",
-      "extracted_requirement": "~1.4.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/opener?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/osenv",
-      "extracted_requirement": "~0.1.3",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/osenv?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/path-is-inside",
-      "extracted_requirement": "~1.0.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/path-is-inside?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/read",
-      "extracted_requirement": "~1.0.6",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/read?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/read-installed",
-      "extracted_requirement": "~4.0.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/read-installed?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/read-package-json",
-      "extracted_requirement": "~2.0.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/read-package-json?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/readable-stream",
-      "extracted_requirement": "~1.1.13",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/readable-stream?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/realize-package-specifier",
-      "extracted_requirement": "~3.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/realize-package-specifier?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/request",
-      "extracted_requirement": "~2.60.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/request?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/retry",
-      "extracted_requirement": "~0.6.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/retry?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/rimraf",
-      "extracted_requirement": "~2.4.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/rimraf?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/semver",
-      "extracted_requirement": "~5.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/semver?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/sha",
-      "extracted_requirement": "~1.3.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/sha?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/slide",
-      "extracted_requirement": "~1.1.6",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/slide?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/sorted-object",
-      "extracted_requirement": "~1.0.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/sorted-object?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/spdx",
-      "extracted_requirement": "~0.4.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/spdx?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/tar",
-      "extracted_requirement": "~2.1.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/tar?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/text-table",
-      "extracted_requirement": "~0.2.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/text-table?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/uid-number",
-      "extracted_requirement": "0.0.6",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/uid-number?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/umask",
-      "extracted_requirement": "~1.1.0",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/umask?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/validate-npm-package-name",
-      "extracted_requirement": "~2.2.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/validate-npm-package-name?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/which",
-      "extracted_requirement": "~1.1.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/which?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/wrappy",
-      "extracted_requirement": "~1.0.1",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/wrappy?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/write-file-atomic",
-      "extracted_requirement": "~1.1.2",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/write-file-atomic?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/validate-npm-package-license",
-      "extracted_requirement": "*",
-      "scope": "dependencies",
-      "is_runtime": true,
-      "is_optional": false,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/validate-npm-package-license?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/deep-equal",
-      "extracted_requirement": "~1.0.0",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/deep-equal?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/marked",
-      "extracted_requirement": "~0.3.3",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/marked?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/marked-man",
-      "extracted_requirement": "~0.1.5",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/marked-man?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/nock",
-      "extracted_requirement": "~2.10.0",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/nock?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-registry-couchapp",
-      "extracted_requirement": "~2.6.7",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-registry-couchapp?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/npm-registry-mock",
-      "extracted_requirement": "~1.0.0",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/npm-registry-mock?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/require-inject",
-      "extracted_requirement": "~1.2.0",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/require-inject?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/sprintf-js",
-      "extracted_requirement": "~1.0.2",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/sprintf-js?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    },
-    {
-      "purl": "pkg:npm/tap",
-      "extracted_requirement": "~1.3.1",
-      "scope": "devDependencies",
-      "is_runtime": false,
-      "is_optional": true,
-      "is_resolved": false,
-      "resolved_package": {},
-      "extra_data": {},
-      "dependency_uid": "pkg:npm/tap?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_path": "scan/package.json",
-      "datasource_id": "npm_package_json"
-    }
-  ],
   "packages": [
     {
       "type": "npm",
@@ -3286,10 +2206,34 @@
       "code_view_url": null,
       "vcs_url": "git+https://github.com/npm/npm.git@fc7bbf03e39cc48a8924b90696d28345a6a90f3c",
       "copyright": null,
-      "license_expression": "artistic-2.0",
-      "declared_license": [
-        "Artistic-2.0"
+      "holder": null,
+      "declared_license_expression": "artistic-2.0",
+      "declared_license_expression_spdx": "Artistic-2.0",
+      "license_detections": [
+        {
+          "license_expression": "artistic-2.0",
+          "matches": [
+            {
+              "score": 50.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "artistic-2.0",
+              "rule_identifier": "spdx_license_id_artistic-2.0_for_artistic-2.0.RULE",
+              "rule_relevance": 50,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/spdx_license_id_artistic-2.0_for_artistic-2.0.RULE",
+              "matched_text": "Artistic-2.0"
+            }
+          ],
+          "identifier": "artistic_2_0-2ca48deb-7b37-fc93-edd9-b349ad073774"
+        }
       ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "- Artistic-2.0\n",
       "notice_text": null,
       "source_packages": [],
       "extra_data": {},
@@ -3306,8 +2250,1140 @@
       "purl": "pkg:npm/npm@2.13.5"
     }
   ],
+  "dependencies": [
+    {
+      "purl": "pkg:npm/abbrev",
+      "extracted_requirement": "~1.0.7",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/abbrev?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/ansi",
+      "extracted_requirement": "~0.3.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/ansi?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/ansicolors",
+      "extracted_requirement": "~0.3.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/ansicolors?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/ansistyles",
+      "extracted_requirement": "~0.1.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/ansistyles?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/archy",
+      "extracted_requirement": "~1.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/archy?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/async-some",
+      "extracted_requirement": "~1.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/async-some?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/block-stream",
+      "extracted_requirement": "0.0.8",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/block-stream?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/char-spinner",
+      "extracted_requirement": "~1.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/char-spinner?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/chmodr",
+      "extracted_requirement": "~1.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/chmodr?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/chownr",
+      "extracted_requirement": "0.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/chownr?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/cmd-shim",
+      "extracted_requirement": "~2.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/cmd-shim?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/columnify",
+      "extracted_requirement": "~1.5.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/columnify?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/config-chain",
+      "extracted_requirement": "~1.1.9",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/config-chain?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/dezalgo",
+      "extracted_requirement": "~1.0.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/dezalgo?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/editor",
+      "extracted_requirement": "~1.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/editor?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/fs-vacuum",
+      "extracted_requirement": "~1.2.6",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/fs-vacuum?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/fs-write-stream-atomic",
+      "extracted_requirement": "~1.0.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/fs-write-stream-atomic?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/fstream",
+      "extracted_requirement": "~1.0.7",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/fstream?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/fstream-npm",
+      "extracted_requirement": "~1.0.4",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/fstream-npm?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/github-url-from-git",
+      "extracted_requirement": "~1.4.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/github-url-from-git?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/github-url-from-username-repo",
+      "extracted_requirement": "~1.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/github-url-from-username-repo?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/glob",
+      "extracted_requirement": "~5.0.14",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/glob?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/graceful-fs",
+      "extracted_requirement": "~4.1.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/graceful-fs?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/hosted-git-info",
+      "extracted_requirement": "~2.1.4",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/hosted-git-info?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/inflight",
+      "extracted_requirement": "~1.0.4",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/inflight?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/inherits",
+      "extracted_requirement": "~2.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/inherits?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/ini",
+      "extracted_requirement": "~1.3.4",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/ini?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/init-package-json",
+      "extracted_requirement": "~1.7.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/init-package-json?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/lockfile",
+      "extracted_requirement": "~1.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/lockfile?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/lru-cache",
+      "extracted_requirement": "~2.6.5",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/lru-cache?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/minimatch",
+      "extracted_requirement": "~2.0.10",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/minimatch?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/mkdirp",
+      "extracted_requirement": "~0.5.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/mkdirp?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/node-gyp",
+      "extracted_requirement": "~2.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/node-gyp?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/nopt",
+      "extracted_requirement": "~3.0.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/nopt?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/normalize-git-url",
+      "extracted_requirement": "~3.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/normalize-git-url?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/normalize-package-data",
+      "extracted_requirement": "~2.3.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/normalize-package-data?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-cache-filename",
+      "extracted_requirement": "~1.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-cache-filename?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-install-checks",
+      "extracted_requirement": "~1.0.6",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-install-checks?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-package-arg",
+      "extracted_requirement": "~4.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-package-arg?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-registry-client",
+      "extracted_requirement": "~6.5.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-registry-client?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-user-validate",
+      "extracted_requirement": "~0.1.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-user-validate?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npmlog",
+      "extracted_requirement": "~1.2.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npmlog?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/once",
+      "extracted_requirement": "~1.3.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/once?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/opener",
+      "extracted_requirement": "~1.4.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/opener?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/osenv",
+      "extracted_requirement": "~0.1.3",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/osenv?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/path-is-inside",
+      "extracted_requirement": "~1.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/path-is-inside?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/read",
+      "extracted_requirement": "~1.0.6",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/read?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/read-installed",
+      "extracted_requirement": "~4.0.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/read-installed?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/read-package-json",
+      "extracted_requirement": "~2.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/read-package-json?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/readable-stream",
+      "extracted_requirement": "~1.1.13",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/readable-stream?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/realize-package-specifier",
+      "extracted_requirement": "~3.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/realize-package-specifier?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/request",
+      "extracted_requirement": "~2.60.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/request?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/retry",
+      "extracted_requirement": "~0.6.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/retry?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/rimraf",
+      "extracted_requirement": "~2.4.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/rimraf?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/semver",
+      "extracted_requirement": "~5.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/semver?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/sha",
+      "extracted_requirement": "~1.3.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/sha?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/slide",
+      "extracted_requirement": "~1.1.6",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/slide?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/sorted-object",
+      "extracted_requirement": "~1.0.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/sorted-object?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/spdx",
+      "extracted_requirement": "~0.4.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/spdx?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/tar",
+      "extracted_requirement": "~2.1.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/tar?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/text-table",
+      "extracted_requirement": "~0.2.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/text-table?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/uid-number",
+      "extracted_requirement": "0.0.6",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/uid-number?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/umask",
+      "extracted_requirement": "~1.1.0",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/umask?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/validate-npm-package-name",
+      "extracted_requirement": "~2.2.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/validate-npm-package-name?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/which",
+      "extracted_requirement": "~1.1.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/which?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/wrappy",
+      "extracted_requirement": "~1.0.1",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/wrappy?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/write-file-atomic",
+      "extracted_requirement": "~1.1.2",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/write-file-atomic?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/validate-npm-package-license",
+      "extracted_requirement": "*",
+      "scope": "dependencies",
+      "is_runtime": true,
+      "is_optional": false,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/validate-npm-package-license?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/deep-equal",
+      "extracted_requirement": "~1.0.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/deep-equal?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/marked",
+      "extracted_requirement": "~0.3.3",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/marked?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/marked-man",
+      "extracted_requirement": "~0.1.5",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/marked-man?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/nock",
+      "extracted_requirement": "~2.10.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/nock?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-registry-couchapp",
+      "extracted_requirement": "~2.6.7",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-registry-couchapp?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/npm-registry-mock",
+      "extracted_requirement": "~1.0.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/npm-registry-mock?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/require-inject",
+      "extracted_requirement": "~1.2.0",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/require-inject?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/sprintf-js",
+      "extracted_requirement": "~1.0.2",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/sprintf-js?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    },
+    {
+      "purl": "pkg:npm/tap",
+      "extracted_requirement": "~1.3.1",
+      "scope": "devDependencies",
+      "is_runtime": false,
+      "is_optional": true,
+      "is_resolved": false,
+      "resolved_package": {},
+      "extra_data": {},
+      "dependency_uid": "pkg:npm/tap?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "for_package_uid": "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_path": "scan/package.json",
+      "datasource_id": "npm_package_json"
+    }
+  ],
+  "license_detections": [
+    {
+      "identifier": "cc0_1_0-4be2dd81-b884-28ac-690a-75aff1b0e963",
+      "license_expression": "cc0-1.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "artistic_2_0-c1ede1c6-eb3d-61cc-53ad-abba5e17c732",
+      "license_expression": "artistic-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "zlib-27de81f4-f6ce-2bf5-ab37-9a4c71f4b296",
+      "license_expression": "zlib",
+      "detection_count": 9
+    },
+    {
+      "identifier": "zlib-b04102d0-a663-78b5-de18-9677ee48ce9c",
+      "license_expression": "zlib",
+      "detection_count": 2
+    },
+    {
+      "identifier": "lgpl_2_1_plus-3fe3e5e6-cb18-c0a1-f831-f08fab3612c1",
+      "license_expression": "lgpl-2.1-plus",
+      "detection_count": 3
+    },
+    {
+      "identifier": "cc_by_2_5-2664cdba-0ee6-a527-2588-8a3a1be3ecae",
+      "license_expression": "cc-by-2.5",
+      "detection_count": 1
+    },
+    {
+      "identifier": "gpl_2_0_plus_with_ada_linking_exception-ca27fab9-344b-58b2-3c05-f3ca150dad7e",
+      "license_expression": "gpl-2.0-plus WITH ada-linking-exception",
+      "detection_count": 1
+    },
+    {
+      "identifier": "boost_1_0-7d91c102-4b73-b55e-398c-cca7ae1e7bf5",
+      "license_expression": "boost-1.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "zlib-f32ae987-c66a-44ce-bd13-c90e0c59aab8",
+      "license_expression": "zlib",
+      "detection_count": 1
+    },
+    {
+      "identifier": "mit_old_style-578ee504-a9b5-6c26-1bb4-fd7b80a664f0",
+      "license_expression": "mit-old-style",
+      "detection_count": 1
+    }
+  ],
   "tallies": {
-    "license_expressions": [
+    "detected_license_expression": [
       {
         "value": "zlib",
         "count": 12
@@ -3315,6 +3391,10 @@
       {
         "value": "lgpl-2.1-plus",
         "count": 3
+      },
+      {
+        "value": null,
+        "count": 1
       },
       {
         "value": "artistic-2.0",
@@ -3502,16 +3582,18 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [],
       "holders": [],
       "authors": [],
-      "package_data": [],
-      "for_packages": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 12
@@ -3519,6 +3601,10 @@
           {
             "value": "lgpl-2.1-plus",
             "count": 3
+          },
+          {
+            "value": null,
+            "count": 1
           },
           {
             "value": "artistic-2.0",
@@ -3710,21 +3796,27 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "lgpl-2.1-plus",
             "count": 3
+          },
+          {
+            "value": null,
+            "count": 1
           },
           {
             "value": "cc-by-2.5",
@@ -3816,21 +3908,27 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "lgpl-2.1-plus",
             "count": 3
+          },
+          {
+            "value": null,
+            "count": 1
           },
           {
             "value": "cc-by-2.5",
@@ -3922,49 +4020,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "lgpl-2.1-plus",
+      "detected_license_expression_spdx": "LGPL-2.1-or-later",
+      "license_detections": [
         {
-          "key": "lgpl-2.1-plus",
-          "score": 100.0,
-          "name": "GNU Lesser General Public License 2.1 or later",
-          "short_name": "LGPL 2.1 or later",
-          "category": "Copyleft Limited",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Free Software Foundation (FSF)",
-          "homepage_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "text_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/lgpl-2.1-plus",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.yml",
-          "spdx_license_key": "LGPL-2.1-or-later",
-          "spdx_url": "https://spdx.org/licenses/LGPL-2.1-or-later",
-          "start_line": 7,
-          "end_line": 20,
-          "matched_rule": {
-            "identifier": "lgpl-2.1-plus_59.RULE",
-            "license_expression": "lgpl-2.1-plus",
-            "licenses": [
-              "lgpl-2.1-plus"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 125,
-            "matched_length": 125,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "lgpl-2.1-plus",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 7,
+              "end_line": 20,
+              "matched_length": 125,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "lgpl-2.1-plus",
+              "rule_identifier": "lgpl-2.1-plus_59.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl-2.1-plus_59.RULE"
+            }
+          ],
+          "identifier": "lgpl_2_1_plus-3fe3e5e6-cb18-c0a1-f831-f08fab3612c1"
         }
       ],
-      "license_expressions": [
-        "lgpl-2.1-plus"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 79.62,
       "copyrights": [
         {
@@ -3981,12 +4063,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "lgpl-2.1-plus",
             "count": 1
@@ -4041,49 +4119,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "cc-by-2.5",
+      "detected_license_expression_spdx": "CC-BY-2.5",
+      "license_detections": [
         {
-          "key": "cc-by-2.5",
-          "score": 100.0,
-          "name": "Creative Commons Attribution License 2.5",
-          "short_name": "CC-BY-2.5",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Creative Commons",
-          "homepage_url": "http://creativecommons.org/licenses/by/2.5/",
-          "text_url": "http://creativecommons.org/licenses/by/2.5/legalcode",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/cc-by-2.5",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/cc-by-2.5.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/cc-by-2.5.yml",
-          "spdx_license_key": "CC-BY-2.5",
-          "spdx_url": "https://spdx.org/licenses/CC-BY-2.5",
-          "start_line": 4,
-          "end_line": 5,
-          "matched_rule": {
-            "identifier": "cc-by-2.5_4.RULE",
-            "license_expression": "cc-by-2.5",
-            "licenses": [
-              "cc-by-2.5"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 14,
-            "matched_length": 14,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "cc-by-2.5",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 5,
+              "matched_length": 14,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "cc-by-2.5",
+              "rule_identifier": "cc-by-2.5_4.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/cc-by-2.5_4.RULE"
+            }
+          ],
+          "identifier": "cc_by_2_5-2664cdba-0ee6-a527-2588-8a3a1be3ecae"
         }
       ],
-      "license_expressions": [
-        "cc-by-2.5"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 19.72,
       "copyrights": [
         {
@@ -4106,12 +4168,8 @@
           "end_line": 10
         }
       ],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "cc-by-2.5",
             "count": 1
@@ -4166,49 +4224,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "lgpl-2.1-plus",
+      "detected_license_expression_spdx": "LGPL-2.1-or-later",
+      "license_detections": [
         {
-          "key": "lgpl-2.1-plus",
-          "score": 100.0,
-          "name": "GNU Lesser General Public License 2.1 or later",
-          "short_name": "LGPL 2.1 or later",
-          "category": "Copyleft Limited",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Free Software Foundation (FSF)",
-          "homepage_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "text_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/lgpl-2.1-plus",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.yml",
-          "spdx_license_key": "LGPL-2.1-or-later",
-          "spdx_url": "https://spdx.org/licenses/LGPL-2.1-or-later",
-          "start_line": 7,
-          "end_line": 20,
-          "matched_rule": {
-            "identifier": "lgpl-2.1-plus_59.RULE",
-            "license_expression": "lgpl-2.1-plus",
-            "licenses": [
-              "lgpl-2.1-plus"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 125,
-            "matched_length": 125,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "lgpl-2.1-plus",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 7,
+              "end_line": 20,
+              "matched_length": 125,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "lgpl-2.1-plus",
+              "rule_identifier": "lgpl-2.1-plus_59.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl-2.1-plus_59.RULE"
+            }
+          ],
+          "identifier": "lgpl_2_1_plus-3fe3e5e6-cb18-c0a1-f831-f08fab3612c1"
         }
       ],
-      "license_expressions": [
-        "lgpl-2.1-plus"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 78.62,
       "copyrights": [
         {
@@ -4225,12 +4267,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "lgpl-2.1-plus",
             "count": 1
@@ -4285,8 +4323,14 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [],
       "holders": [],
@@ -4297,12 +4341,8 @@
           "end_line": 4
         }
       ],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": null,
             "count": 1
@@ -4357,8 +4397,14 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [],
       "holders": [],
@@ -4369,12 +4415,8 @@
           "end_line": 3
         }
       ],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": null,
             "count": 1
@@ -4429,49 +4471,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "lgpl-2.1-plus",
+      "detected_license_expression_spdx": "LGPL-2.1-or-later",
+      "license_detections": [
         {
-          "key": "lgpl-2.1-plus",
-          "score": 100.0,
-          "name": "GNU Lesser General Public License 2.1 or later",
-          "short_name": "LGPL 2.1 or later",
-          "category": "Copyleft Limited",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Free Software Foundation (FSF)",
-          "homepage_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "text_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/lgpl-2.1-plus",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/lgpl-2.1-plus.yml",
-          "spdx_license_key": "LGPL-2.1-or-later",
-          "spdx_url": "https://spdx.org/licenses/LGPL-2.1-or-later",
-          "start_line": 7,
-          "end_line": 20,
-          "matched_rule": {
-            "identifier": "lgpl-2.1-plus_59.RULE",
-            "license_expression": "lgpl-2.1-plus",
-            "licenses": [
-              "lgpl-2.1-plus"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 125,
-            "matched_length": 125,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "lgpl-2.1-plus",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 7,
+              "end_line": 20,
+              "matched_length": 125,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "lgpl-2.1-plus",
+              "rule_identifier": "lgpl-2.1-plus_59.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl-2.1-plus_59.RULE"
+            }
+          ],
+          "identifier": "lgpl_2_1_plus-3fe3e5e6-cb18-c0a1-f831-f08fab3612c1"
         }
       ],
-      "license_expressions": [
-        "lgpl-2.1-plus"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 78.12,
       "copyrights": [
         {
@@ -4488,12 +4514,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "lgpl-2.1-plus",
             "count": 1
@@ -4548,8 +4570,14 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [],
       "holders": [],
@@ -4560,12 +4588,8 @@
           "end_line": 3
         }
       ],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": null,
             "count": 1
@@ -4620,18 +4644,20 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": null,
             "count": 1
@@ -4686,21 +4712,27 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 3
+          },
+          {
+            "value": null,
+            "count": 1
           }
         ],
         "copyrights": [
@@ -4768,51 +4800,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 42.86,
       "copyrights": [
         {
@@ -4829,12 +4858,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -4889,49 +4914,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 6,
-          "end_line": 23,
-          "matched_rule": {
-            "identifier": "zlib_17.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 144,
-            "matched_length": 144,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-b04102d0-a663-78b5-de18-9677ee48ce9c"
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 69.57,
       "copyrights": [
         {
@@ -4948,12 +4957,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -5008,51 +5013,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 20.34,
       "copyrights": [
         {
@@ -5069,12 +5071,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -5129,59 +5127,39 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "cc0-1.0",
-          "score": 99.69,
-          "name": "Creative Commons CC0 1.0 Universal",
-          "short_name": "CC0-1.0",
-          "category": "Public Domain",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Creative Commons",
-          "homepage_url": "http://creativecommons.org/publicdomain/zero/1.0/",
-          "text_url": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/cc0-1.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/cc0-1.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/cc0-1.0.yml",
-          "spdx_license_key": "CC0-1.0",
-          "spdx_url": "https://spdx.org/licenses/CC0-1.0",
-          "start_line": 1,
-          "end_line": 98,
-          "matched_rule": {
-            "identifier": "cc0-1.0_155.RULE",
-            "license_expression": "cc0-1.0",
-            "licenses": [
-              "cc0-1.0"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "3-seq",
-            "rule_length": 981,
-            "matched_length": 978,
-            "match_coverage": 99.69,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "cc0-1.0"
-      ],
-      "percentage_of_license_text": 100.0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": "cc0-1.0",
+      "detected_license_expression_spdx": "CC0-1.0",
+      "license_detections": [
+        {
+          "license_expression": "cc0-1.0",
+          "matches": [
+            {
+              "score": 99.69,
+              "start_line": 1,
+              "end_line": 98,
+              "matched_length": 978,
+              "match_coverage": 99.69,
+              "matcher": "3-seq",
+              "license_expression": "cc0-1.0",
+              "rule_identifier": "cc0-1.0_155.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/cc0-1.0_155.RULE"
+            }
+          ],
+          "identifier": "cc0_1_0-4be2dd81-b884-28ac-690a-75aff1b0e963"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 100.0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "cc0-1.0",
             "count": 1
@@ -5236,59 +5214,6 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "artistic-2.0",
-          "score": 100.0,
-          "name": "Artistic License 2.0",
-          "short_name": "Artistic 2.0",
-          "category": "Copyleft Limited",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Perl Foundation",
-          "homepage_url": "http://www.perlfoundation.org/",
-          "text_url": "https://www.perlfoundation.org/artistic_license_2_0",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/artistic-2.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/artistic-2.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/artistic-2.0.yml",
-          "spdx_license_key": "Artistic-2.0",
-          "spdx_url": "https://spdx.org/licenses/Artistic-2.0",
-          "start_line": 198,
-          "end_line": 198,
-          "matched_rule": {
-            "identifier": "artistic-2.0_46.RULE",
-            "license_expression": "artistic-2.0",
-            "licenses": [
-              "artistic-2.0"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": true,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 4,
-            "matched_length": 4,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "artistic-2.0"
-      ],
-      "percentage_of_license_text": 0.1,
-      "copyrights": [],
-      "holders": [],
-      "authors": [
-        {
-          "author": "name' Isaac Z.",
-          "start_line": 16,
-          "end_line": 17
-        }
-      ],
       "package_data": [
         {
           "type": "npm",
@@ -7496,10 +7421,34 @@
           "code_view_url": null,
           "vcs_url": "git+https://github.com/npm/npm.git@fc7bbf03e39cc48a8924b90696d28345a6a90f3c",
           "copyright": null,
-          "license_expression": "artistic-2.0",
-          "declared_license": [
-            "Artistic-2.0"
+          "holder": null,
+          "declared_license_expression": "artistic-2.0",
+          "declared_license_expression_spdx": "Artistic-2.0",
+          "license_detections": [
+            {
+              "license_expression": "artistic-2.0",
+              "matches": [
+                {
+                  "score": 50.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 3,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "artistic-2.0",
+                  "rule_identifier": "spdx_license_id_artistic-2.0_for_artistic-2.0.RULE",
+                  "rule_relevance": 50,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/spdx_license_id_artistic-2.0_for_artistic-2.0.RULE",
+                  "matched_text": "Artistic-2.0"
+                }
+              ],
+              "identifier": "artistic_2_0-2ca48deb-7b37-fc93-edd9-b349ad073774"
+            }
           ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "- Artistic-2.0\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -8286,8 +8235,41 @@
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": "artistic-2.0",
+      "detected_license_expression_spdx": "Artistic-2.0",
+      "license_detections": [
+        {
+          "license_expression": "artistic-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 198,
+              "end_line": 198,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "artistic-2.0",
+              "rule_identifier": "artistic-2.0_46.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/artistic-2.0_46.RULE"
+            }
+          ],
+          "identifier": "artistic_2_0-c1ede1c6-eb3d-61cc-53ad-abba5e17c732"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.1,
+      "copyrights": [],
+      "holders": [],
+      "authors": [
+        {
+          "author": "name' Isaac Z.",
+          "start_line": 16,
+          "end_line": 17
+        }
+      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "artistic-2.0",
             "count": 1
@@ -8342,21 +8324,27 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 9
+          },
+          {
+            "value": null,
+            "count": 1
           },
           {
             "value": "boost-1.0",
@@ -8484,18 +8472,24 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
+          {
+            "value": null,
+            "count": 1
+          },
           {
             "value": "gpl-2.0-plus WITH ada-linking-exception",
             "count": 1
@@ -8545,89 +8539,33 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "gpl-2.0-plus WITH ada-linking-exception",
+      "detected_license_expression_spdx": "GPL-2.0-or-later WITH GNAT-exception",
+      "license_detections": [
         {
-          "key": "gpl-2.0-plus",
-          "score": 100.0,
-          "name": "GNU General Public License 2.0 or later",
-          "short_name": "GPL 2.0 or later",
-          "category": "Copyleft",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Free Software Foundation (FSF)",
-          "homepage_url": "http://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html",
-          "text_url": "http://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/gpl-2.0-plus",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/gpl-2.0-plus.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/gpl-2.0-plus.yml",
-          "spdx_license_key": "GPL-2.0-or-later",
-          "spdx_url": "https://spdx.org/licenses/GPL-2.0-or-later",
-          "start_line": 6,
-          "end_line": 25,
-          "matched_rule": {
-            "identifier": "gpl-2.0-plus_with_ada-linking-exception_1.RULE",
-            "license_expression": "gpl-2.0-plus WITH ada-linking-exception",
-            "licenses": [
-              "gpl-2.0-plus",
-              "ada-linking-exception"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 176,
-            "matched_length": 176,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        },
-        {
-          "key": "ada-linking-exception",
-          "score": 100.0,
-          "name": "Ada linking exception to GPL 2.0 or later",
-          "short_name": "Ada linking exception to GPL 2.0 or later",
-          "category": "Copyleft Limited",
-          "is_exception": true,
-          "is_unknown": false,
-          "owner": "Dmitriy Anisimkov",
-          "homepage_url": null,
-          "text_url": "",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/ada-linking-exception",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/ada-linking-exception.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/ada-linking-exception.yml",
-          "spdx_license_key": "LicenseRef-scancode-ada-linking-exception",
-          "spdx_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/ada-linking-exception.LICENSE",
-          "start_line": 6,
-          "end_line": 25,
-          "matched_rule": {
-            "identifier": "gpl-2.0-plus_with_ada-linking-exception_1.RULE",
-            "license_expression": "gpl-2.0-plus WITH ada-linking-exception",
-            "licenses": [
-              "gpl-2.0-plus",
-              "ada-linking-exception"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 176,
-            "matched_length": 176,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "gpl-2.0-plus WITH ada-linking-exception",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 25,
+              "matched_length": 176,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "gpl-2.0-plus WITH ada-linking-exception",
+              "rule_identifier": "gpl-2.0-plus_with_ada-linking-exception_1.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-2.0-plus_with_ada-linking-exception_1.RULE"
+            }
+          ],
+          "identifier": "gpl_2_0_plus_with_ada_linking_exception-ca27fab9-344b-58b2-3c05-f3ca150dad7e"
         }
       ],
-      "license_expressions": [
-        "gpl-2.0-plus WITH ada-linking-exception"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 94.12,
       "copyrights": [
         {
@@ -8644,12 +8582,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "gpl-2.0-plus WITH ada-linking-exception",
             "count": 1
@@ -8704,51 +8638,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 42.86,
       "copyrights": [
         {
@@ -8765,12 +8696,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -8825,51 +8752,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 40.0,
       "copyrights": [
         {
@@ -8886,12 +8810,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -8946,51 +8866,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 50.0,
       "copyrights": [
         {
@@ -9007,12 +8924,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -9067,18 +8980,24 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
+          {
+            "value": null,
+            "count": 1
+          },
           {
             "value": "boost-1.0",
             "count": 1
@@ -9137,8 +9056,14 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [
         {
@@ -9155,12 +9080,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": null,
             "count": 1
@@ -9215,51 +9136,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "boost-1.0",
+      "detected_license_expression_spdx": "BSL-1.0",
+      "license_detections": [
         {
-          "key": "boost-1.0",
-          "score": 100.0,
-          "name": "Boost Software License 1.0",
-          "short_name": "Boost 1.0",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Boost",
-          "homepage_url": "http://www.boost.org/users/license.html",
-          "text_url": "http://www.boost.org/LICENSE_1_0.txt",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/boost-1.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/boost-1.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/boost-1.0.yml",
-          "spdx_license_key": "BSL-1.0",
-          "spdx_url": "https://spdx.org/licenses/BSL-1.0",
-          "start_line": 4,
-          "end_line": 5,
-          "matched_rule": {
-            "identifier": "boost-1.0_21.RULE",
-            "license_expression": "boost-1.0",
-            "licenses": [
-              "boost-1.0"
-            ],
-            "referenced_filenames": [
-              "LICENSE_1_0.txt"
-            ],
-            "is_license_text": false,
-            "is_license_notice": true,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 32,
-            "matched_length": 32,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "boost-1.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 5,
+              "matched_length": 32,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "boost-1.0",
+              "rule_identifier": "boost-1.0_21.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/boost-1.0_21.RULE"
+            }
+          ],
+          "identifier": "boost_1_0-7d91c102-4b73-b55e-398c-cca7ae1e7bf5"
         }
       ],
-      "license_expressions": [
-        "boost-1.0"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 88.89,
       "copyrights": [
         {
@@ -9276,12 +9179,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "boost-1.0",
             "count": 1
@@ -9336,18 +9235,24 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
+          {
+            "value": null,
+            "count": 1
+          },
           {
             "value": "zlib",
             "count": 1
@@ -9402,49 +9307,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 17,
-          "end_line": 31,
-          "matched_rule": {
-            "identifier": "zlib.LICENSE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 132,
-            "matched_length": 132,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 17,
+              "end_line": 31,
+              "matched_length": 132,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib.LICENSE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE"
+            }
+          ],
+          "identifier": "zlib-f32ae987-c66a-44ce-bd13-c90e0c59aab8"
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 50.0,
       "copyrights": [
         {
@@ -9467,12 +9356,8 @@
           "end_line": 12
         }
       ],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -9527,21 +9412,27 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 2
+          },
+          {
+            "value": null,
+            "count": 1
           }
         ],
         "copyrights": [
@@ -9593,51 +9484,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            }
+          ],
+          "identifier": "zlib-27de81f4-f6ce-2bf5-ab37-9a4c71f4b296"
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 44.44,
       "copyrights": [
         {
@@ -9654,12 +9527,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -9714,51 +9583,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            }
+          ],
+          "identifier": "zlib-27de81f4-f6ce-2bf5-ab37-9a4c71f4b296"
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 50.0,
       "copyrights": [
         {
@@ -9775,12 +9626,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -9835,18 +9682,24 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
+          {
+            "value": null,
+            "count": 1
+          },
           {
             "value": "mit-old-style",
             "count": 1
@@ -9901,49 +9754,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "mit-old-style",
+      "detected_license_expression_spdx": "LicenseRef-scancode-mit-old-style",
+      "license_detections": [
         {
-          "key": "mit-old-style",
-          "score": 100.0,
-          "name": "MIT Old Style",
-          "short_name": "MIT Old Style",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "MIT",
-          "homepage_url": "http://fedoraproject.org/wiki/Licensing:MIT#Old_Style",
-          "text_url": "http://fedoraproject.org/wiki/Licensing:MIT#Old_Style",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/mit-old-style",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit-old-style.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit-old-style.yml",
-          "spdx_license_key": "LicenseRef-scancode-mit-old-style",
-          "spdx_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit-old-style.LICENSE",
-          "start_line": 9,
-          "end_line": 15,
-          "matched_rule": {
-            "identifier": "mit-old-style_cmr-no_1.RULE",
-            "license_expression": "mit-old-style",
-            "licenses": [
-              "mit-old-style"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 71,
-            "matched_length": 71,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "mit-old-style",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 9,
+              "end_line": 15,
+              "matched_length": 71,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit-old-style",
+              "rule_identifier": "mit-old-style_cmr-no_1.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit-old-style_cmr-no_1.RULE"
+            }
+          ],
+          "identifier": "mit_old_style-578ee504-a9b5-6c26-1bb4-fd7b80a664f0"
         }
       ],
-      "license_expressions": [
-        "mit-old-style"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 79.78,
       "copyrights": [
         {
@@ -9960,12 +9797,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "mit-old-style",
             "count": 1
@@ -10020,49 +9853,33 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 6,
-          "end_line": 23,
-          "matched_rule": {
-            "identifier": "zlib_17.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 144,
-            "matched_length": 144,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-b04102d0-a663-78b5-de18-9677ee48ce9c"
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 84.21,
       "copyrights": [
         {
@@ -10079,12 +9896,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -10139,51 +9952,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 37.5,
       "copyrights": [
         {
@@ -10200,12 +10010,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1
@@ -10260,51 +10066,48 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "zlib",
+      "detected_license_expression_spdx": "Zlib",
+      "license_detections": [
         {
-          "key": "zlib",
-          "score": 100.0,
-          "name": "ZLIB License",
-          "short_name": "ZLIB License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "zlib",
-          "homepage_url": "http://www.zlib.net/",
-          "text_url": "http://www.gzip.org/zlib/zlib_license.html",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/zlib",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/zlib.yml",
-          "spdx_license_key": "Zlib",
-          "spdx_url": "https://spdx.org/licenses/Zlib",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "zlib_5.RULE",
-            "license_expression": "zlib",
-            "licenses": [
-              "zlib"
-            ],
-            "referenced_filenames": [
-              "zlib.h"
-            ],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 12,
-            "matched_length": 12,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "zlib",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 12,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_5.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_5.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 6,
+              "end_line": 23,
+              "matched_length": 144,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "zlib",
+              "rule_identifier": "zlib_17.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/zlib_17.RULE"
+            }
+          ],
+          "identifier": "zlib-663c0d51-510f-fca6-b163-671ecb188ff9",
+          "detection_log": [
+            "unknown-reference-to-local-file"
+          ]
         }
       ],
-      "license_expressions": [
-        "zlib"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 20.34,
       "copyrights": [
         {
@@ -10321,12 +10124,8 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:npm/npm@2.13.5?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
       "tallies": {
-        "license_expressions": [
+        "detected_license_expression": [
           {
             "value": "zlib",
             "count": 1

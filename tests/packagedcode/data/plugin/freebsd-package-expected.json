@@ -1,5 +1,4 @@
 {
-  "dependencies": [],
   "packages": [
     {
       "type": "freebsd",
@@ -37,13 +36,34 @@
       "code_view_url": "https://svnweb.freebsd.org/ports/head/sysutils/dmidecode",
       "vcs_url": null,
       "copyright": null,
-      "license_expression": "gpl-2.0",
-      "declared_license": {
-        "licenses": [
-          "GPLv2"
-        ],
-        "licenselogic": "single"
-      },
+      "holder": null,
+      "declared_license_expression": "gpl-2.0",
+      "declared_license_expression_spdx": "GPL-2.0-only",
+      "license_detections": [
+        {
+          "license_expression": "gpl-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "gpl-2.0",
+              "rule_identifier": "gpl-2.0_bare_single_word.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-2.0_bare_single_word.RULE",
+              "matched_text": "GPLv2"
+            }
+          ],
+          "identifier": "gpl_2_0-3aa0fcde-6d7f-a8e2-6494-7f9352e6aafb"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "{'licenses': ['GPLv2'], 'licenselogic': 'single'}",
       "notice_text": null,
       "source_packages": [],
       "extra_data": {},
@@ -60,6 +80,7 @@
       "purl": "pkg:freebsd/dmidecode@2.12?arch=freebsd:10:x86:64&origin=sysutils/dmidecode"
     }
   ],
+  "dependencies": [],
   "files": [
     {
       "path": "+COMPACT_MANIFEST",
@@ -101,13 +122,34 @@
           "code_view_url": "https://svnweb.freebsd.org/ports/head/sysutils/dmidecode",
           "vcs_url": null,
           "copyright": null,
-          "license_expression": "gpl-2.0",
-          "declared_license": {
-            "licenses": [
-              "GPLv2"
-            ],
-            "licenselogic": "single"
-          },
+          "holder": null,
+          "declared_license_expression": "gpl-2.0",
+          "declared_license_expression_spdx": "GPL-2.0-only",
+          "license_detections": [
+            {
+              "license_expression": "gpl-2.0",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "gpl-2.0",
+                  "rule_identifier": "gpl-2.0_bare_single_word.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-2.0_bare_single_word.RULE",
+                  "matched_text": "GPLv2"
+                }
+              ],
+              "identifier": "gpl_2_0-3aa0fcde-6d7f-a8e2-6494-7f9352e6aafb"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "{'licenses': ['GPLv2'], 'licenselogic': 'single'}",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],

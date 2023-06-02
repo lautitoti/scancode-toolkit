@@ -1,4 +1,72 @@
 {
+  "packages": [
+    {
+      "type": "conda",
+      "namespace": null,
+      "name": "requests-kerberos",
+      "version": "0.8.0",
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": null,
+      "description": "Kerberos authentication handler for python-requests",
+      "release_date": null,
+      "parties": [],
+      "keywords": [],
+      "homepage_url": "https://github.com/requests/requests-kerberos",
+      "download_url": "https://pypi.python.org/packages/source/r/requests-kerberos/requests-kerberos-0.8.0.tar.gz",
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": null,
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "unknown-license-reference",
+      "declared_license_expression_spdx": "LicenseRef-scancode-unknown-license-reference",
+      "license_detections": [
+        {
+          "license_expression": "unknown-license-reference",
+          "matches": [
+            {
+              "score": 80.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "unknown-license-reference",
+              "rule_identifier": "unknown_license_other_12.RULE",
+              "rule_relevance": 80,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown_license_other_12.RULE",
+              "matched_text": "license Other"
+            }
+          ],
+          "identifier": "unknown_license_reference-e1d5d99b-3b3e-7d4b-a3c1-71248ff49c51"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "Other",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {},
+      "repository_homepage_url": null,
+      "repository_download_url": null,
+      "api_data_url": null,
+      "package_uid": "pkg:conda/requests-kerberos@0.8.0?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_paths": [
+        "info/recipe.tar-extract/recipe/meta.yaml"
+      ],
+      "datasource_ids": [
+        "conda_meta_yaml"
+      ],
+      "purl": "pkg:conda/requests-kerberos@0.8.0"
+    }
+  ],
   "dependencies": [
     {
       "purl": "pkg:conda/zlib",
@@ -169,48 +237,6 @@
       "datasource_id": "conda_meta_yaml"
     }
   ],
-  "packages": [
-    {
-      "type": "conda",
-      "namespace": null,
-      "name": "requests-kerberos",
-      "version": "0.8.0",
-      "qualifiers": {},
-      "subpath": null,
-      "primary_language": null,
-      "description": "Kerberos authentication handler for python-requests",
-      "release_date": null,
-      "parties": [],
-      "keywords": [],
-      "homepage_url": "https://github.com/requests/requests-kerberos",
-      "download_url": "https://pypi.python.org/packages/source/r/requests-kerberos/requests-kerberos-0.8.0.tar.gz",
-      "size": null,
-      "sha1": null,
-      "md5": null,
-      "sha256": null,
-      "sha512": null,
-      "bug_tracking_url": null,
-      "code_view_url": null,
-      "vcs_url": null,
-      "copyright": null,
-      "license_expression": "unknown",
-      "declared_license": "Other",
-      "notice_text": null,
-      "source_packages": [],
-      "extra_data": {},
-      "repository_homepage_url": null,
-      "repository_download_url": null,
-      "api_data_url": null,
-      "package_uid": "pkg:conda/requests-kerberos@0.8.0?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_paths": [
-        "info/recipe.tar-extract/recipe/meta.yaml"
-      ],
-      "datasource_ids": [
-        "conda_meta_yaml"
-      ],
-      "purl": "pkg:conda/requests-kerberos@0.8.0"
-    }
-  ],
   "files": [
     {
       "path": "info",
@@ -266,8 +292,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": "unknown",
-          "declared_license": "Other",
+          "holder": null,
+          "declared_license_expression": "unknown-license-reference",
+          "declared_license_expression_spdx": "LicenseRef-scancode-unknown-license-reference",
+          "license_detections": [
+            {
+              "license_expression": "unknown-license-reference",
+              "matches": [
+                {
+                  "score": 80.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 2,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "unknown-license-reference",
+                  "rule_identifier": "unknown_license_other_12.RULE",
+                  "rule_relevance": 80,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown_license_other_12.RULE",
+                  "matched_text": "license Other"
+                }
+              ],
+              "identifier": "unknown_license_reference-e1d5d99b-3b3e-7d4b-a3c1-71248ff49c51"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "Other",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],

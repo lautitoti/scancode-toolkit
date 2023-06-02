@@ -1,5 +1,43 @@
 {
-  "dependencies": [],
+  "summary": {
+    "declared_license_expression": "apache-2.0 AND mit",
+    "license_clarity_score": {
+      "score": 100,
+      "declared_license": true,
+      "identification_precision": true,
+      "has_license_text": true,
+      "declared_copyrights": true,
+      "conflicting_license_categories": false,
+      "ambiguous_compound_licensing": false
+    },
+    "declared_holder": "Example Corp.",
+    "primary_language": "Python",
+    "other_license_expressions": [
+      {
+        "value": "apache-2.0",
+        "count": 2
+      },
+      {
+        "value": "mit",
+        "count": 2
+      },
+      {
+        "value": null,
+        "count": 1
+      },
+      {
+        "value": "apache-2.0 AND (apache-2.0 OR mit)",
+        "count": 1
+      }
+    ],
+    "other_holders": [
+      {
+        "value": null,
+        "count": 4
+      }
+    ],
+    "other_languages": []
+  },
   "packages": [
     {
       "type": "cargo",
@@ -32,8 +70,34 @@
       "code_view_url": null,
       "vcs_url": null,
       "copyright": null,
-      "license_expression": "mit",
-      "declared_license": "MIT",
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "MIT",
       "notice_text": null,
       "source_packages": [],
       "extra_data": {},
@@ -80,10 +144,34 @@
       "code_view_url": null,
       "vcs_url": null,
       "copyright": null,
-      "license_expression": "apache-2.0",
-      "declared_license": {
-        "license": "apache-2.0"
-      },
+      "holder": null,
+      "declared_license_expression": "apache-2.0",
+      "declared_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 3,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "spdx_license_id_apache-2.0_for_apache-2.0.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/spdx_license_id_apache-2.0_for_apache-2.0.RULE",
+              "matched_text": "apache-2.0"
+            }
+          ],
+          "identifier": "apache_2_0-d66ab77d-a5cc-7104-e702-dc7df61fe9e8"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "license: apache-2.0\n",
       "notice_text": null,
       "source_packages": [],
       "extra_data": {},
@@ -100,41 +188,39 @@
       "purl": "pkg:pypi/codebase"
     }
   ],
-  "summary": {
-    "declared_license_expression": "apache-2.0 AND mit",
-    "license_clarity_score": {
-      "score": 100,
-      "declared_license": true,
-      "identification_precision": true,
-      "has_license_text": true,
-      "declared_copyrights": true,
-      "conflicting_license_categories": false,
-      "ambiguous_compound_licensing": false
+  "dependencies": [],
+  "license_detections": [
+    {
+      "identifier": "apache_2_0-9804422e-94ac-ad40-b53a-ee6f8ddb7a3b",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
     },
-    "declared_holder": "Example Corp.",
-    "primary_language": "Python",
-    "other_license_expressions": [
-      {
-        "value": "apache-2.0",
-        "count": 3
-      },
-      {
-        "value": "mit",
-        "count": 2
-      },
-      {
-        "value": "apache-2.0 OR mit",
-        "count": 1
-      }
-    ],
-    "other_holders": [
-      {
-        "value": null,
-        "count": 4
-      }
-    ],
-    "other_languages": []
-  },
+    {
+      "identifier": "mit-3fce6ea2-8abd-6c6b-3ede-a37af7c6efee",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "mit-cacd5c0c-204a-85c2-affc-e4c125b2492a",
+      "license_expression": "mit",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0_and__apache_2_0_or_mit-9b638e72-e872-a67f-3447-eec297ef7b39",
+      "license_expression": "apache-2.0 AND (apache-2.0 OR mit)",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-ec759ae0-ea5a-f138-793e-388520e080c0",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    },
+    {
+      "identifier": "apache_2_0-d66ab77d-a5cc-7104-e702-dc7df61fe9e8",
+      "license_expression": "apache-2.0",
+      "detection_count": 1
+    }
+  ],
   "files": [
     {
       "path": "codebase",
@@ -155,12 +241,6 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
-      "percentage_of_license_text": 0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [],
       "is_legal": false,
@@ -168,6 +248,14 @@
       "is_readme": false,
       "is_top_level": true,
       "is_key_file": false,
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
+      "percentage_of_license_text": 0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "files_count": 5,
       "dirs_count": 0,
       "size_count": 11432,
@@ -192,128 +280,50 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
+      "package_data": [],
+      "for_packages": [
+        "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "is_legal": false,
+      "is_manifest": false,
+      "is_readme": true,
+      "is_top_level": true,
+      "is_key_file": true,
+      "detected_license_expression": "apache-2.0 AND (apache-2.0 OR mit)",
+      "detected_license_expression_spdx": "Apache-2.0 AND (Apache-2.0 OR MIT)",
+      "license_detections": [
         {
-          "key": "apache-2.0",
-          "score": 80.0,
-          "name": "Apache License 2.0",
-          "short_name": "Apache 2.0",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Apache Software Foundation",
-          "homepage_url": "http://www.apache.org/licenses/",
-          "text_url": "http://www.apache.org/licenses/LICENSE-2.0",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/apache-2.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.yml",
-          "spdx_license_key": "Apache-2.0",
-          "spdx_url": "https://spdx.org/licenses/Apache-2.0",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "apache-2.0_73.RULE",
-            "license_expression": "apache-2.0",
-            "licenses": [
-              "apache-2.0"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 4,
-            "matched_length": 4,
-            "match_coverage": 100.0,
-            "rule_relevance": 80
-          }
-        },
-        {
-          "key": "apache-2.0",
-          "score": 100.0,
-          "name": "Apache License 2.0",
-          "short_name": "Apache 2.0",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Apache Software Foundation",
-          "homepage_url": "http://www.apache.org/licenses/",
-          "text_url": "http://www.apache.org/licenses/LICENSE-2.0",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/apache-2.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.yml",
-          "spdx_license_key": "Apache-2.0",
-          "spdx_url": "https://spdx.org/licenses/Apache-2.0",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "apache-2.0_or_mit_36.RULE",
-            "license_expression": "apache-2.0 OR mit",
-            "licenses": [
-              "apache-2.0",
-              "mit"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 5,
-            "matched_length": 5,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        },
-        {
-          "key": "mit",
-          "score": 100.0,
-          "name": "MIT License",
-          "short_name": "MIT License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "MIT",
-          "homepage_url": "http://opensource.org/licenses/mit-license.php",
-          "text_url": "http://opensource.org/licenses/mit-license.php",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/mit",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.yml",
-          "spdx_license_key": "MIT",
-          "spdx_url": "https://spdx.org/licenses/MIT",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "apache-2.0_or_mit_36.RULE",
-            "license_expression": "apache-2.0 OR mit",
-            "licenses": [
-              "apache-2.0",
-              "mit"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": true,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 5,
-            "matched_length": 5,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
+          "license_expression": "apache-2.0 AND (apache-2.0 OR mit)",
+          "matches": [
+            {
+              "score": 80.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_73.RULE",
+              "rule_relevance": 80,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_73.RULE"
+            },
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0 OR mit",
+              "rule_identifier": "apache-2.0_or_mit_36.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_or_mit_36.RULE"
+            }
+          ],
+          "identifier": "apache_2_0_and__apache_2_0_or_mit-9b638e72-e872-a67f-3447-eec297ef7b39"
         }
       ],
-      "license_expressions": [
-        "apache-2.0",
-        "apache-2.0 OR mit"
-      ],
+      "license_clues": [],
       "percentage_of_license_text": 57.14,
       "copyrights": [
         {
@@ -330,15 +340,6 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [
-        "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
-      ],
-      "is_legal": false,
-      "is_manifest": false,
-      "is_readme": true,
-      "is_top_level": true,
-      "is_key_file": true,
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,
@@ -363,53 +364,6 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "apache-2.0",
-          "score": 100.0,
-          "name": "Apache License 2.0",
-          "short_name": "Apache 2.0",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Apache Software Foundation",
-          "homepage_url": "http://www.apache.org/licenses/",
-          "text_url": "http://www.apache.org/licenses/LICENSE-2.0",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/apache-2.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.yml",
-          "spdx_license_key": "Apache-2.0",
-          "spdx_url": "https://spdx.org/licenses/Apache-2.0",
-          "start_line": 1,
-          "end_line": 176,
-          "matched_rule": {
-            "identifier": "apache-2.0_93.RULE",
-            "license_expression": "apache-2.0",
-            "licenses": [
-              "apache-2.0"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "1-hash",
-            "rule_length": 1410,
-            "matched_length": 1410,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "apache-2.0"
-      ],
-      "percentage_of_license_text": 100.0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
@@ -419,6 +373,33 @@
       "is_readme": false,
       "is_top_level": true,
       "is_key_file": true,
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 176,
+              "matched_length": 1410,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_93.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_93.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-9804422e-94ac-ad40-b53a-ee6f8ddb7a3b"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 100.0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,
@@ -443,59 +424,6 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "mit",
-          "score": 100.0,
-          "name": "MIT License",
-          "short_name": "MIT License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "MIT",
-          "homepage_url": "http://opensource.org/licenses/mit-license.php",
-          "text_url": "http://opensource.org/licenses/mit-license.php",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/mit",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.yml",
-          "spdx_license_key": "MIT",
-          "spdx_url": "https://spdx.org/licenses/MIT",
-          "start_line": 4,
-          "end_line": 4,
-          "matched_rule": {
-            "identifier": "mit_30.RULE",
-            "license_expression": "mit",
-            "licenses": [
-              "mit"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": true,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 2,
-            "matched_length": 2,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "mit"
-      ],
-      "percentage_of_license_text": 25.0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [
-        {
-          "author": "Demo Corporation",
-          "start_line": 3,
-          "end_line": 3
-        }
-      ],
       "package_data": [
         {
           "type": "cargo",
@@ -528,8 +456,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": "MIT",
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "MIT",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -547,10 +501,43 @@
         "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
       "is_legal": false,
-      "is_manifest": true,
+      "is_manifest": false,
       "is_readme": false,
-      "is_top_level": true,
-      "is_key_file": true,
+      "is_top_level": false,
+      "is_key_file": false,
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 4,
+              "matched_length": 2,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "mit",
+              "rule_identifier": "mit_30.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/mit_30.RULE"
+            }
+          ],
+          "identifier": "mit-3fce6ea2-8abd-6c6b-3ede-a37af7c6efee"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 25.0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [
+        {
+          "author": "Demo Corporation",
+          "start_line": 3,
+          "end_line": 3
+        }
+      ],
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,
@@ -575,53 +562,6 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "mit",
-          "score": 100.0,
-          "name": "MIT License",
-          "short_name": "MIT License",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "MIT",
-          "homepage_url": "http://opensource.org/licenses/mit-license.php",
-          "text_url": "http://opensource.org/licenses/mit-license.php",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/mit",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.yml",
-          "spdx_license_key": "MIT",
-          "spdx_url": "https://spdx.org/licenses/MIT",
-          "start_line": 1,
-          "end_line": 18,
-          "matched_rule": {
-            "identifier": "mit.LICENSE",
-            "license_expression": "mit",
-            "licenses": [
-              "mit"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": true,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": false,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "1-hash",
-            "rule_length": 161,
-            "matched_length": 161,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "mit"
-      ],
-      "percentage_of_license_text": 100.0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [],
       "for_packages": [
         "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
@@ -631,6 +571,33 @@
       "is_readme": false,
       "is_top_level": true,
       "is_key_file": true,
+      "detected_license_expression": "mit",
+      "detected_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 18,
+              "matched_length": 161,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "mit",
+              "rule_identifier": "mit.LICENSE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE"
+            }
+          ],
+          "identifier": "mit-cacd5c0c-204a-85c2-affc-e4c125b2492a"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 100.0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,
@@ -655,53 +622,6 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [
-        {
-          "key": "apache-2.0",
-          "score": 100.0,
-          "name": "Apache License 2.0",
-          "short_name": "Apache 2.0",
-          "category": "Permissive",
-          "is_exception": false,
-          "is_unknown": false,
-          "owner": "Apache Software Foundation",
-          "homepage_url": "http://www.apache.org/licenses/",
-          "text_url": "http://www.apache.org/licenses/LICENSE-2.0",
-          "reference_url": "https://scancode-licensedb.aboutcode.org/apache-2.0",
-          "scancode_text_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.LICENSE",
-          "scancode_data_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/apache-2.0.yml",
-          "spdx_license_key": "Apache-2.0",
-          "spdx_url": "https://spdx.org/licenses/Apache-2.0",
-          "start_line": 3,
-          "end_line": 3,
-          "matched_rule": {
-            "identifier": "apache-2.0_65.RULE",
-            "license_expression": "apache-2.0",
-            "licenses": [
-              "apache-2.0"
-            ],
-            "referenced_filenames": [],
-            "is_license_text": false,
-            "is_license_notice": false,
-            "is_license_reference": false,
-            "is_license_tag": true,
-            "is_license_intro": false,
-            "has_unknown": false,
-            "matcher": "2-aho",
-            "rule_length": 4,
-            "matched_length": 4,
-            "match_coverage": 100.0,
-            "rule_relevance": 100
-          }
-        }
-      ],
-      "license_expressions": [
-        "apache-2.0"
-      ],
-      "percentage_of_license_text": 40.0,
-      "copyrights": [],
-      "holders": [],
-      "authors": [],
       "package_data": [
         {
           "type": "pypi",
@@ -734,10 +654,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": {
-            "license": "apache-2.0"
-          },
+          "holder": null,
+          "declared_license_expression": "apache-2.0",
+          "declared_license_expression_spdx": "Apache-2.0",
+          "license_detections": [
+            {
+              "license_expression": "apache-2.0",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 3,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "apache-2.0",
+                  "rule_identifier": "spdx_license_id_apache-2.0_for_apache-2.0.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/spdx_license_id_apache-2.0_for_apache-2.0.RULE",
+                  "matched_text": "apache-2.0"
+                }
+              ],
+              "identifier": "apache_2_0-d66ab77d-a5cc-7104-e702-dc7df61fe9e8"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "license: apache-2.0\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -754,10 +698,37 @@
         "pkg:pypi/codebase?uuid=fixed-uid-done-for-testing-5642512d1758"
       ],
       "is_legal": false,
-      "is_manifest": true,
+      "is_manifest": false,
       "is_readme": false,
-      "is_top_level": true,
-      "is_key_file": true,
+      "is_top_level": false,
+      "is_key_file": false,
+      "detected_license_expression": "apache-2.0",
+      "detected_license_expression_spdx": "Apache-2.0",
+      "license_detections": [
+        {
+          "license_expression": "apache-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 3,
+              "end_line": 3,
+              "matched_length": 4,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "apache-2.0",
+              "rule_identifier": "apache-2.0_65.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/apache-2.0_65.RULE"
+            }
+          ],
+          "identifier": "apache_2_0-ec759ae0-ea5a-f138-793e-388520e080c0"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 40.0,
+      "copyrights": [],
+      "holders": [],
+      "authors": [],
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,

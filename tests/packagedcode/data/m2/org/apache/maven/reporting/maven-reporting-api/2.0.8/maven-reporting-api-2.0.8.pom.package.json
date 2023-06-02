@@ -11,7 +11,7 @@
   "parties": [
     {
       "type": "person",
-      "role": "developper",
+      "role": "developer",
       "name": "Vincent Siveton",
       "email": "vincent.siveton@gmail.com",
       "url": null
@@ -29,8 +29,14 @@
   "code_view_url": null,
   "vcs_url": null,
   "copyright": null,
-  "license_expression": null,
-  "declared_license": null,
+  "holder": null,
+  "declared_license_expression": null,
+  "declared_license_expression_spdx": null,
+  "license_detections": [],
+  "other_license_expression": null,
+  "other_license_expression_spdx": null,
+  "other_license_detections": [],
+  "extracted_license_statement": null,
   "notice_text": null,
   "source_packages": [
     "pkg:maven/org.apache.maven.reporting/maven-reporting-api@2.0.8?classifier=sources"

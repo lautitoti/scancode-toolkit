@@ -41,6 +41,7 @@ class RedundantCluesFilter(PostScanPlugin):
     Filter redundant clues (copyrights, authors, emails, and urls) that are
     already contained in a matched license text.
     """
+    run_order = 1
     sort_order = 1
 
     options = [
@@ -63,10 +64,8 @@ class RedundantCluesFilter(PostScanPlugin):
 
         from licensedcode.cache import get_index
 
-        rules_by_id = {r.identifier: r for r in get_index().rules_by_rid}
-
         for resource in codebase.walk():
-            filtered = filter_ignorable_resource_clues(resource, rules_by_id)
+            filtered = filter_ignorable_resource_clues(resource, get_index().rules_by_id)
             if filtered:
                 filtered.save(codebase)
 

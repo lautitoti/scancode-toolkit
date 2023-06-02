@@ -1,4 +1,84 @@
 {
+  "packages": [
+    {
+      "type": "bower",
+      "namespace": null,
+      "name": "blue-leaf",
+      "version": null,
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": null,
+      "description": "Physics-like animations for pretty particles",
+      "release_date": null,
+      "parties": [
+        {
+          "type": null,
+          "role": "author",
+          "name": "Betty Beta <bbeta@example.com>",
+          "email": null,
+          "url": null
+        }
+      ],
+      "keywords": [
+        "motion",
+        "physics",
+        "particles"
+      ],
+      "homepage_url": null,
+      "download_url": null,
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": null,
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "MIT",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {},
+      "repository_homepage_url": null,
+      "repository_download_url": null,
+      "api_data_url": null,
+      "package_uid": "pkg:bower/blue-leaf?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_paths": [
+        "bower.json"
+      ],
+      "datasource_ids": [
+        "bower_json"
+      ],
+      "purl": "pkg:bower/blue-leaf"
+    }
+  ],
   "dependencies": [
     {
       "purl": "pkg:bower/get-size",
@@ -43,62 +123,6 @@
       "datasource_id": "bower_json"
     }
   ],
-  "packages": [
-    {
-      "type": "bower",
-      "namespace": null,
-      "name": "blue-leaf",
-      "version": null,
-      "qualifiers": {},
-      "subpath": null,
-      "primary_language": null,
-      "description": "Physics-like animations for pretty particles",
-      "release_date": null,
-      "parties": [
-        {
-          "type": null,
-          "role": "author",
-          "name": "Betty Beta <bbeta@example.com>",
-          "email": null,
-          "url": null
-        }
-      ],
-      "keywords": [
-        "motion",
-        "physics",
-        "particles"
-      ],
-      "homepage_url": null,
-      "download_url": null,
-      "size": null,
-      "sha1": null,
-      "md5": null,
-      "sha256": null,
-      "sha512": null,
-      "bug_tracking_url": null,
-      "code_view_url": null,
-      "vcs_url": null,
-      "copyright": null,
-      "license_expression": "mit",
-      "declared_license": [
-        "MIT"
-      ],
-      "notice_text": null,
-      "source_packages": [],
-      "extra_data": {},
-      "repository_homepage_url": null,
-      "repository_download_url": null,
-      "api_data_url": null,
-      "package_uid": "pkg:bower/blue-leaf?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_paths": [
-        "bower.json"
-      ],
-      "datasource_ids": [
-        "bower_json"
-      ],
-      "purl": "pkg:bower/blue-leaf"
-    }
-  ],
   "files": [
     {
       "path": "bower.json",
@@ -139,10 +163,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": [
-            "MIT"
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            }
           ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "MIT",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],

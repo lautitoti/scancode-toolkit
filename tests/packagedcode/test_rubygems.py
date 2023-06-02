@@ -116,7 +116,7 @@ def create_test_function(test_loc, test_name, regen=REGEN_TEST_FIXTURES):
         expected_json_loc = loc + '.json'
         packages = list(rubygems.GemArchiveHandler.parse(location=loc))
         package = packages[0]
-        package.license_expression = rubygems.GemArchiveHandler.compute_normalized_license(package)
+        package.populate_license_fields()
         package = [package.to_dict()]
         if regen:
             with io.open(expected_json_loc, 'w') as ex:
@@ -164,6 +164,12 @@ class TestGemfileLock(PackageTester):
     def test_ruby_gemfile_lock_as_dict(self):
         test_file = self.get_test_loc('rubygems/gemfile-lock/Gemfile.lock')
         expected_loc = self.get_test_loc('rubygems/gemfile-lock/Gemfile.lock.expected')
+        packages = rubygems.GemfileLockHandler.parse(test_file)
+        self.check_packages_data(packages, expected_loc, regen=REGEN_TEST_FIXTURES)
+
+    def test_ruby_gemfile_lock_with_path_as_dict(self):
+        test_file = self.get_test_loc('rubygems/gemfile-lock/path/Gemfile.lock')
+        expected_loc = self.get_test_loc('rubygems/gemfile-lock/path/Gemfile.lock.expected')
         packages = rubygems.GemfileLockHandler.parse(test_file)
         self.check_packages_data(packages, expected_loc, regen=REGEN_TEST_FIXTURES)
 

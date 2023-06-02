@@ -11,12 +11,35 @@ from os.path import exists
 from os.path import isdir
 
 import attr
+import os
+import logging
 import saneyaml
 
 from plugincode.post_scan import PostScanPlugin
 from plugincode.post_scan import post_scan_impl
 from commoncode.cliutils import PluggableCommandLineOption
 from commoncode.cliutils import POST_SCAN_GROUP
+from licensedcode.detection import get_license_keys_from_detections
+
+
+TRACE = os.environ.get('SCANCODE_DEBUG_LICENSE_POLICY', False)
+
+
+def logger_debug(*args):
+    pass
+
+
+if TRACE:
+
+    logger = logging.getLogger(__name__)
+
+    import sys
+
+    logging.basicConfig(stream=sys.stdout)
+    logger.setLevel(logging.DEBUG)
+
+    def logger_debug(*args):
+        return logger.debug(' '.join(isinstance(a, str) and a or repr(a) for a in args))
 
 
 @post_scan_impl
@@ -26,8 +49,9 @@ class LicensePolicy(PostScanPlugin):
     detected license key that is found in the license_policy.yml file
     """
 
-    resource_attributes = dict(license_policy=attr.ib(default=attr.Factory(dict)))
+    resource_attributes = dict(license_policy=attr.ib(default=attr.Factory(list)))
 
+    run_order = 9
     sort_order = 9
 
     options = [
@@ -63,20 +87,23 @@ class LicensePolicy(PostScanPlugin):
                 continue
 
             try:
-                resource_license_keys = set([entry.get('key') for entry in resource.licenses])
+                resource_license_keys = get_license_keys_from_detections(resource.license_detections)
 
             except AttributeError:
                 # add license_policy regardless if there is license info or not
-                resource.license_policy = {}
+                resource.license_policy = []
                 codebase.save_resource(resource)
                 continue
 
+            license_policies = []
             for key in resource_license_keys:
                 for policy in policies:
                     if key == policy.get('license_key'):
                         # Apply the policy to the Resource
-                        resource.license_policy = policy
-                        codebase.save_resource(resource)
+                        license_policies.append(policy)
+
+            resource.license_policy = sorted(license_policies, key=lambda d: d['license_key'])
+            codebase.save_resource(resource)
 
 
 def has_policy_duplicates(license_policy_location):

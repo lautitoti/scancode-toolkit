@@ -206,7 +206,7 @@ def validate_depth(ctx, param, value):
 @click.option('--timeout',
     type=float,
     default=DEFAULT_TIMEOUT,
-    metavar='<secs>',
+    metavar='<seconds>',
     help='Stop an unfinished file scan after a timeout in seconds. '
          f'[default: {DEFAULT_TIMEOUT} seconds]',
     help_group=cliutils.CORE_GROUP, sort_order=10, cls=PluggableCommandLineOption)
@@ -861,6 +861,7 @@ def run_scan(
         cle.options = pretty_params or {}
         # useful for debugging
         cle.extra_data['system_environment'] = system_environment = {}
+
         system_environment['operating_system'] = commoncode.system.current_os
         system_environment['cpu_architecture'] = commoncode.system.current_arch
         system_environment['platform'] = platform.platform()
@@ -1058,9 +1059,12 @@ def run_codebase_plugins(
     if verbose and plugins:
         echo_func(stage_msg % locals(), fg='green')
 
+    # Sort plugins by run_order, from low to high
+    sorted_plugins = sorted(plugins, key=lambda x: x.run_order)
+
     success = True
     # TODO: add progress indicator
-    for plugin in plugins:
+    for plugin in sorted_plugins:
         name = plugin.name
         plugin_start = time()
 

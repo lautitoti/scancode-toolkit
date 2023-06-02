@@ -22,8 +22,14 @@
     "code_view_url": null,
     "vcs_url": null,
     "copyright": null,
-    "license_expression": null,
-    "declared_license": null,
+    "holder": null,
+    "declared_license_expression": null,
+    "declared_license_expression_spdx": null,
+    "license_detections": [],
+    "other_license_expression": null,
+    "other_license_expression_spdx": null,
+    "other_license_detections": [],
+    "extracted_license_statement": null,
     "notice_text": null,
     "source_packages": [],
     "file_references": [],
@@ -31,7 +37,7 @@
     "dependencies": [
       {
         "purl": "pkg:pypi/prompt-toolkit",
-        "extracted_requirement": ">=1.0.14",
+        "extracted_requirement": "prompt_toolkit>=1.0.14",
         "scope": "development",
         "is_runtime": false,
         "is_optional": true,
@@ -52,7 +58,7 @@
       },
       {
         "purl": "pkg:pypi/pygments@2.2.0",
-        "extracted_requirement": "==2.2.0",
+        "extracted_requirement": "Pygments==2.2.0",
         "scope": "development",
         "is_runtime": false,
         "is_optional": true,
@@ -73,7 +79,7 @@
       },
       {
         "purl": "pkg:pypi/regex",
-        "extracted_requirement": "",
+        "extracted_requirement": "regex",
         "scope": "development",
         "is_runtime": false,
         "is_optional": true,

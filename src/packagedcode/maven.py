@@ -21,7 +21,6 @@ from pymaven.pom import strip_namespace
 
 from commoncode import fileutils
 from packagedcode import models
-from packagedcode.utils import combine_expressions
 from packagedcode.utils import normalize_vcs_url
 from packagedcode.utils import VCS_URLS
 from textcode import analysis
@@ -96,13 +95,15 @@ class MavenPomXmlHandler(models.DatafileHandler):
 
     @classmethod
     def parse(cls, location, base_url='https://repo1.maven.org/maven2'):
-        return parse(
+        package_data = parse(
             location=location,
             datasource_id=cls.datasource_id,
             package_type=cls.default_package_type,
             primary_language=cls.default_primary_language,
             base_url=base_url,
         )
+        if package_data:
+            yield package_data
 
     @classmethod
     def assign_package_to_resources(cls, package, resource, codebase, package_adder):
@@ -152,8 +153,19 @@ class MavenPomXmlHandler(models.DatafileHandler):
         )
 
     @classmethod
-    def compute_normalized_license(cls, package):
-        return compute_normalized_license(declared_license=package.declared_license)
+    def get_top_level_resources(cls, manifest_resource, codebase):
+        """
+        Yield Resources that are top-level based on a JAR's directory structure
+        """
+        if 'META-INF' in manifest_resource.path:
+            path_segments = manifest_resource.path.split('META-INF')
+            leading_segment = path_segments[0].strip()
+            meta_inf_dir_path = f'{leading_segment}/META-INF'
+            meta_inf_resource = codebase.get_resource(meta_inf_dir_path)
+            if meta_inf_resource:
+                yield meta_inf_resource
+                yield from meta_inf_resource.walk(codebase)
+
 
 # TODO: assemble with its pom!!
 class MavenPomPropertiesHandler(models.NonAssemblableDatafileHandler):
@@ -181,70 +193,6 @@ class MavenPomPropertiesHandler(models.NonAssemblableDatafileHandler):
                     primary_language=cls.primary_language,
                     extra_data=dict(pom_properties=properties)
                 )
-
-
-def compute_normalized_license(declared_license):
-    """
-    Return a detected license expression from a declared license mapping.
-    """
-    if not declared_license:
-        return
-
-    # FIXME: declared_license add top comment to declared license as it often
-    # contains extra
-    detected_licenses = []
-
-    for license_declaration in declared_license:
-        # 1. try detection on the value of name if not empty and keep this
-        name = license_declaration.get('name')
-        via_name = models.compute_normalized_license(name)
-
-        # 2. try detection on the value of url  if not empty and keep this
-        url = license_declaration.get('url')
-        via_url = models.compute_normalized_license(url)
-
-        # 3. try detection on the value of comment  if not empty and keep this
-        comments = license_declaration.get('comments')
-        via_comments = models.compute_normalized_license(comments)
-
-        if via_name:
-            # The name should have precedence and any unknowns
-            # in url and comment should be ignored.
-            if via_url == 'unknown':
-                via_url = None
-            if via_comments == 'unknown':
-                via_comments = None
-
-        # Check the three detections to decide which license to keep
-        name_and_url = via_name == via_url
-        name_and_comment = via_name == via_comments
-        all_same = name_and_url and name_and_comment
-
-        if via_name:
-            if all_same:
-                detected_licenses.append(via_name)
-
-            # name and (url or comment) are same
-            elif name_and_url and not via_comments:
-                detected_licenses.append(via_name)
-            elif name_and_comment and not via_url:
-                detected_licenses.append(via_name)
-
-            else:
-                # we have some non-unknown license detected in url or comment
-                detections = via_name, via_url, via_comments
-                detections = [l for l in detections if l]
-                if detections:
-                    combined_expression = combine_expressions(detections)
-                    if combined_expression:
-                        detected_licenses.append(combined_expression)
-        elif via_url:
-            detected_licenses.append(via_url)
-        elif via_comments:
-            detected_licenses.append(via_comments)
-
-    if detected_licenses:
-        return combine_expressions(detected_licenses)
 
 
 def build_url(
@@ -891,12 +839,12 @@ def has_basic_pom_attributes(pom):
     return basics
 
 
-def get_maven_pom(location=None):
+def get_maven_pom(location=None, text=None):
     """
     Return a MavenPom object from a POM file at `location` or provided as a
     `text` string.
     """
-    pom = MavenPom(location=location)
+    pom = MavenPom(location=location, text=text)
 
     extra_properties = {}
 
@@ -961,7 +909,7 @@ def get_dependencies(pom):
             if dversion == 'latest.release':
                 dversion = None
 
-            is_resolved = dversion and not any(c in dversion for c in '$[,]')
+            is_resolved = bool(dversion and not any(c in dversion for c in '$[,]'))
 
             dqualifiers = {}
             # FIXME: this is missing from the original Pom parser
@@ -1016,7 +964,7 @@ def get_parties(pom):
             models.Party(
                 type=models.party_person,
                 name=dev['name'],
-                role='developper',
+                role='developer',
                 email=dev['email'],
                 url=dev['url']))
 
@@ -1043,7 +991,7 @@ def get_parties(pom):
     return parties
 
 
-def get_urls(namespace, name, version, qualifiers, base_url='https://repo1.maven.org/maven2'):
+def get_urls(namespace, name, version, qualifiers, base_url='https://repo1.maven.org/maven2', **kwargs):
     """
     Return a mapping of URLs.
     """
@@ -1102,10 +1050,33 @@ def parse(
     base_url='https://repo1.maven.org/maven2',
 ):
     """
+    Return Packagedata objects from parsing a Maven pom file at `location` or
+    using the provided `text` (one or the other but not both).
+    """
+    package = _parse(
+        datasource_id=datasource_id,
+        package_type=package_type,
+        primary_language=primary_language,
+        location=location,
+        base_url=base_url
+    )
+    if package:
+        return package
+
+
+def _parse(
+    datasource_id,
+    package_type,
+    primary_language,
+    location=None,
+    text=None,
+    base_url='https://repo1.maven.org/maven2',
+):
+    """
     Yield Packagedata objects from parsing a Maven pom file at `location` or
     using the provided `text` (one or the other but not both).
     """
-    pom = get_maven_pom(location=location)
+    pom = get_maven_pom(location=location, text=text)
 
     if not pom:
         return
@@ -1132,7 +1103,7 @@ def parse(
             # complex defeinition in Maven
             qualifiers['type'] = extension
 
-    declared_license = pom.licenses
+    extracted_license_statement = pom.licenses
 
     group_id = pom.group_id
     artifact_id = pom.artifact_id
@@ -1171,7 +1142,7 @@ def parse(
     ))
 
     # FIXME: there are still other data to map in a PackageData
-    package_data = models.PackageData(
+    return models.PackageData(
         datasource_id=datasource_id,
         type=package_type,
         primary_language=primary_language,
@@ -1181,7 +1152,7 @@ def parse(
         qualifiers=qualifiers or None,
         description=description or None,
         homepage_url=pom.url or None,
-        declared_license=declared_license or None,
+        extracted_license_statement=extracted_license_statement or None,
         parties=get_parties(pom),
         dependencies=get_dependencies(pom),
         source_packages=source_packages,
@@ -1189,10 +1160,6 @@ def parse(
         **urls,
     )
 
-    if not package_data.license_expression and package_data.declared_license:
-        package_data.license_expression = models.compute_normalized_license(package_data.declared_license)
-
-    yield package_data
 
 def build_vcs_and_code_view_urls(scm):
     """

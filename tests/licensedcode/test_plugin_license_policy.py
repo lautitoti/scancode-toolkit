@@ -15,11 +15,46 @@ from licensedcode.plugin_license_policy import has_policy_duplicates
 from licensedcode.plugin_license_policy import load_license_policy
 from scancode.cli_test_utils import load_json_result
 from scancode.cli_test_utils import run_scan_click
-
+from scancode.cli_test_utils import check_json_scan
+from scancode_config import REGEN_TEST_FIXTURES
 
 class TestLicensePolicy(FileDrivenTesting):
 
     test_data_dir = join(dirname(__file__), 'data')
+
+    def test_end_to_end_scan_with_license_policy(self):
+        test_dir = self.extract_test_tar('plugin_license_policy/policy-codebase.tgz')
+        policy_file = self.get_test_loc('plugin_license_policy/process_codebase_info_license_valid_policy_file.yml')
+        result_file = self.get_temp_file('json')
+        args = [
+            '--info',
+            '--license',
+            '--license-policy',
+            policy_file,
+            test_dir,
+            '--json-pp',
+            result_file
+        ]
+        run_scan_click(args)
+        test_loc = self.get_test_loc('plugin_license_policy/policy-codebase.expected.json')
+        check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES, remove_file_date=True)
+
+    def test_end_to_end_scan_with_license_policy_multiple_text(self):
+        test_dir = self.get_test_loc('plugin_license_policy/file_with_multiple_licenses.txt')
+        policy_file = self.get_test_loc('plugin_license_policy/sample_valid_policy_file.yml')
+        result_file = self.get_temp_file('json')
+        args = [
+            '--info',
+            '--license',
+            '--license-policy',
+            policy_file,
+            test_dir,
+            '--json-pp',
+            result_file
+        ]
+        run_scan_click(args)
+        test_loc = self.get_test_loc('plugin_license_policy/file_with_multiple_licenses.expected.json')
+        check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES, remove_file_date=True)
 
     def test_process_codebase_info_license_duplicate_key_policy_file(self):
         test_dir = self.extract_test_tar('plugin_license_policy/policy-codebase.tgz')
@@ -33,7 +68,7 @@ class TestLicensePolicy(FileDrivenTesting):
 
         for result in scan_result['files']:
             assert 'license_policy' in result.keys()
-            assert result['license_policy'] == {}
+            assert result['license_policy'] == []
 
     def test_process_codebase_info_license_valid_policy_file(self):
         test_dir = self.extract_test_tar('plugin_license_policy/policy-codebase.tgz')
@@ -50,10 +85,10 @@ class TestLicensePolicy(FileDrivenTesting):
 
         approved, restricted = 0, 0
         for result in scan_result['files']:
-            if result.get('license_policy') != {}:
-                if result.get('license_policy').get('label') == "Approved License":
+            if result.get('license_policy') != []:
+                if result.get('license_policy')[0].get('label') == "Approved License":
                     approved += 1
-                if result.get('license_policy').get('label') == "Restricted License":
+                if result.get('license_policy')[0].get('label') == "Restricted License":
                     restricted += 1
 
         assert approved == 1
@@ -74,10 +109,10 @@ class TestLicensePolicy(FileDrivenTesting):
 
         approved, restricted = 0, 0
         for result in scan_result['files']:
-            if result.get('license_policy') != {}:
-                if result.get('license_policy').get('label') == "Approved License":
+            if result.get('license_policy') != []:
+                if result.get('license_policy')[0].get('label') == "Approved License":
                     approved += 1
-                if result.get('license_policy').get('label') == "Restricted License":
+                if result.get('license_policy')[0].get('label') == "Restricted License":
                     restricted += 1
 
         assert approved == 1
@@ -97,7 +132,7 @@ class TestLicensePolicy(FileDrivenTesting):
             assert 'license_policy' in result.keys()
 
         for result in scan_result['files']:
-            assert result.get('license_policy') == {}
+            assert result.get('license_policy') == []
 
     def test_process_codebase_empty_policy_file(self):
         test_dir = self.extract_test_tar('plugin_license_policy/policy-codebase.tgz')
@@ -113,7 +148,7 @@ class TestLicensePolicy(FileDrivenTesting):
             assert 'license_policy' in result.keys()
 
         for result in scan_result['files']:
-            assert result.get('license_policy') == {}
+            assert result.get('license_policy') == []
 
     def test_process_codebase_invalid_policy_file(self):
         test_dir = self.extract_test_tar('plugin_license_policy/policy-codebase.tgz')
@@ -129,7 +164,7 @@ class TestLicensePolicy(FileDrivenTesting):
             assert 'license_policy' in result.keys()
 
         for result in scan_result['files']:
-            assert result.get('license_policy') == {}
+            assert result.get('license_policy') == []
 
     def test_has_policy_duplcates_invalid_dupes(self):
         test_file = self.get_test_loc('plugin_license_policy/has_policy_duplicates_invalid_dupes.yml')

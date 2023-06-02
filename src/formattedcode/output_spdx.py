@@ -12,23 +12,28 @@ import uuid
 from io import BytesIO
 from io import StringIO
 
-from spdx.checksum import Algorithm
+from spdx.checksum import Checksum
+from spdx.checksum import ChecksumAlgorithm
 from spdx.creationinfo import Tool
 from spdx.document import ExtractedLicense
 from spdx.document import Document
-from spdx.document import License
+from spdx.license import License
 from spdx.file import File
 from spdx.package import Package
+from spdx.relationship import Relationship
+from spdx.utils import calc_verif_code
 from spdx.utils import NoAssert
 from spdx.utils import SPDXNone
 from spdx.version import Version
 
+from license_expression import Licensing
 from commoncode.cliutils import OUTPUT_GROUP
 from commoncode.cliutils import PluggableCommandLineOption
 from commoncode.fileutils import file_name
 from commoncode.fileutils import parent_directory
 from commoncode.text import python_safe_name
 from formattedcode import FileOptionType
+from licensedcode.detection import get_matches_from_detection_mappings
 from plugincode.output import output_impl
 from plugincode.output import OutputPlugin
 import scancode_config
@@ -169,6 +174,7 @@ def _process_codebase(
     package_name = build_package_name(input_path)
 
     write_spdx(
+        codebase=codebase,
         output_file=output_file,
         files=files,
         tool_name=tool_name,
@@ -207,6 +213,7 @@ def check_sha1(codebase):
 
 
 def write_spdx(
+    codebase,
     output_file,
     files,
     tool_name,
@@ -228,11 +235,18 @@ def write_spdx(
     producing this SPDX document.
     Use ``package_name`` as a Package name and as a namespace prefix base.
     """
+    from licensedcode import cache
+    licenses = cache.get_licenses_db()
+    licensing = Licensing()
+
     as_rdf = not as_tagvalue
     _patch_license_list()
 
     ns_prefix = '_'.join(package_name.lower().split())
     comment = notice + f'\nSPDX License List: {scancode_config.spdx_license_list_version}'
+
+    version_major, version_minor = scancode_config.spdx_license_list_version.split(".")
+    spdx_license_list_version = Version(major=version_major, minor=version_minor)
 
     doc = Document(
         version=Version(*spdx_version),
@@ -246,6 +260,7 @@ def write_spdx(
     tool_name = tool_name or 'ScanCode'
     doc.creation_info.add_creator(Tool(f'{tool_name} {tool_version}'))
     doc.creation_info.set_created_now()
+    doc.creation_info.license_list_version = spdx_license_list_version
 
     package_id = '001'
     package = doc.package = Package(
@@ -272,46 +287,56 @@ def write_spdx(
         name = './' + file_data.get('path')
         file_entry = File(
             spdx_id=f'SPDXRef-{sid}',
-            name=name,
-            chk_sum=Algorithm('SHA1', file_data.get('sha1') or '')
-        )
+            name=name)
+        if file_data.get('file_type') == 'empty':
+            file_entry.set_checksum(Checksum(ChecksumAlgorithm.SHA1, "da39a3ee5e6b4b0d3255bfef95601890afd80709"))
+        else:
+            file_entry.set_checksum(Checksum(ChecksumAlgorithm.SHA1, file_data.get('sha1') or ''))
 
-        file_licenses = file_data.get('licenses')
-        if file_licenses:
+        file_license_detections = file_data.get('license_detections')
+        license_matches = get_matches_from_detection_mappings(file_license_detections)
+        if license_matches:
             all_files_have_no_license = False
-            for file_license in file_licenses:
-                license_key = file_license.get('key')
+            for match in license_matches:
+                file_license_expression = match["license_expression"]
+                file_license_keys = licensing.license_keys(
+                    expression=file_license_expression,
+                    unique=True
+                )
+                for license_key in file_license_keys:
+                    file_license = licenses.get(license_key)
+                    license_key = file_license.key
 
-                spdx_id = file_license.get('spdx_license_key')
-                if not spdx_id:
-                    spdx_id = f'LicenseRef-scancode-{license_key}'
-                is_license_ref = spdx_id.lower().startswith('licenseref-')
+                    spdx_id = file_license.spdx_license_key
+                    if not spdx_id:
+                        spdx_id = f'LicenseRef-scancode-{license_key}'
+                    is_license_ref = spdx_id.lower().startswith('licenseref-')
 
-                if not is_license_ref:
-                    spdx_license = License.from_identifier(spdx_id)
-                else:
-                    spdx_license = ExtractedLicense(spdx_id)
-                    spdx_license.name = file_license.get('short_name')
-                    # FIXME: replace this with the licensedb URL
-                    comment = (
-                        f'See details at https://github.com/nexB/scancode-toolkit'
-                        f'/blob/develop/src/licensedcode/data/licenses/{license_key}.yml\n'
-                    )
-                    spdx_license.comment = comment
-                    text = file_license.get('matched_text')
-                    # always set some text, even if we did not extract the
-                    # matched text
-                    if not text:
-                        text = comment
-                    spdx_license.text = text
-                    doc.add_extr_lic(spdx_license)
+                    if not is_license_ref:
+                        spdx_license = License.from_identifier(spdx_id)
+                    else:
+                        spdx_license = ExtractedLicense(spdx_id)
+                        spdx_license.name = file_license.short_name
+                        # FIXME: replace this with the licensedb URL
+                        comment = (
+                            f'See details at https://github.com/nexB/scancode-toolkit'
+                            f'/blob/develop/src/licensedcode/data/licenses/{license_key}.yml\n'
+                        )
+                        spdx_license.comment = comment
+                        text = match.get('matched_text')
+                        # always set some text, even if we did not extract the
+                        # matched text
+                        if not text:
+                            text = comment
+                        spdx_license.text = text
+                        doc.add_extr_lic(spdx_license)
 
-                # Add licenses in the order they appear in the file. Maintaining
-                # the order might be useful for provenance purposes.
-                file_entry.add_lics(spdx_license)
-                package.add_lics_from_file(spdx_license)
+                    # Add licenses in the order they appear in the file. Maintaining
+                    # the order might be useful for provenance purposes.
+                    file_entry.add_lics(spdx_license)
+                    package.add_lics_from_file(spdx_license)
 
-        elif file_licenses is None:
+        elif license_matches is None:
             all_files_have_no_license = False
             file_entry.add_lics(NoAssert())
 
@@ -341,9 +366,11 @@ def write_spdx(
         else:
             file_entry.copyright = SPDXNone()
 
-        package.add_file(file_entry)
+        doc.add_file(file_entry)
+        relationship = Relationship(f'{package.spdx_id} CONTAINS {file_entry.spdx_id}')
+        doc.add_relationship(relationship)
 
-    if len(package.files) == 0:
+    if not doc.files:
         if as_tagvalue:
             msg = "# No results for package '{}'.\n".format(package.name)
         else:
@@ -376,7 +403,7 @@ def write_spdx(
         # statements for the package.
         package.cr_text = '\n'.join(sorted(package.cr_text)) + '\n'
 
-    package.verif_code = doc.package.calc_verif_code()
+    package.verif_code = calc_verif_code(doc.files)
     package.license_declared = NoAssert()
     package.conc_lics = NoAssert()
 
@@ -388,7 +415,7 @@ def write_spdx(
     # one case we do need to deal with bytes and decode before writing (rdf) and
     # in the other case we deal with text all the way.
 
-    if package.files:
+    if doc.files:
 
         if as_tagvalue:
             from spdx.writers.tagvalue import write_document  # NOQA

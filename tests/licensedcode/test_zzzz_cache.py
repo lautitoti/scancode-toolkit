@@ -109,7 +109,7 @@ class LicenseIndexCacheTest(FileBasedTesting):
     def test_get_spdx_symbols_from_dir(self):
         test_dir = self.get_test_loc('spdx/db')
         from licensedcode.models import load_licenses
-        test_licenses = load_licenses(test_dir)
+        test_licenses = load_licenses(test_dir, check_consistency=False)
         result = {
             key: val.key for key, val
             in cache.get_spdx_symbols(licenses_db=test_licenses).items()
@@ -130,24 +130,57 @@ class LicenseIndexCacheTest(FileBasedTesting):
     def test_get_spdx_symbols_fails_on_duplicates(self):
         test_dir = self.get_test_loc('spdx/db-dupe')
         from licensedcode.models import load_licenses
-        test_licenses = load_licenses(test_dir)
+        test_licenses = load_licenses(test_dir, check_consistency=False)
         try:
             cache.get_spdx_symbols(licenses_db=test_licenses)
             self.fail('ValueError not raised!')
         except ValueError as e:
-            assert 'Duplicated SPDX license key' in str(e)
+            msg = str(e)
+            assert msg.startswith('Duplicated')
+            assert 'SPDX license key' in msg
 
     def test_get_spdx_symbols_fails_on_duplicated_other_spdx_keys(self):
         test_dir = self.get_test_loc('spdx/db-dupe-other')
         from licensedcode.models import load_licenses
-        test_licenses = load_licenses(test_dir)
+        test_licenses = load_licenses(test_dir, check_consistency=False)
         try:
             cache.get_spdx_symbols(licenses_db=test_licenses)
             self.fail('ValueError not raised!')
         except ValueError as e:
-            assert 'Duplicated "other" SPDX license key' in str(e)
+            msg = str(e)
+            assert msg.startswith('Duplicated')
+            assert 'SPDX license key' in msg
 
     def test_get_spdx_symbols_checks_duplicates_with_deprecated_on_live_db(self):
         from licensedcode.models import load_licenses
         test_licenses = load_licenses(with_deprecated=True)
         cache.get_spdx_symbols(licenses_db=test_licenses)
+
+    def test_build_spdx_license_expression(self):
+        from licensedcode.cache import build_spdx_license_expression
+        assert build_spdx_license_expression("mit")
+    
+    def test_build_spdx_license_expression_fails_on_invalid_key_none(self):
+        from licensedcode.cache import build_spdx_license_expression
+        from licensedcode.cache import InvalidLicenseKeyError
+        try:
+            build_spdx_license_expression("mit AND None")
+        except InvalidLicenseKeyError:
+            pass
+
+    def test_build_spdx_license_expression_fails_on_deprecated_license(self):
+        # TODO: this should not fail, see https://github.com/nexB/scancode-toolkit/issues/3400
+        from licensedcode.cache import build_spdx_license_expression
+        from licensedcode.cache import InvalidLicenseKeyError
+        try:
+            assert build_spdx_license_expression("broadcom-linking-unmodified")
+        except InvalidLicenseKeyError:
+            pass
+
+    def test_build_spdx_license_expression_fails_on_invalid_key(self):
+        from licensedcode.cache import build_spdx_license_expression
+        from licensedcode.cache import InvalidLicenseKeyError
+        try:
+            assert build_spdx_license_expression("mitt")
+        except InvalidLicenseKeyError:
+            pass

@@ -1,5 +1,4 @@
 {
-  "dependencies": [],
   "packages": [
     {
       "type": "pypi",
@@ -45,13 +44,53 @@
       "code_view_url": "https://github.com/pypa/pip",
       "vcs_url": null,
       "copyright": null,
-      "license_expression": "mit AND mit",
-      "declared_license": {
-        "license": "MIT",
-        "classifiers": [
-          "License :: OSI Approved :: MIT License"
-        ]
-      },
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        },
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "mit",
+              "rule_identifier": "pypi_mit_license.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_mit_license.RULE",
+              "matched_text": "['License :: OSI Approved :: MIT License']"
+            }
+          ],
+          "identifier": "mit-24a5293c-14d7-5403-efac-1a8b7532c0e8"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "license: MIT\nclassifiers:\n  - 'License :: OSI Approved :: MIT License'\n",
       "notice_text": null,
       "source_packages": [],
       "extra_data": {
@@ -71,6 +110,7 @@
       "purl": "pkg:pypi/pip@22.0.4"
     }
   ],
+  "dependencies": [],
   "files": [
     {
       "path": "AUTHORS.txt",
@@ -156,13 +196,53 @@
           "code_view_url": "https://github.com/pypa/pip",
           "vcs_url": null,
           "copyright": null,
-          "license_expression": "mit AND mit",
-          "declared_license": {
-            "license": "MIT",
-            "classifiers": [
-              "License :: OSI Approved :: MIT License"
-            ]
-          },
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            },
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 5,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "mit",
+                  "rule_identifier": "pypi_mit_license.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_mit_license.RULE",
+                  "matched_text": "['License :: OSI Approved :: MIT License']"
+                }
+              ],
+              "identifier": "mit-24a5293c-14d7-5403-efac-1a8b7532c0e8"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "license: MIT\nclassifiers:\n  - 'License :: OSI Approved :: MIT License'\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -226,8 +306,14 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": null,
+          "holder": null,
+          "declared_license_expression": null,
+          "declared_license_expression_spdx": null,
+          "license_detections": [],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -235,7 +321,7 @@
           "dependencies": [
             {
               "purl": "pkg:pypi/sphinx",
-              "extracted_requirement": "~=4.2,!=4.4.0",
+              "extracted_requirement": "sphinx~=4.2,!=4.4.0",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -256,7 +342,7 @@
             },
             {
               "purl": "pkg:pypi/towncrier",
-              "extracted_requirement": "",
+              "extracted_requirement": "towncrier",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -277,7 +363,7 @@
             },
             {
               "purl": "pkg:pypi/furo",
-              "extracted_requirement": "",
+              "extracted_requirement": "furo",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -298,7 +384,7 @@
             },
             {
               "purl": "pkg:pypi/myst-parser",
-              "extracted_requirement": "",
+              "extracted_requirement": "myst_parser",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -319,7 +405,7 @@
             },
             {
               "purl": "pkg:pypi/sphinx-copybutton",
-              "extracted_requirement": "",
+              "extracted_requirement": "sphinx-copybutton",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -340,7 +426,7 @@
             },
             {
               "purl": "pkg:pypi/sphinx-inline-tabs",
-              "extracted_requirement": "",
+              "extracted_requirement": "sphinx-inline-tabs",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -361,7 +447,7 @@
             },
             {
               "purl": "pkg:pypi/sphinxcontrib-towncrier",
-              "extracted_requirement": ">=0.2.0a0",
+              "extracted_requirement": "sphinxcontrib-towncrier>=0.2.0a0",
               "scope": "install",
               "is_runtime": true,
               "is_optional": false,
@@ -441,8 +527,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": null,
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 3,
+                  "end_line": 20,
+                  "matched_length": 161,
+                  "match_coverage": 100.0,
+                  "matcher": "2-aho",
+                  "license_expression": "mit",
+                  "rule_identifier": "mit.LICENSE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE",
+                  "matched_text": "Permission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+                }
+              ],
+              "identifier": "mit-cacd5c0c-204a-85c2-affc-e4c125b2492a"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -487,8 +599,50 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": null,
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 87,
+                  "end_line": 87,
+                  "matched_length": 4,
+                  "match_coverage": 100.0,
+                  "matcher": "2-aho",
+                  "license_expression": "unknown-license-reference",
+                  "rule_identifier": "unknown-license-reference_see_license_at_manifest_2.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/unknown-license-reference_see_license_at_manifest_2.RULE",
+                  "matched_text": "license_file = LICENSE.txt"
+                },
+                {
+                  "score": 100.0,
+                  "start_line": 3,
+                  "end_line": 20,
+                  "matched_length": 161,
+                  "match_coverage": 100.0,
+                  "matcher": "2-aho",
+                  "license_expression": "mit",
+                  "rule_identifier": "mit.LICENSE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/licenses/mit.LICENSE",
+                  "matched_text": "Permission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+                }
+              ],
+              "identifier": "mit-59433771-4926-870e-d21a-8162cfa060a3",
+              "detection_log": [
+                "package-unknown-reference-to-local-file"
+              ]
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": null,
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -554,13 +708,53 @@
           "code_view_url": "https://github.com/pypa/pip",
           "vcs_url": null,
           "copyright": null,
-          "license_expression": null,
-          "declared_license": {
-            "license": "MIT",
-            "classifiers": [
-              "License :: OSI Approved :: MIT License"
-            ]
-          },
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            },
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 5,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "mit",
+                  "rule_identifier": "pypi_mit_license.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_mit_license.RULE",
+                  "matched_text": "['License :: OSI Approved :: MIT License']"
+                }
+              ],
+              "identifier": "mit-24a5293c-14d7-5403-efac-1a8b7532c0e8"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "license: MIT\nclassifiers:\n  - 'License :: OSI Approved :: MIT License'\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],
@@ -651,13 +845,53 @@
           "code_view_url": "https://github.com/pypa/pip",
           "vcs_url": null,
           "copyright": null,
-          "license_expression": "mit AND mit",
-          "declared_license": {
-            "license": "MIT",
-            "classifiers": [
-              "License :: OSI Approved :: MIT License"
-            ]
-          },
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            },
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 5,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "mit",
+                  "rule_identifier": "pypi_mit_license.RULE",
+                  "rule_relevance": 100,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_mit_license.RULE",
+                  "matched_text": "['License :: OSI Approved :: MIT License']"
+                }
+              ],
+              "identifier": "mit-24a5293c-14d7-5403-efac-1a8b7532c0e8"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "license: MIT\nclassifiers:\n  - 'License :: OSI Approved :: MIT License'\n",
           "notice_text": null,
           "source_packages": [],
           "file_references": [

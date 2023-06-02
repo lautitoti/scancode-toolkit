@@ -25,7 +25,8 @@ class EmailScanner(ScanPlugin):
     """
     resource_attributes = dict(emails=attr.ib(default=attr.Factory(list)))
 
-    sort_order = 8
+    run_order = 7
+    sort_order = 7
 
     options = [
         PluggableCommandLineOption(('-e', '--email',),

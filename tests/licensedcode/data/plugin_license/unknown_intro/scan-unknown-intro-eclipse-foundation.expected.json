@@ -1,0 +1,56 @@
+{
+  "license_detections": [
+    {
+      "identifier": "epl_2_0-c1e39224-7271-293c-64f7-090bd2f15988",
+      "license_expression": "epl-2.0",
+      "detection_count": 1,
+      "detection_log": []
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "type": "file",
+      "detected_license_expression": "epl-2.0",
+      "detected_license_expression_spdx": "EPL-2.0",
+      "license_detections": [
+        {
+          "license_expression": "epl-2.0",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 6,
+              "matched_length": 31,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "epl-2.0",
+              "rule_identifier": "epl-2.0_56.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/epl-2.0_56.RULE",
+              "matched_text": "This program and the accompanying materials are made\n * available under the terms of the Eclipse Public License 2.0\n * which is available at https://www.eclipse.org/legal/epl-2.0/"
+            },
+            {
+              "score": 100.0,
+              "start_line": 8,
+              "end_line": 8,
+              "matched_length": 6,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "epl-2.0",
+              "rule_identifier": "spdx-license-identifier-epl-2.0-c05120fcba71854ec1ea0d2897a5dcb1290a6dea",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "SPDX-License-Identifier: EPL-2.0"
+            }
+          ],
+          "detection_log": [],
+          "identifier": "epl_2_0-c1e39224-7271-293c-64f7-090bd2f15988"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 86.05,
+      "scan_errors": []
+    }
+  ]
+}

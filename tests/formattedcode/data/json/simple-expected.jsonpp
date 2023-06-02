@@ -1,6 +1,7 @@
 {
-  "dependencies": [],
   "packages": [],
+  "dependencies": [],
+  "license_detections": [],
   "files": [
     {
       "path": "simple",
@@ -21,14 +22,16 @@
       "is_media": false,
       "is_source": false,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [],
       "holders": [],
       "authors": [],
-      "package_data": [],
-      "for_packages": [],
       "files_count": 1,
       "dirs_count": 0,
       "size_count": 55,
@@ -53,8 +56,12 @@
       "is_media": false,
       "is_source": true,
       "is_script": false,
-      "licenses": [],
-      "license_expressions": [],
+      "package_data": [],
+      "for_packages": [],
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [],
       "percentage_of_license_text": 0,
       "copyrights": [
         {
@@ -71,8 +78,6 @@
         }
       ],
       "authors": [],
-      "package_data": [],
-      "for_packages": [],
       "files_count": 0,
       "dirs_count": 0,
       "size_count": 0,

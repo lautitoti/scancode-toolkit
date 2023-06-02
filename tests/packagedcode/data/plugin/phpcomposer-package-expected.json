@@ -1,4 +1,87 @@
 {
+  "packages": [
+    {
+      "type": "composer",
+      "namespace": "jandreasn",
+      "name": "a-timer",
+      "version": null,
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": "PHP",
+      "description": null,
+      "release_date": null,
+      "parties": [
+        {
+          "type": "person",
+          "role": "author",
+          "name": "Andreas Nilsson",
+          "email": null,
+          "url": null
+        },
+        {
+          "type": "person",
+          "role": "vendor",
+          "name": "jandreasn",
+          "email": null,
+          "url": null
+        }
+      ],
+      "keywords": [],
+      "homepage_url": "http://github.com/jandreasn/a-timer",
+      "download_url": null,
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": null,
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "mit",
+      "declared_license_expression_spdx": "MIT",
+      "license_detections": [
+        {
+          "license_expression": "mit",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 1,
+              "match_coverage": 100.0,
+              "matcher": "1-spdx-id",
+              "license_expression": "mit",
+              "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+              "rule_relevance": 100,
+              "rule_url": null,
+              "matched_text": "MIT"
+            }
+          ],
+          "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "MIT",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {},
+      "repository_homepage_url": "https://packagist.org/packages/jandreasn/a-timer",
+      "repository_download_url": null,
+      "api_data_url": "https://packagist.org/p/packages/jandreasn/a-timer.json",
+      "package_uid": "pkg:composer/jandreasn/a-timer?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_paths": [
+        "composer.json"
+      ],
+      "datasource_ids": [
+        "php_composer_json"
+      ],
+      "purl": "pkg:composer/jandreasn/a-timer"
+    }
+  ],
   "dependencies": [
     {
       "purl": "pkg:composer/php",
@@ -41,63 +124,6 @@
       "for_package_uid": "pkg:composer/jandreasn/a-timer?uuid=fixed-uid-done-for-testing-5642512d1758",
       "datafile_path": "composer.json",
       "datasource_id": "php_composer_json"
-    }
-  ],
-  "packages": [
-    {
-      "type": "composer",
-      "namespace": "jandreasn",
-      "name": "a-timer",
-      "version": null,
-      "qualifiers": {},
-      "subpath": null,
-      "primary_language": "PHP",
-      "description": null,
-      "release_date": null,
-      "parties": [
-        {
-          "type": "person",
-          "role": "author",
-          "name": "Andreas Nilsson",
-          "email": null,
-          "url": null
-        },
-        {
-          "type": "person",
-          "role": "vendor",
-          "name": "jandreasn",
-          "email": null,
-          "url": null
-        }
-      ],
-      "keywords": [],
-      "homepage_url": "http://github.com/jandreasn/a-timer",
-      "download_url": null,
-      "size": null,
-      "sha1": null,
-      "md5": null,
-      "sha256": null,
-      "sha512": null,
-      "bug_tracking_url": null,
-      "code_view_url": null,
-      "vcs_url": null,
-      "copyright": null,
-      "license_expression": "mit",
-      "declared_license": "MIT",
-      "notice_text": null,
-      "source_packages": [],
-      "extra_data": {},
-      "repository_homepage_url": "https://packagist.org/packages/jandreasn/a-timer",
-      "repository_download_url": null,
-      "api_data_url": "https://packagist.org/p/packages/jandreasn/a-timer.json",
-      "package_uid": "pkg:composer/jandreasn/a-timer?uuid=fixed-uid-done-for-testing-5642512d1758",
-      "datafile_paths": [
-        "composer.json"
-      ],
-      "datasource_ids": [
-        "php_composer_json"
-      ],
-      "purl": "pkg:composer/jandreasn/a-timer"
     }
   ],
   "files": [
@@ -143,8 +169,34 @@
           "code_view_url": null,
           "vcs_url": null,
           "copyright": null,
-          "license_expression": "mit",
-          "declared_license": "MIT",
+          "holder": null,
+          "declared_license_expression": "mit",
+          "declared_license_expression_spdx": "MIT",
+          "license_detections": [
+            {
+              "license_expression": "mit",
+              "matches": [
+                {
+                  "score": 100.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 1,
+                  "match_coverage": 100.0,
+                  "matcher": "1-spdx-id",
+                  "license_expression": "mit",
+                  "rule_identifier": "spdx-license-identifier-mit-5da48780aba670b0860c46d899ed42a0f243ff06",
+                  "rule_relevance": 100,
+                  "rule_url": null,
+                  "matched_text": "MIT"
+                }
+              ],
+              "identifier": "mit-a822f434-d61f-f2b1-c792-8b8cb9e7b9bf"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "MIT",
           "notice_text": null,
           "source_packages": [],
           "file_references": [],

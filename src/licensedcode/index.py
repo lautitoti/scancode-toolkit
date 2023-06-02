@@ -49,6 +49,7 @@ TRACE = False or os.environ.get('SCANCODE_DEBUG_LICENSE', False)
 TRACE_APPROX = False
 TRACE_APPROX_CANDIDATES = False
 TRACE_APPROX_MATCHES = False
+TRACE_INDEXING = False or os.environ.get('SCANCODE_DEBUG_LICENSE_INDEX', False)
 TRACE_INDEXING_PERF = False
 TRACE_TOKEN_DOC_FREQ = False
 TRACE_SPDX_LID = False
@@ -63,6 +64,7 @@ if (
     or TRACE_APPROX
     or TRACE_APPROX_CANDIDATES
     or TRACE_APPROX_MATCHES
+    or TRACE_INDEXING
     or TRACE_INDEXING_PERF
     or TRACE_SPDX_LID
 ):
@@ -129,6 +131,7 @@ class LicenseIndex(object):
         'digit_only_tids',
         'tokens_by_tid',
 
+        'rules_by_id',
         'rules_by_rid',
         'tids_by_rid',
 
@@ -161,9 +164,11 @@ class LicenseIndex(object):
     ):
         """
         Initialize the index with an iterable of Rule objects.
-        ``_legalese`` is a set of common license-specific words aka. legalese
+        ``_legalese`` is a sorted mapping of common license-specific words aka. legalese as {token: id}
         ``_spdx_tokens`` is a set of tokens used in SPDX license identifiers
-        ``license_tokens`` is a set of "license" tokens used as start or end of a rule
+        ``_license_tokens`` is a set of "license" tokens used as start or end of a rule
+        If ``_all_languages`` is True, use all spoken languages license and rules.
+        Otherwise, use only English rules and licenses.
         """
         # total number of unique known tokens
         self.len_tokens = 0
@@ -185,6 +190,9 @@ class LicenseIndex(object):
 
         # Note: all the following are mappings-like (using lists) of
         # rid-> data are lists of data where the index is the rule id.
+
+        # mapping of rule identifiers -> rule objects
+        self.rules_by_id = {}
 
         # maping-like of rule_id -> rule objects proper
         self.rules_by_rid = []
@@ -265,9 +273,9 @@ class LicenseIndex(object):
         Add a list of Rule objects to the index and constructs optimized and
         immutable index structures.
 
-        `_legalese` is a set of common license-specific words aka. legalese
-        `_spdx_tokens` is a set of token strings used in SPDX license identifiers
-        ``license_tokens`` is a set of "license" tokens used as start or end of a rule
+        ``_legalese`` is a sorted mapping of common license-specific words aka. legalese as {token: id}
+        ``_spdx_tokens`` is a set of token strings used in SPDX license identifiers
+        ``_license_tokens`` is a set of "license" tokens used as start or end of a rule
         """
         if self.optimized:
             raise Exception('Index has been optimized and cannot be updated.')
@@ -279,10 +287,7 @@ class LicenseIndex(object):
         # valid "unichr" values, making it easier downstream when used in
         # automatons
 
-        self.dictionary = dictionary = {
-            ts: tid for tid, ts in enumerate(sorted(_legalese))
-        }
-
+        self.dictionary = dictionary = dict(_legalese)
         dictionary_get = dictionary.get
 
         self.len_legalese = len_legalese = len(dictionary)
@@ -304,6 +309,11 @@ class LicenseIndex(object):
                 dictionary[sts] = stid
 
         self.rules_by_rid = rules_by_rid = list(rules)
+        self.rules_by_id = {r.identifier: r for r in self.rules_by_rid}
+        if TRACE_INDEXING:
+            for _rid, _rule in enumerate(rules_by_rid):
+                logger_debug('rules_by_rid:', _rid, _rule)
+
         # ensure that rules are sorted
         rules_by_rid.sort()
         len_rules = len(rules_by_rid)
@@ -379,7 +389,7 @@ class LicenseIndex(object):
 
             # A rule is weak if it does not contain at least one legalese word:
             # we consider all rules to be weak until proven otherwise below.
-            # "weak" rules can only be matched with an automaton.
+            # "weak" rules can only be matched with an automaton exactly.
             is_weak = True
 
             for rts in rule.tokens():
@@ -394,7 +404,10 @@ class LicenseIndex(object):
                 if is_weak and rtid < len_legalese:
                     is_weak = False
 
-                rule_token_ids_append(rtid)
+                try:
+                    rule_token_ids_append(rtid)
+                except Exception as e:
+                    raise Exception(rtid, rts, rule) from e
 
             rule_length = rule.length
             is_tiny = rule_length < TINY_RULE
@@ -558,25 +571,29 @@ class LicenseIndex(object):
         msg = 'Cannot support more than licensedcode.index.MAX_TOKENS: %d' % MAX_TOKENS
         assert len_tokens <= MAX_TOKENS, msg
 
-        dupe_rules = [rules for rules in dupe_rules_by_hash.values() if len(rules) > 1]
-        if dupe_rules:
-            dupe_rule_paths = [
-                '\n'.join(
-                    sorted([
-                        ('file://' + rule.text_file)
-                        if rule.text_file
-                        else ('text: ' + rule.stored_text)
-                            for rule in rules])
-                    )
-                for rules in dupe_rules
-            ]
+        dupe_rule_paths = []
+        for rules in dupe_rules_by_hash.values():
+            if len(rules) == 1:
+                continue
+            drp = [rule.identifier for rule in rules]
+            drp.sort()
+            dupe_rule_paths.append('\n'.join(drp))
+
+        if dupe_rule_paths:
             msg = ('Duplicate rules: \n' + '\n\n'.join(dupe_rule_paths))
             raise DuplicateRuleError(msg)
 
         self.optimized = True
 
-    def debug_matches(self, matches, message, location=None, query_string=None,
-                      with_text=False, qry=None):
+    def debug_matches(
+        self,
+        matches,
+        message,
+        location=None,
+        query_string=None,
+        with_text=False,
+        qry=None,
+    ):
         """
         Log debug-level data for a list of `matches`.
         """
@@ -1182,7 +1199,7 @@ def get_weak_rids(len_legalese, tids_by_rid, _idx):
             continue
         weak_rids_add(rid)
 
-    if TRACE :
+    if TRACE:
         for rid in sorted(weak_rids):
             rule = _idx.rules_by_rid[rid]
             message = (

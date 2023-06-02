@@ -30,10 +30,11 @@
 
 import datetime
 import json
+import os
 import logging
-from os import path
+import sys
 
-from packaging import version as packaging_version
+from packvers import version as packaging_version
 import requests
 from requests.exceptions import ConnectionError
 
@@ -54,9 +55,22 @@ This code is based on a pip module and heavilty modified for use here.
 
 SELFCHECK_DATE_FMT = "%Y-%m-%dT%H:%M:%SZ"
 
+TRACE = os.environ.get('SCANCODE_DEBUG_OUTDATED', False)
+
+def logger_debug(*args):
+    pass
+
+
 logger = logging.getLogger(__name__)
-# logging.basicConfig(stream=sys.stdout)
-# logger.setLevel(logging.WARNING)
+
+if TRACE:
+
+    if TRACE:
+        logging.basicConfig(stream=sys.stdout)
+        logger.setLevel(logging.DEBUG)
+
+        def logger_debug(*args):
+            return logger.debug(' '.join(isinstance(a, str) and a or repr(a) for a in args))
 
 
 def total_seconds(td):
@@ -70,7 +84,7 @@ def total_seconds(td):
 class VersionCheckState:
 
     def __init__(self):
-        self.statefile_path = path.join(
+        self.statefile_path = os.path.join(
             scancode_cache_dir, 'scancode-version-check.json')
         self.lockfile_path = self.statefile_path + '.lockfile'
         # Load the existing state
@@ -114,7 +128,6 @@ def build_outdated_message(installed_version, release_date, newer_version=''):
         'Visit https://github.com/nexB/scancode-toolkit/releases for details.'
     )
     return msg
- 
 
 
 def check_scancode_version(
@@ -155,8 +168,13 @@ def fetch_newer_version(
     State is stored in the scancode_cache_dir.
     If `force` is True, redo a PyPI remote check.
     """
-    installed_version = packaging_version.parse(installed_version)
+    # If installed version is from git describe, only use the first part of it
+    # i.e. `v31.2.1-343-gd9d2e19e32` -> `v31.2.1`
+    if "-" in installed_version:
+        installed_version = installed_version.split("-")[0]
+
     try:
+        installed_version = packaging_version.parse(installed_version)
         state = VersionCheckState()
 
         current_time = datetime.datetime.utcnow()
@@ -186,15 +204,9 @@ def fetch_newer_version(
 
         latest_version = packaging_version.parse(latest_version)
 
-        # Our git version string is not PEP 440 compliant, and thus improperly
-        # parsed via most 3rd party version parsers. We handle this case by
-        # pulling out the "base" release version by split()-ting on "post".
-        #
-        # For example, "3.1.2.post351.850399ba3" becomes "3.1.2"
-        if isinstance(installed_version, packaging_version.LegacyVersion):
-            installed_version = installed_version.split('post')
-            installed_version = installed_version[0]
-            installed_version = packaging_version.parse(installed_version)
+        if TRACE:
+            logger_debug(f"installed_version: {installed_version}, latest version: {latest_version}")
+            logger_debug(f"installed_version < latest_version: {installed_version < latest_version}")
 
         # Determine if our latest_version is older
         if (installed_version < latest_version

@@ -7,7 +7,6 @@
 # See https://aboutcode.org for more information about nexB OSS projects.
 #
 
-from cgi import test
 import os.path
 
 from packagedcode import misc
@@ -55,8 +54,14 @@ class TestModels(PackageTester):
             ('code_view_url', None),
             ('vcs_url', None),
             ('copyright', None),
-            ('license_expression', None),
-            ('declared_license', None),
+            ('holder', None),
+            ('declared_license_expression', None),
+            ('declared_license_expression_spdx', None),
+            ('license_detections', []),
+            ('other_license_expression', None),
+            ('other_license_expression_spdx', None),
+            ('other_license_detections', []),
+            ('extracted_license_statement', None),
             ('notice_text', None),
             ('source_packages', []),
             ('file_references', []),
@@ -79,7 +84,7 @@ class TestModels(PackageTester):
             parties=[Party(name='Some Author', role='author', email='some@email.com')],
             keywords=['some', 'keyword'],
             vcs_url='git+https://somerepo.com/that.git',
-            declared_license='apache-2.0',
+            extracted_license_statement='apache-2.0',
         )
         expected_loc = 'models/simple-expected.json'
         self.check_package_data(package, expected_loc, regen=REGEN_TEST_FIXTURES)
@@ -105,6 +110,7 @@ class TestModels(PackageTester):
     def test_Package_full(self):
         package = PackageData(
             type='rpm',
+            datasource_id = 'rpm_archive',
             namespace='fedora',
             name='Sample',
             version='12.2.3',
@@ -126,8 +132,7 @@ class TestModels(PackageTester):
             code_view_url='http://homepage.com/code',
             vcs_url='git+http://homepage.com/code.git@12ed302c4b4c2aa10638db3890',
             copyright='copyright (c) nexB Inc.',
-            license_expression='apache-2.0',
-            declared_license=u'apache-2.0',
+            extracted_license_statement=u'apache-2.0',
             notice_text='licensed under the apacche 2.0 \nlicense',
             source_packages=["pkg:maven/aspectj/aspectjtools@1.5.4?classifier=sources"],
         )
@@ -220,3 +225,20 @@ class TestModels(PackageTester):
             for package_uid in for_packages:
                 normalized_package_uid = purl_with_fake_uuid(package_uid)
                 assert normalized_package_uid == test_package_uid
+
+    def test_create_package_not_handled_by_packagedcode(self):
+        extracted_license_statement = [
+            'gpl',
+            'GNU General Public License version 2.0 (GPLv2)',
+        ]
+        package = PackageData(
+            type='sourceforge',
+            name='openstunts',
+            copyright='Copyright (c) openstunts project',
+            extracted_license_statement=extracted_license_statement,
+        )
+        # Test generated fields
+        assert package.purl == 'pkg:sourceforge/openstunts'
+        assert package.holder == 'openstunts project'
+        assert package.declared_license_expression == 'gpl-1.0-plus AND gpl-2.0'
+        assert package.declared_license_expression_spdx == 'GPL-1.0-or-later AND GPL-2.0-only'

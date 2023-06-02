@@ -1,0 +1,279 @@
+{
+  "packages": [
+    {
+      "type": "pypi",
+      "namespace": null,
+      "name": "Django",
+      "version": "1.2.5",
+      "qualifiers": {},
+      "subpath": null,
+      "primary_language": "Python",
+      "description": "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.\nUNKNOWN",
+      "release_date": null,
+      "parties": [
+        {
+          "type": "person",
+          "role": "author",
+          "name": "Django Software Foundation",
+          "email": "foundation@djangoproject.com",
+          "url": null
+        }
+      ],
+      "keywords": [
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Web Environment",
+        "Framework :: Django",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Internet :: WWW/HTTP :: WSGI",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        "Topic :: Software Development :: Libraries :: Python Modules"
+      ],
+      "homepage_url": "http://www.djangoproject.com/",
+      "download_url": null,
+      "size": null,
+      "sha1": null,
+      "md5": null,
+      "sha256": null,
+      "sha512": null,
+      "bug_tracking_url": null,
+      "code_view_url": null,
+      "vcs_url": null,
+      "copyright": null,
+      "holder": null,
+      "declared_license_expression": "bsd-new",
+      "declared_license_expression_spdx": "BSD-3-Clause",
+      "license_detections": [
+        {
+          "license_expression": "bsd-new",
+          "matches": [
+            {
+              "score": 99.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "bsd-new",
+              "rule_identifier": "pypi_bsd_license.RULE",
+              "rule_relevance": 99,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_bsd_license.RULE",
+              "matched_text": "['License :: OSI Approved :: BSD License']"
+            }
+          ],
+          "identifier": "bsd_new-f4e99f86-00ab-18d9-a65d-a3a12767dcf5"
+        }
+      ],
+      "other_license_expression": null,
+      "other_license_expression_spdx": null,
+      "other_license_detections": [],
+      "extracted_license_statement": "classifiers:\n  - 'License :: OSI Approved :: BSD License'\n",
+      "notice_text": null,
+      "source_packages": [],
+      "extra_data": {
+        "Download-URL": "http://media.djangoproject.com/releases/1.2/Django-1.2.5.tar.gz"
+      },
+      "repository_homepage_url": "https://pypi.org/project/Django",
+      "repository_download_url": "https://pypi.org/packages/source/D/Django/Django-1.2.5.tar.gz",
+      "api_data_url": "https://pypi.org/pypi/Django/1.2.5/json",
+      "package_uid": "pkg:pypi/django@1.2.5?uuid=fixed-uid-done-for-testing-5642512d1758",
+      "datafile_paths": [
+        "PKG-INFO"
+      ],
+      "datasource_ids": [
+        "pypi_sdist_pkginfo"
+      ],
+      "purl": "pkg:pypi/django@1.2.5"
+    }
+  ],
+  "dependencies": [],
+  "license_detections": [
+    {
+      "identifier": "bsd-new-af493d9f-0c66-d9f8-4538-579134812514",
+      "license_expression": "bsd-new",
+      "detection_count": 1,
+      "detection_log": []
+    },
+    {
+      "identifier": "bsd_new-f4e99f86-00ab-18d9-a65d-a3a12767dcf5",
+      "license_expression": "bsd-new",
+      "detection_count": 2,
+      "detection_log": []
+    }
+  ],
+  "files": [
+    {
+      "path": "PKG-INFO",
+      "type": "file",
+      "package_data": [
+        {
+          "type": "pypi",
+          "namespace": null,
+          "name": "Django",
+          "version": "1.2.5",
+          "qualifiers": {},
+          "subpath": null,
+          "primary_language": "Python",
+          "description": "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.\nUNKNOWN",
+          "release_date": null,
+          "parties": [
+            {
+              "type": "person",
+              "role": "author",
+              "name": "Django Software Foundation",
+              "email": "foundation@djangoproject.com",
+              "url": null
+            }
+          ],
+          "keywords": [
+            "Development Status :: 5 - Production/Stable",
+            "Environment :: Web Environment",
+            "Framework :: Django",
+            "Intended Audience :: Developers",
+            "Operating System :: OS Independent",
+            "Programming Language :: Python",
+            "Topic :: Internet :: WWW/HTTP",
+            "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+            "Topic :: Internet :: WWW/HTTP :: WSGI",
+            "Topic :: Software Development :: Libraries :: Application Frameworks",
+            "Topic :: Software Development :: Libraries :: Python Modules"
+          ],
+          "homepage_url": "http://www.djangoproject.com/",
+          "download_url": null,
+          "size": null,
+          "sha1": null,
+          "md5": null,
+          "sha256": null,
+          "sha512": null,
+          "bug_tracking_url": null,
+          "code_view_url": null,
+          "vcs_url": null,
+          "copyright": null,
+          "holder": null,
+          "declared_license_expression": "bsd-new",
+          "declared_license_expression_spdx": "BSD-3-Clause",
+          "license_detections": [
+            {
+              "license_expression": "bsd-new",
+              "matches": [
+                {
+                  "score": 99.0,
+                  "start_line": 1,
+                  "end_line": 1,
+                  "matched_length": 5,
+                  "match_coverage": 100.0,
+                  "matcher": "1-hash",
+                  "license_expression": "bsd-new",
+                  "rule_identifier": "pypi_bsd_license.RULE",
+                  "rule_relevance": 99,
+                  "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_bsd_license.RULE",
+                  "matched_text": "['License :: OSI Approved :: BSD License']"
+                }
+              ],
+              "identifier": "bsd_new-f4e99f86-00ab-18d9-a65d-a3a12767dcf5"
+            }
+          ],
+          "other_license_expression": null,
+          "other_license_expression_spdx": null,
+          "other_license_detections": [],
+          "extracted_license_statement": "classifiers:\n  - 'License :: OSI Approved :: BSD License'\n",
+          "notice_text": null,
+          "source_packages": [],
+          "file_references": [],
+          "extra_data": {
+            "Download-URL": "http://media.djangoproject.com/releases/1.2/Django-1.2.5.tar.gz"
+          },
+          "dependencies": [],
+          "repository_homepage_url": "https://pypi.org/project/Django",
+          "repository_download_url": "https://pypi.org/packages/source/D/Django/Django-1.2.5.tar.gz",
+          "api_data_url": "https://pypi.org/pypi/Django/1.2.5/json",
+          "datasource_id": "pypi_sdist_pkginfo",
+          "purl": "pkg:pypi/django@1.2.5"
+        }
+      ],
+      "for_packages": [
+        "pkg:pypi/django@1.2.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "bsd-new",
+      "detected_license_expression_spdx": "BSD-3-Clause",
+      "license_detections": [
+        {
+          "license_expression": "bsd-new",
+          "matches": [
+            {
+              "score": 99.0,
+              "start_line": 16,
+              "end_line": 16,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "bsd-new",
+              "rule_identifier": "pypi_bsd_license.RULE",
+              "rule_relevance": 99,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_bsd_license.RULE",
+              "matched_text": "License :: OSI Approved :: BSD License"
+            }
+          ],
+          "detection_log": [],
+          "identifier": "bsd_new-f4e99f86-00ab-18d9-a65d-a3a12767dcf5"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 4.03,
+      "scan_errors": []
+    },
+    {
+      "path": "django.po",
+      "type": "file",
+      "package_data": [],
+      "for_packages": [
+        "pkg:pypi/django@1.2.5?uuid=fixed-uid-done-for-testing-5642512d1758"
+      ],
+      "detected_license_expression": "bsd-new",
+      "detected_license_expression_spdx": "BSD-3-Clause",
+      "license_detections": [
+        {
+          "license_expression": "bsd-new",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 11,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "free-unknown",
+              "rule_identifier": "free-unknown-package_1.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/free-unknown-package_1.RULE",
+              "matched_text": "This file is distributed under the same license as the package."
+            },
+            {
+              "score": 99.0,
+              "start_line": 1,
+              "end_line": 1,
+              "matched_length": 5,
+              "match_coverage": 100.0,
+              "matcher": "1-hash",
+              "license_expression": "bsd-new",
+              "rule_identifier": "pypi_bsd_license.RULE",
+              "rule_relevance": 99,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/pypi_bsd_license.RULE",
+              "matched_text": "['License :: OSI Approved :: BSD License']"
+            }
+          ],
+          "detection_log": [
+            "unknown-reference-in-file-to-package"
+          ],
+          "identifier": "bsd-new-af493d9f-0c66-d9f8-4538-579134812514"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 0.07,
+      "scan_errors": []
+    }
+  ]
+}

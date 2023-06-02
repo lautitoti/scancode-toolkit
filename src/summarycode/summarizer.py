@@ -8,6 +8,7 @@
 #
 
 from collections import defaultdict
+import warnings
 
 import attr
 import fingerprints
@@ -28,6 +29,7 @@ from summarycode.tallies import compute_codebase_tallies
 TRACE = False
 TRACE_LIGHT = False
 
+warnings.simplefilter('ignore', UnicodeWarning)
 
 def logger_debug(*args):
     pass
@@ -55,7 +57,8 @@ class ScanSummary(PostScanPlugin):
     Summarize a scan at the codebase level.
     """
 
-    sort_order = 10
+    run_order = 6
+    sort_order = 2
 
     codebase_attributes = dict(summary=attr.ib(default=attr.Factory(dict)))
 
@@ -81,7 +84,7 @@ class ScanSummary(PostScanPlugin):
 
         # Get tallies
         tallies = compute_codebase_tallies(codebase, keep_details=False, **kwargs)
-        license_expressions_tallies = tallies.get('license_expressions') or []
+        license_expressions_tallies = tallies.get('detected_license_expression') or []
         holders_tallies = tallies.get('holders') or []
         programming_language_tallies = tallies.get('programming_language') or []
 
@@ -204,10 +207,10 @@ def get_primary_language(programming_language_tallies):
     programming_languages_by_count = {
         entry['count']: entry['value'] for entry in programming_language_tallies
     }
-    primary_language = ''
+    primary_language = None
     if programming_languages_by_count:
         highest_count = max(programming_languages_by_count)
-        primary_language = programming_languages_by_count[highest_count] or ''
+        primary_language = programming_languages_by_count[highest_count] or None
     return primary_language
 
 
@@ -219,7 +222,7 @@ def get_origin_info_from_top_level_packages(top_level_packages, codebase):
     ``codebase``.
     """
     if not top_level_packages:
-        return '', [], ''
+        return None, [], None
 
     license_expressions = []
     programming_languages = []
@@ -231,7 +234,7 @@ def get_origin_info_from_top_level_packages(top_level_packages, codebase):
     ]
     key_file_packages = [p for p in top_level_packages if is_key_package(p, codebase)]
     for package in key_file_packages:
-        license_expression = package.license_expression
+        license_expression = package.declared_license_expression
         if license_expression:
             license_expressions.append(license_expression)
 
@@ -250,7 +253,7 @@ def get_origin_info_from_top_level_packages(top_level_packages, codebase):
         relation='AND',
     )
 
-    declared_license_expression = ''
+    declared_license_expression = None
     if combined_declared_license_expression:
         declared_license_expression = str(
             Licensing().parse(combined_declared_license_expression).simplify()
@@ -270,6 +273,10 @@ def get_origin_info_from_top_level_packages(top_level_packages, codebase):
                 key_file_resource = codebase.get_resource(path=datafile_path)
                 if not key_file_resource:
                     continue
+
+                if not hasattr(key_file_resource, 'holders'):
+                    break
+
                 holders = [h['holder'] for h in key_file_resource.holders]
                 declared_holders.extend(holders)
     # Normalize holder names before collecting them
@@ -279,23 +286,23 @@ def get_origin_info_from_top_level_packages(top_level_packages, codebase):
 
     # Programming language
     unique_programming_languages = unique(programming_languages)
-    primary_language = ''
+    primary_language = None
     if len(unique_programming_languages) == 1:
         primary_language = unique_programming_languages[0]
 
     return declared_license_expression, declared_holders, primary_language
 
 
-def get_holders_from_copyright(copyright):
+def get_holders_from_copyright(copyrght):
     """
-    Yield holders detected from a `copyright` string or list.
+    Yield holders detected from a `copyrght` string or list.
     """
     numbered_lines = []
-    if isinstance(copyright, list):
-        for i, c in enumerate(copyright):
+    if isinstance(copyrght, list):
+        for i, c in enumerate(copyrght):
             numbered_lines.append((i, c))
     else:
-        numbered_lines.append((0, copyright))
+        numbered_lines.append((0, copyrght))
 
     holder_detections = CopyrightDetector().detect(
         numbered_lines,
@@ -318,8 +325,8 @@ def is_key_package(package, codebase):
 
     datafile_paths = set(package.datafile_paths or [])
     for resource in codebase.walk(topdown=True):
-        if not resource.is_top_level:
-            break
+        if resource.is_dir:
+            continue
         if resource.path in datafile_paths:
             return True
 

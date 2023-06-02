@@ -47,7 +47,8 @@ class Tallies(PostScanPlugin):
     """
     Compute tallies for license, copyright and other scans at the codebase level
     """
-    sort_order = 10
+    run_order = 15
+    sort_order = 15
 
     codebase_attributes = dict(tallies=attr.ib(default=attr.Factory(dict)))
 
@@ -74,7 +75,7 @@ class TalliesWithDetails(PostScanPlugin):
     keep file and directory details.
 
     The scan attributes that are tallied are:
-    - license_expressions
+    - detected_license_expression
     - copyrights
     - holders
     - authors
@@ -86,6 +87,7 @@ class TalliesWithDetails(PostScanPlugin):
     # store tallies at the file and directory level in this attribute when
     # keep details is True
     resource_attributes = dict(tallies=attr.ib(default=attr.Factory(dict)))
+    run_order = 100
     sort_order = 100
 
     options = [
@@ -116,7 +118,7 @@ def compute_codebase_tallies(codebase, keep_details, **kwargs):
                                                holder_tallies)
 
     attrib_summarizers = [
-        ('license_expressions', license_tallies),
+        ('detected_license_expression', license_tallies),
         ('copyrights', copyright_tallies),
         ('holders', holder_tallies),
         ('authors', author_tallies),
@@ -156,16 +158,16 @@ def license_tallies(resource, children, keep_details=False):
         {value: "expression", count: "count of occurences"}
     sorted by decreasing count.
     """
-    LIC_EXP = 'license_expressions'
+    LIC_EXP = 'detected_license_expression'
     license_expressions = []
 
     # Collect current data
-    lic_expressions = getattr(resource, LIC_EXP  , [])
-    if not lic_expressions and resource.is_file:
+    lic_expression = getattr(resource, LIC_EXP, None)
+    if not lic_expression and resource.is_file:
         # also count files with no detection
         license_expressions.append(None)
     else:
-        license_expressions.extend(lic_expressions)
+        license_expressions.append(lic_expression)
 
     # Collect direct children expression tallies
     for child in children:
@@ -236,7 +238,7 @@ def tally_languages(languages):
 
 
 TALLYABLE_ATTRS = set([
-    'license_expressions',
+    'detected_license_expression',
     'copyrights',
     'holders',
     'authors',
@@ -255,7 +257,7 @@ def tally_values(values, attribute):
     from summarycode.copyright_tallies import tally_copyrights, tally_persons
 
     value_talliers_by_attr = dict(
-        license_expressions=tally_licenses,
+        detected_license_expression=tally_licenses,
         copyrights=tally_copyrights,
         holders=tally_persons,
         authors=tally_persons,
@@ -269,6 +271,7 @@ class KeyFilesTallies(PostScanPlugin):
     """
     Compute tallies of a scan at the codebase level for only key files.
     """
+    run_order = 150
     sort_order = 150
 
     # mapping of tally data at the codebase level for key files
@@ -343,6 +346,7 @@ class FacetTallies(PostScanPlugin):
     """
     Compute tallies for a scan at the codebase level, grouping by facets.
     """
+    run_order = 200
     sort_order = 200
     codebase_attributes = dict(tallies_by_facet=attr.ib(default=attr.Factory(list)))
 
@@ -444,7 +448,7 @@ def package_tallies(resource, children, keep_details=False):
 
     if TRACE_LIGHT and current_packages:
         from packagedcode.models import Package
-        packs = [Package.create(**p) for p in current_packages]
+        packs = [Package(**p) for p in current_packages]
         logger_debug('package_tallier: for:', resource,
                      'current_packages are:', packs)
 
@@ -454,7 +458,7 @@ def package_tallies(resource, children, keep_details=False):
     if TRACE_LIGHT and packages:
         logger_debug()
         from packagedcode.models import Package  # NOQA
-        packs = [Package.create(**p) for p in packages]
+        packs = [Package(**p) for p in packages]
         logger_debug('package_tallier: for:', resource,
                      'packages are:', packs)
 

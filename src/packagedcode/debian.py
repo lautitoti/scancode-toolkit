@@ -15,6 +15,7 @@ from commoncode import fileutils
 from debian_inspector.debcon import get_paragraph_data_from_file
 from debian_inspector.debcon import get_paragraphs_data_from_file
 from debian_inspector.package import DebArchive
+from debian_inspector.version import Version as DebVersion
 from packageurl import PackageURL
 
 from packagedcode import models
@@ -296,7 +297,7 @@ class DebianInstalledStatusDatabaseHandler(models.DatafileHandler):
                 package_data = models.PackageData.from_dict(pkgdt)
                 if TRACE:
                     # logger_debug(f'     debian: assemble: root_walk: package_data: {package_data}')
-                    logger_debug(f'     debian: assemble: root_walk: package_data: {package_data.license_expression}')
+                    logger_debug(f'     debian: assemble: root_walk: package_data: {package_data.declared_license_expression}')
 
                 # Most debian secondary files are only specific to a name. We
                 # have a few cases where the arch is included in the lists and
@@ -516,7 +517,7 @@ class DebianMd5sumFilelistInPackageHandler(models.DatafileHandler):
             return models.DatafileHandler.assign_package_to_resources(package, root, codebase, package_adder)
 
 
-def build_package_data_from_package_filename(filename, datasource_id, package_type,):
+def build_package_data_from_package_filename(filename, datasource_id, package_type):
     """
     Return a PackageData built from the filename of a Debian package archive.
     """
@@ -529,11 +530,15 @@ def build_package_data_from_package_filename(filename, datasource_id, package_ty
     else:
         qualifiers = {}
 
+    version = deb.version
+    if isinstance(version, DebVersion):
+        version = str(version)
+
     return models.PackageData(
         datasource_id=datasource_id,
         type=package_type,
         name=deb.name,
-        version=deb.version,
+        version=version,
         qualifiers=qualifiers,
     )
 

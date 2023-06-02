@@ -7,9 +7,7 @@
 
 ----
 
-.. include::  /rst_snippets/note_snippets/synopsis_install_quickstart.rst
-
-----
+.. _quiet_verbose_options:
 
 Comparing Progress Message Options
 ----------------------------------
@@ -57,6 +55,8 @@ Comparing Progress Message Options
 
 ----
 
+.. _timeout_option:
+
 ``--timeout`` Option
 --------------------
 
@@ -69,21 +69,7 @@ Comparing Progress Message Options
 
 ----
 
-``--reindex-licenses`` Option
------------------------------
-
-    ScanCode maintains a license index to search for and detect licenses. When Scancode is
-    configured for the first time, a license index is built and used in every scan thereafter.
-
-    This ``--reindex-licenses`` option rebuilds the license index. Running a scan with this option
-    displays the following message to the terminal in addition to what it normally shows::
-
-        Checking and rebuilding the license index...
-
-    ..
-        [ToDo] Research and Write Better
-
-----
+.. _from_json_option:
 
 ``--from-json`` Option
 ----------------------
@@ -99,6 +85,8 @@ Comparing Progress Message Options
     outputs the results for this scan to ``sample_2.json``.
 
 ----
+
+.. _max_in_memory_option:
 
 ``--max-in-memory`` Option
 ----------------------------------
@@ -121,6 +109,8 @@ Comparing Progress Message Options
         scancode -clieu --json-pp sample.json samples --max-in-memory -1
 
 ----
+
+.. _max_depth_option:
 
 ``--max_depth`` Option
 ----------------------------------

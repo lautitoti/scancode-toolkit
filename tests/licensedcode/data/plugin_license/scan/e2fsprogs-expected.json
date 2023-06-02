@@ -1,0 +1,63 @@
+{
+  "license_detections": [
+    {
+      "identifier": "gpl_2_0_and_patent_disclaimer-3bb2602f-86f5-b9da-9bf5-b52e6920c8d1",
+      "license_expression": "gpl-2.0 AND patent-disclaimer",
+      "detection_count": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "e2fsprogs-copyright",
+      "type": "file",
+      "detected_license_expression": null,
+      "detected_license_expression_spdx": null,
+      "license_detections": [],
+      "license_clues": [
+        {
+          "score": 14.39,
+          "start_line": 19,
+          "end_line": 20,
+          "matched_length": 20,
+          "match_coverage": 14.39,
+          "matcher": "3-seq",
+          "license_expression": "lgpl-2.0-plus",
+          "rule_identifier": "lgpl-2.0-plus_65.RULE",
+          "rule_relevance": 100,
+          "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/lgpl-2.0-plus_65.RULE"
+        }
+      ],
+      "percentage_of_license_text": 22.73,
+      "scan_errors": []
+    },
+    {
+      "path": "e2fsprogs-fsstress",
+      "type": "file",
+      "detected_license_expression": "gpl-2.0 AND patent-disclaimer",
+      "detected_license_expression_spdx": "GPL-2.0-only AND LicenseRef-scancode-patent-disclaimer",
+      "license_detections": [
+        {
+          "license_expression": "gpl-2.0 AND patent-disclaimer",
+          "matches": [
+            {
+              "score": 100.0,
+              "start_line": 4,
+              "end_line": 30,
+              "matched_length": 185,
+              "match_coverage": 100.0,
+              "matcher": "2-aho",
+              "license_expression": "gpl-2.0 AND patent-disclaimer",
+              "rule_identifier": "gpl-2.0_and_patent-disclaimer_3.RULE",
+              "rule_relevance": 100,
+              "rule_url": "https://github.com/nexB/scancode-toolkit/tree/develop/src/licensedcode/data/rules/gpl-2.0_and_patent-disclaimer_3.RULE"
+            }
+          ],
+          "identifier": "gpl_2_0_and_patent_disclaimer-3bb2602f-86f5-b9da-9bf5-b52e6920c8d1"
+        }
+      ],
+      "license_clues": [],
+      "percentage_of_license_text": 95.36,
+      "scan_errors": []
+    }
+  ]
+}

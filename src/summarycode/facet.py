@@ -42,7 +42,7 @@ Assign a facet to a file.
 
 A facet is defined by zero or more glob/fnmatch expressions. Multiple facets can
 be assigned to a file. The facets definition is a list of (facet, pattern) and a
-file is assigned all thye facets that have a pattern defintion that match their
+file is assigned all the facets that have a pattern defintion that match their
 path.
 
 Once all files have been assigned a facet, files without a facet are assigned to
@@ -107,6 +107,7 @@ class AddFacet(PreScanPlugin):
 
     resource_attributes = dict(facets=attr.ib(default=attr.Factory(list), repr=False))
 
+    run_order = 20
     sort_order = 20
 
     options = [
@@ -170,7 +171,7 @@ def compute_path_facets(path, facet_definitions):
 def build_facets(facets, known_facet_names=FACETS):
     """
     Return:
-    - a mapping for facet patterns  to a list of unique facet names as 
+    - a mapping for facet patterns  to a list of unique facet names as
       {pattern: [facet, facet, ...]}
     - a sorted list of error messages for invalid or unknown facet definitions
       found in `facets`.
