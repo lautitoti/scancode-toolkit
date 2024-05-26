@@ -228,22 +228,22 @@ def test_cyclonedx_plugin_does_not_fail_without_packages():
 def test_cyclonedx_plugin_json():
     test_dir = test_env.get_test_loc('cyclonedx/simple')
     result_file = test_env.get_temp_file('cyclonedx.json')
-    run_scan_click(['-p', test_dir, '--cyclonedx', result_file])
+    run_scan_click(['--package', test_dir, '--cyclonedx', result_file])
     expected_file = test_env.get_test_loc('cyclonedx/simple-expected.json')
     check_cyclone_output(expected_file, result_file, regen=REGEN_TEST_FIXTURES)
 
 
-def test_cyclonedx_plugin_json_simple_package_icu():
-    test_dir = test_env.get_test_loc('cyclonedx/simple-icu')
+def test_cyclonedx_plugin_json_simple_package_npm():
+    test_dir = test_env.get_test_loc('cyclonedx/simple-npm/')
     result_file = test_env.get_temp_file('cyclonedx.json')
-    run_scan_click(['-p', test_dir, '--cyclonedx', result_file])
-    expected_file = test_env.get_test_loc('cyclonedx/simple-icu-expected.json')
+    run_scan_click(['--package', '--license', test_dir, '--cyclonedx', result_file])
+    expected_file = test_env.get_test_loc('cyclonedx/simple-npm-expected.json')
     check_cyclone_output(expected_file, result_file, regen=REGEN_TEST_FIXTURES)
 
 
 def test_cyclonedx_plugin_xml_components_and_dependencies_are_serialized_correctly():
     test_dir = test_env.get_test_loc('cyclonedx/simple')
     result_file = test_env.get_temp_file('cyclonedx.xml')
-    run_scan_click(['-p', test_dir, '--cyclonedx-xml', result_file])
+    run_scan_click(['--package', test_dir, '--cyclonedx-xml', result_file])
     expected_file = test_env.get_test_loc('cyclonedx/expected.xml')
     check_cyclone_xml_output(expected_file, result_file, regen=REGEN_TEST_FIXTURES)

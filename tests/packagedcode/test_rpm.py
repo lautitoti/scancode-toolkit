@@ -33,6 +33,28 @@ class TestRpmBasics(FileBasedTesting):
         )
         check_result_equals_expected_json(result, expected_loc, regen=REGEN_TEST_FIXTURES)
 
+    def test_parse_to_package_only(self):
+        test_file = self.get_test_loc('rpm/header/libproxy-bin-0.3.0-4.el6_3.x86_64.rpm')
+        package_datas = rpm.RpmArchiveHandler.parse(location=test_file, package_only=True)
+        result = [pd.to_dict() for pd in package_datas]
+
+        expected_loc = self.get_test_loc(
+            'rpm/header/libproxy-bin-0.3.0-4.el6_3.x86_64.rpm-package-only-expected.json',
+            must_exist=False,
+        )
+        check_result_equals_expected_json(result, expected_loc, regen=REGEN_TEST_FIXTURES)
+
+    def test_parse_mariner_manifest(self):
+        test_file = self.get_test_loc('rpm_installed/mariner/scan/var/lib/rpmmanifest/container-manifest-2')
+        package_datas = rpm.RpmMarinerContainerManifestHandler.parse(location=test_file)
+        result = [pd.to_dict() for pd in package_datas]
+
+        expected_loc = self.get_test_loc(
+            'rpm_installed/mariner/rpm-manifest-expected.json',
+            must_exist=False,
+        )
+        check_result_equals_expected_json(result, expected_loc, regen=REGEN_TEST_FIXTURES)
+
     def test_pyrpm_basic(self):
         test_file = self.get_test_loc('rpm/header/python-glc-0.7.1-1.src.rpm')
         from packagedcode.pyrpm import RPM
@@ -390,4 +412,8 @@ class TestRpmTags(FileBasedTesting):
 
     def test_rpm_tags_zziplib_0_11_15_3sf_i586_rpm(self):
         test_file = self.get_test_loc('rpm/header/zziplib-0.11.15-3sf.i586.rpm')
+        self.check_rpm_tags(test_file)
+
+    def test_rpm_tags_apache_commons_io_2_4_12_el7_noarch_rpm(self):
+        test_file = self.get_test_loc('rpm/header/apache-commons-io-2.4-12.el7.noarch.rpm')
         self.check_rpm_tags(test_file)

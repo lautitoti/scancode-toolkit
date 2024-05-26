@@ -21,13 +21,13 @@ from packagedcode import debian
 from packagedcode import debian_copyright
 from packagedcode import distro
 from packagedcode import conda
+from packagedcode import conan
 from packagedcode import cocoapods
 from packagedcode import cran
 from packagedcode import freebsd
 from packagedcode import godeps
 from packagedcode import golang
 from packagedcode import haxe
-from packagedcode import jar_manifest
 from packagedcode import maven
 from packagedcode import misc
 from packagedcode import npm
@@ -77,9 +77,13 @@ APPLICATION_PACKAGE_DATAFILE_HANDLERS = [
     conda.CondaYamlHandler,
     conda.CondaMetaYamlHandler,
 
+    conan.ConanFileHandler,
+    conan.ConanDataHandler,
+
     cran.CranDescriptionFileHandler,
 
     debian_copyright.DebianCopyrightFileInPackageHandler,
+    debian_copyright.StandaloneDebianCopyrightFileHandler,
     debian.DebianDscFileHandler,
 
     debian.DebianControlFileInExtractedDebHandler,
@@ -101,10 +105,10 @@ APPLICATION_PACKAGE_DATAFILE_HANDLERS = [
 
     haxe.HaxelibJsonHandler,
 
-    jar_manifest.JavaJarManifestHandler,
-
     maven.MavenPomXmlHandler,
     maven.MavenPomPropertiesHandler,
+    maven.JavaJarManifestHandler,
+    maven.JavaOSGiManifestHandler,
 
     misc.AndroidAppArchiveHandler,
     misc.AndroidLibraryHandler,
@@ -208,13 +212,14 @@ SYSTEM_PACKAGE_DATAFILE_HANDLERS = [
     debian_copyright.DebianCopyrightFileInPackageHandler,
     debian_copyright.DebianCopyrightFileInSourceHandler,
 
-    # TODO: consider activating? debian_copyright.StandaloneDebianCopyrightFileHandler,
-
     debian.DebianDistrolessInstalledDatabaseHandler,
 
     debian.DebianInstalledFilelistHandler,
     debian.DebianInstalledMd5sumFilelistHandler,
     debian.DebianInstalledStatusDatabaseHandler,
+
+    rpm.RpmLicenseFilesHandler,
+    rpm.RpmMarinerContainerManifestHandler
 ]
 
 if on_linux:
@@ -253,3 +258,7 @@ def get_package_handler(package_data):
         raise UnknownPackageDatasource(package_data)
     return ppc
 
+
+PACKAGE_DATA_CLASS_BY_DATASOURCE_ID = {
+    maven.MavenPackageData.datasource_id: maven.MavenPackageData
+}

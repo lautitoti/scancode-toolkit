@@ -19,7 +19,7 @@ test_env = FileDrivenTesting()
 test_env.test_data_dir = os.path.join(os.path.dirname(__file__), 'data')
 
 
-def test_license_reference_detection_in_manifest_unknown():
+def test_license_reference_detection_in_manifest_unknown_with_license():
     test_dir = test_env.get_test_loc('license_detection/reference-at-manifest/flutter_playtabs_bridge/', copy=True)
     result_file = test_env.get_temp_file('json')
     args = [
@@ -38,7 +38,7 @@ def test_license_reference_detection_in_manifest_unknown():
     check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
 
 
-def test_license_reference_detection_in_manifest_known():
+def test_license_reference_detection_in_manifest_known_with_license():
     test_dir = test_env.get_test_loc('license_detection/reference-at-manifest/nanopb/', copy=True)
     result_file = test_env.get_temp_file('json')
     args = [
@@ -54,6 +54,25 @@ def test_license_reference_detection_in_manifest_known():
     ]
     run_scan_click(args)
     test_loc = test_env.get_test_loc('license_detection/reference-at-manifest/nanopb.expected.json')
+    check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
+
+
+def test_license_reference_detection_in_manifest_unknown_reference_nuget():
+    test_dir = test_env.get_test_loc('license_detection/reference-at-manifest/fizzler/', copy=True)
+    result_file = test_env.get_temp_file('json')
+    args = [
+        '--license',
+        '--license-text',
+        '--license-text-diagnostics',
+        '--license-diagnostics',
+        '--package',
+        '--strip-root',
+        '--verbose',
+        '--json', result_file,
+        test_dir,
+    ]
+    run_scan_click(args)
+    test_loc = test_env.get_test_loc('license_detection/reference-at-manifest/fizzler.expected.json')
     check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
 
 
@@ -82,6 +101,23 @@ def test_license_reference_detection_in_manifest_siblings():
     args = [
         '--license',
         '--license-text',
+        '--package',
+        '--strip-root',
+        '--verbose',
+        '--json', result_file,
+        test_dir,
+    ]
+    run_scan_click(args)
+    test_loc = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection.expected.json')
+    check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
+
+
+def test_license_reference_detection_in_manifest_siblings_with_diag():
+    test_dir = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection/', copy=True)
+    result_file = test_env.get_temp_file('json')
+    args = [
+        '--license',
+        '--license-text',
         '--license-text-diagnostics',
         '--license-diagnostics',
         '--package',
@@ -91,7 +127,7 @@ def test_license_reference_detection_in_manifest_siblings():
         test_dir,
     ]
     run_scan_click(args)
-    test_loc = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection.expected.json')
+    test_loc = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection-diag.expected.json')
     check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
 
 
@@ -153,6 +189,23 @@ def test_license_reference_detection_in_manifest_siblings_without_license():
     run_scan_click(args)
     test_loc = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection_without_license.expected.json')
     check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
+
+
+def test_license_reference_detection_in_manifest_siblings_without_license_text():
+    test_dir = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection/', copy=True)
+    result_file = test_env.get_temp_file('json')
+    args = [
+        '--package',
+        '--license',
+        '--strip-root',
+        '--verbose',
+        '--json', result_file,
+        test_dir,
+    ]
+    run_scan_click(args)
+    test_loc = test_env.get_test_loc('license_detection/license-beside-manifest/google-built-collection_without_license_text.expected.json')
+    check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
+
 
 def test_license_reference_to_unknown_package_complex_package():
     test_dir = test_env.get_test_loc('license_detection/reference-to-package/google_appengine_sdk/')
@@ -263,4 +316,25 @@ def test_license_reference_to_unknown_package_special_case_debian():
     ]
     run_scan_click(args)
     test_loc = test_env.get_test_loc('license_detection/reference-to-package/fusiondirectory.expected.json')
+    check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)
+
+
+def test_license_package_multi_flavored():
+    test_dir = test_env.get_test_loc('license_detection/multi-flavor/jquery-form-3.51.0/')
+    result_file = test_env.get_temp_file('json')
+    args = [
+        '--license',
+        '--license-text',
+        '--license-text-diagnostics',
+        '--license-diagnostics',
+        '--package',
+        '--strip-root',
+        '--verbose',
+        '--summary',
+        '--classify',
+        '--json', result_file,
+        test_dir,
+    ]
+    run_scan_click(args)
+    test_loc = test_env.get_test_loc('license_detection/multi-flavor/jquery-form-3.51.0.expected.json')
     check_json_scan(test_loc, result_file, regen=REGEN_TEST_FIXTURES)

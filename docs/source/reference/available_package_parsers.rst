@@ -23,12 +23,6 @@ parsers in scancode-toolkit during documentation builds.
      - Datasource ID
      - Primary Language
      - Documentation URL
-   * - JAR Java Archive
-     - ``*.jar``
-     - None
-     - ``java_jar``
-     - None
-     - https://en.wikipedia.org/wiki/JAR_(file_format)
    * - AboutCode ABOUT file
      - ``*.ABOUT``
      - ``about``
@@ -183,6 +177,18 @@ parsers in scancode-toolkit during documentation builds.
      - ``php_composer_lock``
      - PHP
      - https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+   * - conan external source
+     - ``*/conandata.yml``
+     - ``conan``
+     - ``conan_conandata_yml``
+     - C++
+     - https://docs.conan.io/2/tutorial/creating_packages/handle_sources_in_packages.html#using-the-conandata-yml-file
+   * - conan recipe
+     - ``*/conanfile.py``
+     - ``conan``
+     - ``conan_conanfile_py``
+     - C++
+     - https://docs.conan.io/2.0/reference/conanfile.html
    * - Conda meta.yml manifest
      - ``*/meta.yaml``
      - ``conda``
@@ -249,6 +255,13 @@ parsers in scancode-toolkit during documentation builds.
      - ``debian_copyright_in_source``
      - None
      - https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+   * - Debian machine readable file standalone
+     - ``*/copyright``
+       ``*_copyright``
+     - ``deb``
+     - ``debian_copyright_standalone``
+     - None
+     - https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
    * - Debian binary package archive
      - ``*.deb``
      - ``deb``
@@ -306,13 +319,13 @@ parsers in scancode-toolkit during documentation builds.
      - ``debian_source_metadata_tarball``
      - None
      - https://manpages.debian.org/unstable/dpkg-dev/deb.5.en.html
-   * - None
+   * - macOS disk image file
      - ``*.dmg``
        ``*.sparseimage``
      - ``dmg``
      - ``apple_dmg``
      - None
-     - None
+     - https://en.wikipedia.org/wiki/Apple_Disk_Image
    * - Java EAR application.xml
      - ``*/META-INF/application.xml``
      - ``ear``
@@ -437,6 +450,12 @@ parsers in scancode-toolkit during documentation builds.
      - ``ant_ivy_xml``
      - Java
      - https://ant.apache.org/ivy/history/latest-milestone/ivyfile.html
+   * - JAR Java Archive
+     - ``*.jar``
+     - ``jar``
+     - ``java_jar``
+     - None
+     - https://en.wikipedia.org/wiki/JAR_(file_format)
    * - Java JAR MANIFEST.MF
      - ``*/META-INF/MANIFEST.MF``
      - ``jar``
@@ -555,6 +574,12 @@ parsers in scancode-toolkit during documentation builds.
      - ``opam_file``
      - Ocaml
      - https://opam.ocaml.org/doc/Manual.html#Common-file-format
+   * - Java OSGi MANIFEST.MF
+     - None
+     - ``osgi``
+     - ``java_osgi_manifest``
+     - Java
+     - https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html
    * - Dart pubspec lockfile
      - ``*pubspec.lock``
      - ``pubspec``
@@ -640,7 +665,7 @@ parsers in scancode-toolkit during documentation builds.
      - ``pypi``
      - ``pypi_setup_py``
      - Python
-     - https://docs.python.org/3/distutils/setupscript.html
+     - https://docs.python.org/3.11/distutils/setupscript.html
    * - PyPI wheel
      - ``*.whl``
      - ``pypi``
@@ -686,7 +711,7 @@ parsers in scancode-toolkit during documentation builds.
      - None
      - https://fedoraproject.org/wiki/Changes/NewRpmDBFormat
    * - RPM installed package SQLite database
-     - ``*var/lib/rpm/rpmdb.sqlite``
+     - ``*rpm/rpmdb.sqlite``
      - ``rpm``
      - ``rpm_installed_database_sqlite``
      - None

@@ -25,6 +25,8 @@ from licensedcode.detection import get_referenced_filenames
 from licensedcode.detection import find_referenced_resource
 from licensedcode.detection import detect_licenses
 from licensedcode.detection import LicenseDetectionFromResult
+from licensedcode.detection import populate_matches_with_path
+from licensedcode.detection import use_referenced_license_expression
 from licensedcode.spans import Span
 from licensedcode import query
 
@@ -32,6 +34,8 @@ from packagedcode.utils import combine_expressions
 from summarycode.classify import check_resource_name_start_and_end
 from summarycode.classify import LEGAL_STARTS_ENDS
 from summarycode.classify import README_STARTS_ENDS
+
+import saneyaml
 
 
 """
@@ -56,7 +60,14 @@ if TRACE:
         return logger.debug(' '.join(isinstance(a, str) and a or repr(a) for a in args))
 
 
-def add_referenced_license_matches_for_package(resource, codebase, no_licenses):
+RESOURCE_TO_PACKAGE_LICENSE_FIELDS = {
+    'detected_license_expression': 'declared_license_expression',
+    'detected_license_expression_spdx': 'declared_license_expression_spdx',
+    'license_detections': 'license_detections',
+}
+
+
+def add_referenced_license_matches_for_package(resource, codebase):
     """
     Return an updated ``resource`` saving it in place, after adding new license
     detections to the package manifests detected in this resource, following their
@@ -90,12 +101,13 @@ def add_referenced_license_matches_for_package(resource, codebase, no_licenses):
                 file_path=resource.path,
             )
 
-            detection_modified = False
+            detections_added = []
             license_match_mappings = license_detection_mapping["matches"]
             referenced_filenames = get_referenced_filenames(license_detection_object.matches)
             if not referenced_filenames:
                 continue
 
+            referenced_detections = []
             for referenced_filename in referenced_filenames:
                 referenced_resource = find_referenced_resource(
                     referenced_filename=referenced_filename,
@@ -103,39 +115,53 @@ def add_referenced_license_matches_for_package(resource, codebase, no_licenses):
                     codebase=codebase,
                 )
 
-                if not referenced_resource:
-                    continue
-
-                if no_licenses:
-                    referenced_license_detections = get_license_detection_mappings(
-                        location=referenced_resource.location
+                if referenced_resource and referenced_resource.license_detections:
+                    referenced_detections.extend(
+                        referenced_resource.license_detections
                     )
 
-                else:
-                    referenced_license_detections = referenced_resource.license_detections
-
-                if referenced_license_detections:
-                    modified = True
-                    detection_modified = True
-                    license_match_mappings.extend(
-                        get_matches_from_detection_mappings(
-                            license_detections=referenced_license_detections
+                    # For LicenseMatches with different resources as origin, add the
+                    # resource path to these matches as origin info
+                    for detection in referenced_resource.license_detections:
+                        populate_matches_with_path(
+                            matches=detection["matches"],
+                            path=referenced_resource.path
                         )
-                    )
 
-            if not detection_modified:
+            referenced_license_expression = combine_expressions(
+                expressions=[
+                    detection["license_expression"]
+                    for detection in referenced_detections
+                ],
+            )
+            if not use_referenced_license_expression(
+                referenced_license_expression=referenced_license_expression,
+                license_detection=license_detection_object,
+            ):
                 continue
+
+            modified = True
+            detections_added.extend(referenced_resource.license_detections)
+            matches_to_extend = get_matches_from_detection_mappings(
+                license_detections=referenced_resource.license_detections,
+            )
+            license_match_mappings.extend(matches_to_extend)
 
             detection_log, license_expression = get_detected_license_expression(
                 license_match_mappings=license_match_mappings,
                 analysis=DetectionCategory.PACKAGE_UNKNOWN_FILE_REFERENCE_LOCAL.value,
                 post_scan=True,
             )
+            license_expression_spdx = build_spdx_license_expression(
+                license_expression=str(license_expression),
+                licensing=get_cache().licensing,
+            )
             license_detection_mapping["license_expression"] = str(license_expression)
+            license_detection_mapping["license_expression_spdx"] = str(license_expression_spdx)
             license_detection_mapping["detection_log"] = detection_log
             license_detection_mapping["identifier"] = get_new_identifier_from_detections(
                 initial_detection=license_detection_mapping,
-                detections_added=referenced_license_detections,
+                detections_added=detections_added,
                 license_expression=license_expression,
             )
 
@@ -160,7 +186,7 @@ def add_referenced_license_matches_for_package(resource, codebase, no_licenses):
             yield resource
 
 
-def add_referenced_license_detection_from_package(resource, codebase, no_licenses):
+def add_referenced_license_detection_from_package(resource, codebase):
     """
     Return an updated ``resource`` saving it in place, after adding new license
     matches (licenses and license_expressions) following their Rule
@@ -209,7 +235,6 @@ def add_referenced_license_detection_from_package(resource, codebase, no_license
             sibling_license_detections, _le = get_license_detections_from_sibling_file(
                 resource=root_resource,
                 codebase=codebase,
-                no_licenses=no_licenses,
             )
             if TRACE:
                 logger_debug(
@@ -217,7 +242,20 @@ def add_referenced_license_detection_from_package(resource, codebase, no_license
                     f'sibling_license_detections: {sibling_license_detections}'
                 )
 
+            referenced_license_expression = combine_expressions(
+                expressions=[
+                    detection["license_expression"]
+                    for detection in sibling_license_detections
+                ],
+            )
+            if not use_referenced_license_expression(
+                referenced_license_expression=referenced_license_expression,
+                license_detection=license_detection_object,
+            ):
+                continue
+
             for sibling_detection in sibling_license_detections:
+                
                 modified = True
                 detection_modified = True
                 license_match_mappings.extend(sibling_detection["matches"])
@@ -233,9 +271,28 @@ def add_referenced_license_detection_from_package(resource, codebase, no_license
                         break
 
                 pkg_detections = codebase_package["license_detections"]
+                if not pkg_detections:
+                    continue
+
+                referenced_license_expression = combine_expressions(
+                    expressions=[
+                        detection["license_expression"]
+                        for detection in pkg_detections
+                    ],
+                )
+                if not use_referenced_license_expression(
+                    referenced_license_expression=referenced_license_expression,
+                    license_detection=license_detection_object,
+                ):
+                    continue
+
                 for pkg_detection in pkg_detections:
                     modified = True
                     detection_modified = True
+                    populate_matches_with_path(
+                        matches=pkg_detection["matches"],
+                        path=resource.path
+                    )
                     license_match_mappings.extend(pkg_detection["matches"])
                     detections_added.append(pkg_detection)
                     analysis = DetectionCategory.UNKNOWN_REFERENCE_IN_FILE_TO_PACKAGE.value
@@ -248,7 +305,12 @@ def add_referenced_license_detection_from_package(resource, codebase, no_license
             analysis=analysis,
             post_scan=True,
         )
+        license_expression_spdx = build_spdx_license_expression(
+            license_expression=str(license_expression),
+            licensing=get_cache().licensing,
+        )
         license_detection_mapping["license_expression"] = str(license_expression)
+        license_detection_mapping["license_expression_spdx"] = str(license_expression_spdx)
         license_detection_mapping["detection_log"] = detection_log
         license_detection_mapping["identifier"] = get_new_identifier_from_detections(
             initial_detection=license_detection_mapping,
@@ -278,12 +340,10 @@ def add_referenced_license_detection_from_package(resource, codebase, no_license
         yield resource
 
 
-def add_license_from_sibling_file(resource, codebase, no_licenses):
+def add_license_from_sibling_file(resource, codebase):
     """
     Given a resource and it's codebase object, assign licenses to the package
     detections in that resource, from the sibling files of it.
-
-    If `no_license` is True, then license scan (for resources) is disabled.
     """
     if TRACE:
         logger_debug(f'packagedcode.licensing: add_license_from_sibling_file: resource: {resource.path}')
@@ -303,7 +363,6 @@ def add_license_from_sibling_file(resource, codebase, no_licenses):
     license_detections, license_expression = get_license_detections_from_sibling_file(
         resource=resource,
         codebase=codebase,
-        no_licenses=no_licenses,
     )
     if not license_detections:
         return
@@ -333,13 +392,11 @@ def is_legal_or_readme(resource):
     return False
 
 
-def get_license_detections_from_sibling_file(resource, codebase, no_licenses):
+def get_license_detections_from_sibling_file(resource, codebase):
     """
     Return `license_detections`, a list of LicenseDetection objects and a
     `license_expression`, given a resource and it's codebase object, from
     the sibling files of the resource.
-
-    If `no_license` is True, then license scan (for resources) is disabled.
     """
     siblings = []
 
@@ -357,15 +414,12 @@ def get_license_detections_from_sibling_file(resource, codebase, no_licenses):
 
     license_detections = []
     for sibling in siblings:
-        if no_licenses:
-            detections = get_license_detection_mappings(
-                location=sibling.location,
-                analysis=DetectionCategory.PACKAGE_ADD_FROM_SIBLING_FILE.value,
-                post_scan=True,
+        for detection in sibling.license_detections:
+            populate_matches_with_path(
+                matches=detection["matches"],
+                path=sibling.path
             )
-            license_detections.extend(detections)
-        else:
-            license_detections.extend(sibling.license_detections)
+        license_detections.extend(sibling.license_detections)
 
     if not license_detections:
         return [], None
@@ -385,8 +439,9 @@ def get_license_detection_mappings(
     package_license=True,
 ):
     """
-    Return a list of LicenseDetection objects by running license detection
-    on `location`. This performs similarly to `scancode.api.get_licenses`.
+    Return a list of LicenseDetection mappings by running license detection on
+    the file at ``location``. This performs license detection the same way as
+    with `scancode.api.get_licenses`.
     """
     license_detections = []
     detections = detect_licenses(
@@ -399,9 +454,11 @@ def get_license_detection_mappings(
 
     for detection in detections:
         # TODO: also return these?
+        # FIXME: How can we ever get a license detection WITHOUT an expression??
         if detection.license_expression is None:
             continue
 
+        # FIXME: why not honoring the arguments for include_text and license_text_diagnostics?
         license_detections.append(
             detection.to_dict(
                 include_text=True,
@@ -699,8 +756,14 @@ def get_normalized_license_detections(
                 if detections:
                     license_detections.extend(detections)
 
+            if not license_detections:
+                unknown_dict_object = repr(dict(extracted_license.items()))
+                unknown_detection = get_unknown_license_detection(query_string=unknown_dict_object)
+                license_detections.append(unknown_detection)
+                if TRACE:
+                    logger_debug(f'get_normalized_license_detections: dict: unknown_dict_object: {unknown_dict_object}, unknown_detection: {saneyaml.dump(unknown_detection.to_dict())}')
         else:
-            extracted_license_statement = repr(extracted_license)
+            extracted_license_statement = saneyaml.dump(extracted_license)
             license_detections = get_license_detections_for_extracted_license_statement(
                 extracted_license_statement=extracted_license_statement,
                 try_as_expression=try_as_expression,
@@ -742,8 +805,7 @@ def get_normalized_license_detections(
                         license_detections.extend(detections)
 
             else:
-                extracted_license_statement = repr(extracted_license_item)
-
+                extracted_license_statement = saneyaml.dump(extracted_license_item)
                 detections = get_license_detections_for_extracted_license_statement(
                     extracted_license_statement=extracted_license_statement,
                     try_as_expression=try_as_expression,
@@ -766,6 +828,7 @@ def get_license_detections_and_expression(
     try_as_expression=True,
     approximate=True,
     expression_symbols=None,
+    datasource_id = None,
 ):
     """
     Given a text `extracted_license_statement` return a list of LicenseDetection objects.
@@ -781,22 +844,34 @@ def get_license_detections_and_expression(
     Return None if the `query_string` is empty. Return "unknown" as a license
     expression if there is a `query_string` but nothing was detected.
     """
+    from packagedcode import PACKAGE_DATA_CLASS_BY_DATASOURCE_ID
+
     detection_data = []
     license_expression = None
 
     if not extracted_license_statement:
         return detection_data, license_expression
 
-    license_detections = get_normalized_license_detections(
-        extracted_license=extracted_license_statement,
-        try_as_expression=try_as_expression,
-        approximate=approximate,
-        expression_symbols=expression_symbols,
-    )
+    package_data_class = PACKAGE_DATA_CLASS_BY_DATASOURCE_ID.get(datasource_id)
+    if package_data_class:
+        license_detections = package_data_class.get_license_detections_for_extracted_license_statement(
+            extracted_license=extracted_license_statement,
+            try_as_expression=try_as_expression,
+            approximate=approximate,
+            expression_symbols=expression_symbols,
+        )
+    else:
+        license_detections = get_normalized_license_detections(
+            extracted_license=extracted_license_statement,
+            try_as_expression=try_as_expression,
+            approximate=approximate,
+            expression_symbols=expression_symbols,
+        )
 
     if not license_detections:
         if not isinstance(extracted_license_statement, str):
-            extracted_license_statement = repr(extracted_license_statement)
+            extracted_license_statement = saneyaml.dump(extracted_license_statement)
+
         license_detection = get_unknown_license_detection(query_string=extracted_license_statement)
         license_detections = [license_detection]
 
@@ -825,7 +900,7 @@ def get_license_detections_for_extracted_license_statement(
         return []
 
     if not isinstance(extracted_license_statement, str):
-        extracted_license_statement = repr(extracted_license_statement)
+        extracted_license_statement = saneyaml.dump(extracted_license_statement)
 
     matches, matched_as_expression = get_license_matches_for_extracted_license_statement(
         query_string=extracted_license_statement,

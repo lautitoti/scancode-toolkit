@@ -30,6 +30,7 @@ from saneyaml import dump as saneyaml_dump
 from commoncode.fileutils import file_base_name
 from commoncode.fileutils import file_name
 from commoncode.fileutils import resource_iter
+from commoncode.text import python_safe_name
 from licensedcode import MIN_MATCH_HIGH_LENGTH
 from licensedcode import MIN_MATCH_LENGTH
 from licensedcode import SMALL_RULE
@@ -1086,9 +1087,10 @@ def validate_rules(rules, licenses_by_key, with_text=False, rules_data_dir=rules
             for rule in rules:
                 message.append(f'  {rule!r}')
 
-                rule_file = rule.rule_file(rules_data_dir=rules_data_dir)
-                if rule_file and exists(rule_file):
-                    message.append(f'    file://{rule_file}')
+                if rule.identifier:
+                    rule_file = rule.rule_file(rules_data_dir=rules_data_dir)
+                    if rule_file and exists(rule_file):
+                        message.append(f'    file://{rule_file}')
 
                 if with_text:
                     txt = rule.text[:100].strip()
@@ -1188,7 +1190,12 @@ def get_license_tokens():
     yield 'licensed'
 
 
-def load_rules(rules_data_dir=rules_data_dir, with_checks=True, is_builtin=True):
+def load_rules(
+    rules_data_dir=rules_data_dir,
+    with_checks=True,
+    is_builtin=True,
+    with_depreacted=False,
+):
     """
     Return an iterable of rules loaded from rule files in ``rules_data_dir``.
     Optionally check for consistency if ``with_checks`` is True.
@@ -1210,7 +1217,12 @@ def load_rules(rules_data_dir=rules_data_dir, with_checks=True, is_builtin=True)
                 space_problems.append(rule_file)
 
             try:
-                yield Rule.from_file(rule_file=rule_file)
+                rule = Rule.from_file(rule_file=rule_file)
+                if not with_depreacted and rule.is_deprecated:
+                    continue 
+                else:
+                    yield rule
+
             except Exception as re:
                 if with_checks:
                     model_errors.append(str(re))
@@ -1386,6 +1398,22 @@ class BasicRule:
             'after. Mutually exclusive from any other is_license_* flag')
     )
 
+    is_license_clue = attr.ib(
+        default=False,
+        repr=False,
+        metadata=dict(
+            help='True if this is rule text is a clue to a license '
+            'but cannot be considered in a proper license detection '
+            'as a license text/notice/reference/tag/intro as it is'
+            'merely a clue and does not actually point to or refer to '
+            'the actual license directly. This is still valuable information '
+            'useful in determining the license/origin of a file, but this '
+            'should not be summarized/present in the license expression for '
+            'a package or a file, nor its list of license detections. '
+            'considered in the context of the detection that it precedes. '
+            'Mutually exclusive from any other is_license_* flag')
+    )
+
     is_false_positive = attr.ib(
         default=False,
         repr=False,
@@ -1502,6 +1530,19 @@ class BasicRule:
         metadata=dict(
             help='Flag set to True if this rule is a synthetic rule dynamically '
             'built at runtime, such as an SPDX license rule.')
+    )
+
+    is_deprecated = attr.ib(
+        default=False,
+        repr=False,
+        metadata=dict(
+            help='Flag set to True if this rule is deleted, '
+            'and not to be used anymore in license detection. '
+            'This happens usually when a rule is renamed/assigned '
+            'to a seperate license-expression, promoted to being a '
+            'license text or just plain retired. This is used to '
+            'preserve the link to the rule, and therefore make links '
+            'to rules as permanent.')
     )
 
     ###########################################################################
@@ -1704,11 +1745,11 @@ class BasicRule:
         licenses_data_dir=licenses_data_dir,
     ):
         """
-        Return the path to the rule file for this rule object,
-        given the `rules_data_dir` directory or `licenses_data_dir`
-        if a license rule.
+        Return the path to the rule file for this rule object, given the
+        `rules_data_dir` directory or `licenses_data_dir` if a license rule.
+        Return None if the Rule does not have yet an identifier or is synthetic.
         """
-        if self.is_synthetic:
+        if self.is_synthetic or not self.identifier:
             return None
 
         if self.is_from_license:
@@ -1768,6 +1809,7 @@ class BasicRule:
             self.is_license_reference,
             self.is_license_tag,
             self.is_license_intro,
+            self.is_license_clue,
         )
 
         has_license_flags = any(license_flags)
@@ -1891,9 +1933,10 @@ class BasicRule:
                 expression2=other.license_expression_object,
             )
 
-    def spdx_license_expression(self, licensing=None):
+    def spdx_license_expression(self):
         from licensedcode.cache import build_spdx_license_expression
-        return str(build_spdx_license_expression(self.license_expression, licensing=licensing))
+        from licensedcode.cache import get_cache
+        return str(build_spdx_license_expression(self.license_expression, licensing=get_cache().licensing))
 
     def get_length(self, unique=False):
         return self.length_unique if unique else self.length
@@ -1909,6 +1952,29 @@ class BasicRule:
         return (self.min_high_matched_length_unique if unique
                 else self.min_high_matched_length)
 
+    def get_flags_mapping(self):
+        """
+        Return a list of boolean attributes for a rule which are set to True.
+        """
+
+        rule_boolean_attributes = [
+            'is_license_text',
+            'is_license_notice',
+            'is_license_reference',
+            'is_license_tag',
+            'is_license_intro',
+            'is_license_clue',
+            'is_continuous',
+        ]
+
+        mapping = {}
+        for attribute in rule_boolean_attributes:
+            value = getattr(self, attribute)
+            if value:
+                mapping[attribute] = True
+
+        return mapping
+
     def to_reference(self):
         """
         Return a mapping of reference data for this Rule object.
@@ -1923,6 +1989,7 @@ class BasicRule:
         data['is_license_reference'] = self.is_license_reference
         data['is_license_tag'] = self.is_license_tag
         data['is_license_intro'] = self.is_license_intro
+        data['is_license_clue'] = self.is_license_clue
         data['is_continuous'] = self.is_continuous
         data['is_builtin'] = self.is_builtin
         data['is_from_license'] = self.is_from_license
@@ -1960,7 +2027,9 @@ class BasicRule:
             'is_license_reference',
             'is_license_tag',
             'is_license_intro',
+            'is_license_clue',
             'is_continuous',
+            'is_deprecated'
         )
 
         # default to English which is implied
@@ -2058,6 +2127,12 @@ class Rule(BasicRule):
         rule.load_data(rule_file=rule_file)
         return rule
 
+    @property
+    def pysafe_expression(self):
+        """
+        Return a python safe identifier, for use in rule identifiers"""
+        return python_safe_name(self.license_expression)
+
     def load_data(self, rule_file):
         """
         Load data from ``rule_file`` which has both the text and the data (as YAML forntmatter).
@@ -2136,7 +2211,10 @@ class Rule(BasicRule):
         """
         if self.is_from_license:
             return []
-        return list(get_key_phrase_spans(self.text))
+        try:
+            return list(get_key_phrase_spans(self.text))
+        except Exception as e:
+            raise InvalidRule(f'Invalid rule: {self}') from e
 
     def compute_thresholds(self, small_rule=SMALL_RULE):
         """
@@ -2249,7 +2327,9 @@ class Rule(BasicRule):
         self.is_license_tag = data.get('is_license_tag', False)
         self.is_license_reference = data.get('is_license_reference', False)
         self.is_license_intro = data.get('is_license_intro', False)
+        self.is_license_clue = data.get('is_license_clue', False)
         self.is_continuous = data.get('is_continuous', False)
+        self.is_deprecated = data.get('is_deprecated', False)
 
         self.referenced_filenames = data.get('referenced_filenames', []) or []
 
@@ -2509,7 +2589,7 @@ class SpdxRule(SynthethicRule):
     """
 
     def __attrs_post_init__(self, *args, **kwargs):
-        self.identifier = f'spdx-license-identifier-{self.license_expression}-{self._unique_id}'
+        self.identifier = f'spdx-license-identifier-{self.pysafe_expression}-{self._unique_id}'
         self.setup()
 
         if not self.license_expression:
@@ -2563,7 +2643,7 @@ class UnDetectedRule(SynthethicRule):
     """
 
     def __attrs_post_init__(self, *args, **kwargs):
-        self.identifier = f'package-manifest-{self.license_expression}-{self._unique_id}'
+        self.identifier = f'package-manifest-{self.pysafe_expression}-{self._unique_id}'
         expression = self.licensing.parse(self.license_expression)
         self.license_expression = expression.render()
         self.license_expression_object = expression
@@ -2598,7 +2678,6 @@ class DebianUnknownRule(Rule):
 
     def dump(self):
         raise NotImplementedError
-
 
 
 def _print_rule_stats():

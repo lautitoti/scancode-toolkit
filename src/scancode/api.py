@@ -170,10 +170,9 @@ def get_licenses(
     score lower than `minimum_score` are not returned.
 
     If `include_text` is True, matched text is included in the returned
-    `licenses` data as well as a file-level `percentage_of_license_text` percentage to
-    indicate the overall proportion of detected license text and license notice
-    words in the file. This is used to determine if a file contains mostly
-    licensing information.
+    `licenses` data as well as a file-level `percentage_of_license_text` 
+    as the percentage of file words detected as license text or notice.
+    This is used to determine if a file contains mostly licensing.
 
     If ``unknown_licenses`` is True, also detect unknown licenses.
     """
@@ -249,20 +248,21 @@ def get_licenses(
 SCANCODE_DEBUG_PACKAGE_API = os.environ.get('SCANCODE_DEBUG_PACKAGE_API', False)
 
 
-def _get_package_data(location, application=True, system=False, **kwargs):
+def _get_package_data(location, application=True, system=False, package_only=False, **kwargs):
     """
     Return a mapping of package manifest information detected in the file at ``location``.
     Include ``application`` packages (such as pypi) and/or ``system`` packages.
     Note that all exceptions are caught if there are any errors while parsing a
     package manifest.
     """
-    assert application or system
+    assert application or system or package_only
     from packagedcode.recognize import recognize_package_data
     try:
         return recognize_package_data(
             location=location,
             application=application,
-            system=system
+            system=system,
+            package_only=package_only,
         ) or []
 
     except Exception as e:
@@ -292,7 +292,7 @@ def get_package_info(location, **kwargs):
     return dict(packages=[p.to_dict() for p in packages])
 
 
-def get_package_data(location, application=True, system=False, **kwargs):
+def get_package_data(location, application=True, system=False, package_only=False, **kwargs):
     """
     Return a mapping of package manifest information detected in the file at
     `location`.
@@ -305,6 +305,7 @@ def get_package_data(location, application=True, system=False, **kwargs):
         location=location,
         application=application,
         system=system,
+        package_only=package_only,
         **kwargs,
     ) or []
 

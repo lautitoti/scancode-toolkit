@@ -209,10 +209,52 @@ class TestMavenMisc(BaseMavenCase):
         assert package2.to_dict().items() == package.to_dict().items()
 
     def test_package_with_extracted_jars_and_metainf_poms_is_detected_correctly(self):
-        test_dir = self.get_test_loc('maven_misc/extracted-jar')
+        test_dir = self.get_test_loc('maven_misc/extracted-jar/activiti-image-generator-7-201802-EA-sources.jar-extract/')
         result_file = self.get_temp_file('json')
-        expected_file = self.get_test_loc('maven_misc/extracted-jar-expected.json')
+        expected_file = self.get_test_loc('maven_misc/extracted-jar/activiti-image-generator-expected.json')
         run_scan_click(['--package', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+
+    def test_package_with_extracted_jars_and_metainf_manifest_is_detected_correctly(self):
+        test_dir = self.get_test_loc('maven_misc/extracted-jar/hsqldb-2.4.0.jar-extract/')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/extracted-jar/hsqldb-2.4.0-expected.json')
+        run_scan_click(['--package', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+
+    def test_uberjars_is_detected_and_resource_assigned_correctly(self):
+        test_dir = self.get_test_loc('maven_misc/uberjars/htrace-core-4.0.0-incubating')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/uberjars/htrace-core-4.0.0-incubating-expected.json')
+        run_scan_click(['--package', '--license', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+
+    def test_maven_assembly_with_pom_and_manifest(self):
+        test_dir = self.get_test_loc('maven_misc/assemble/johnzon-jsonb-1.2.11')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/assemble/johnzon-jsonb-1.2.11-expected.json')
+        run_scan_click(['--package', '--license', '--license-diagnostics', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+
+    def test_maven_assembly_with_pom_and_manifest_package_only(self):
+        test_dir = self.get_test_loc('maven_misc/assemble/johnzon-jsonb-1.2.11')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/assemble/johnzon-jsonb-1.2.11-package-only-expected.json')
+        run_scan_click(['--package-only', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+
+    def test_maven_assembly_with_pom_and_jar_manifest(self):
+        test_dir = self.get_test_loc('maven_misc/assemble/numbers-1.7.4')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/assemble/numbers-1.7.4-expected.json')
+        run_scan_click(['--package', '--license', '--license-diagnostics', '--processes', '-1', test_dir, '--json', result_file])
+        check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
+    
+    def test_maven_unknown_reference_to_license_in_manifest(self):
+        test_dir = self.get_test_loc('maven_misc/assemble/jackson-dataformat-xml-2.13.5')
+        result_file = self.get_temp_file('json')
+        expected_file = self.get_test_loc('maven_misc/assemble/jackson-dataformat-xml-2.13.5-expected.json')
+        run_scan_click(['--package', '--license', '--license-diagnostics', '--processes', '-1', test_dir, '--json', result_file])
         check_json_scan(expected_file, result_file, remove_uuid=True, regen=REGEN_TEST_FIXTURES)
 
     def test_package_dependency_not_missing(self):
@@ -239,7 +281,7 @@ class TestMavenMisc(BaseMavenCase):
         pom_resource = codebase.get_resource(
             'activiti-image-generator-7-201802-EA-sources.jar-extract/META-INF/maven/org.activiti/activiti-image-generator/pom.xml'
         )
-        self.assertTrue(pom_resource)
+        assert pom_resource
         top_level_resources_paths = [
             r.path for r in maven.MavenPomXmlHandler.get_top_level_resources(pom_resource, codebase)
         ]
@@ -252,7 +294,7 @@ class TestMavenMisc(BaseMavenCase):
             'activiti-image-generator-7-201802-EA-sources.jar-extract/META-INF/maven/org.activiti/activiti-image-generator/pom.properties',
             'activiti-image-generator-7-201802-EA-sources.jar-extract/META-INF/maven/org.activiti/activiti-image-generator/pom.xml',
         ]
-        self.assertEquals(expected_resource_paths, top_level_resources_paths)
+        assert top_level_resources_paths == expected_resource_paths
 
 
 class TestPomProperties(testcase.FileBasedTesting):

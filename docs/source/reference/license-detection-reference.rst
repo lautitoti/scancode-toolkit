@@ -30,6 +30,8 @@ implemented:
 
 Some other elements are still WIP, see `issue #3300 <https://github.com/nexB/scancode-toolkit/issues/3300>`_ for more details on this.
 
+.. _what-is-a-licensedetection:
+
 What is a LicenseDetection?
 ---------------------------
 
@@ -297,7 +299,7 @@ also has been renamed to ``extracted_license_statement``.
 
 .. _license_detections_unique:
 
-New codebase level Unique License Detection
+Codebase level Unique License Detection
 -------------------------------------------
 
 We now have a new codebase level attribute ``license_detections`` which has Unique
@@ -686,8 +688,8 @@ LicenseDetection Data
 This is referencing by LicenseDetections objects, and has one or multiple
 license matches. This is linked to the resource level detections through
 an ``identifier`` attribute present in both resource and codebase level
-detections. See the `unique license detections section <license_detections_unique>`_
-above for more details on this.
+detections. See the :ref:`license_detections_unique` above for more
+details on this.
 
 There could be a list of ambiguous detections as a summary to review.
 This is WIP, see `scancode-toolkit#3122 <https://github.com/nexB/scancode-toolkit/issues/3122>`_.

@@ -108,7 +108,9 @@ TAGS
 Procfile
 local.cfg
 geckodriver.log
-var
 .metaflow
 selenium
 /dist/
+
+# Ignore extra rpmdb sqlite stuff
+rpmdb.sqlite-*
